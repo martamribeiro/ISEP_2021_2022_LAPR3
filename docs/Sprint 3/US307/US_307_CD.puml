@@ -1,0 +1,31 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CheckIfContainerExceedsWarehouseCapacityController{
+- company
+- tryToCreateTruckTrip(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+- deleteTruckTrip(truckTripID)
+}
+
+class TruckTripStoreDB{
+- triggerContainersWarehouse()
+- createTruckTripWithUnloading(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+- checkIfTruckTripExists(truckTripID)
+- deleteTruckTrip(truckTripID)
+- checkIfTruckExists(truckID)
+}
+
+class Company{
+- cargoTruckTripStoreDB
+- getTruckTripStoreDB()
+}
+
+CheckIfContainerExceedsWarehouseCapacityController ..> Company
+CheckIfContainerExceedsWarehouseCapacityController ..> TruckTripStoreDB
+Company "1" -- "1" TruckTripStoreDB : uses >
+
+@enduml

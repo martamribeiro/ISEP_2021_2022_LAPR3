@@ -1,0 +1,13 @@
+@startuml
+autonumber
+actor TrafficManager as C
+
+activate C
+C -> ":System" : asks to get the most efficient circuit
+activate ":System"
+
+":System" --> C : returns the most efficient circuit and total distance
+deactivate ":System"
+
+deactivate C
+@enduml

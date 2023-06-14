@@ -1,0 +1,41 @@
+@startuml
+'https://plantuml.com/class-diagram
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class TrafficManager{
+    -name
+}
+
+class Company{}
+
+class Ship {
+    -mmmsi /'MMSI - 1'/
+    -imo /'IMO - 9'/
+    -callSign /'CallSign - 10'/
+    -shipName /'VesselName - 8'/
+    -vesselType
+    -length
+    -width
+    -draft /'Draft - 14'/
+    -cargo
+    '-shipPositions /'BST que guarda Positions'/
+    '-vesselType /'objeto do tipo VesselType'/
+}
+
+class ShipPosition {
+    -baseDateTime /'BaseDateTime - 2'/
+    -latitude /'LAT - 3'/
+    -longitude /'LON - 4'/
+    -sog /'SOG - 5'/
+    -cog /'COG - 6'/
+    -heading /'Heading - 7'/
+    -transceiver /'TransceiverClass - 16'/
+}
+
+TrafficManager "1" -- "1..*" Ship : imports >
+Ship "1" -- "1..*" ShipPosition : has >
+Company "1" -- "1..*" Ship : manages >
+
+@enduml

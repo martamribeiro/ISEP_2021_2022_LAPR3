@@ -1,0 +1,49 @@
+@startuml
+autonumber
+'hide footbox
+actor "Port Manager" as SC
+participant ":OccupancyRatesAndEstimationsWarehouseUI  " as UI
+participant ":CheckOccupancyRatesAndEstimationsWarehouseController" as CTRL
+participant ":Company" as CMP
+participant ":WarehouseStoreDB" as CMS
+
+activate SC
+SC -> UI : wants to know the occupancy rate for a warehouse and an estimate of the containers leaving the warehouse during the next 30 days
+activate UI
+UI --> SC : asks for data(i.e.,warehouseID)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getOccupancyRateByWarehouseID(warehouseID)
+activate CTRL
+CTRL -> CMP : getWarehouseStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getWarehouseMaxCapacity(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getCurrentContainersWarehouse(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : calculateOccupancyRate(maxCapacity,currentCapacity)
+activate CTRL
+|||
+deactivate CTRL
+CTRL --> UI : occupancyRate
+deactivate CTRL
+UI -> CTRL : getContainersOut30Days(warehouseID)
+activate CTRL
+CTRL -> CMS : getNumContainersOutWarehouse(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL --> UI : numContainersOut30Days
+deactivate CTRL
+UI --> SC : informs the warehouse occupancy rate and the estimated number of containers leaving it in the next 30 days
+deactivate UI
+deactivate SC
+
+@enduml

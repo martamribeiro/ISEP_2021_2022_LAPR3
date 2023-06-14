@@ -1,0 +1,80 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class CreateFreightNetworkController{
+    +createFreightNetworkFromDb()
+}
+
+class PortStoreDb{
+    +getExistentPorts()
+    +getSeaDists()
+}
+
+class CountryStoreDb{
+    +getExistentCapitals()
+    +getCountries()
+    +getBorders()
+}
+
+class PortStore{
+    +getPorts()
+    +getPortById()
+}
+
+class CountryStore{
+    +getExistentCapitals()
+    +getCountries()
+    +getBorders()
+}
+
+class Company {
+    -designation
+    +getShipTripStoreDB()
+}
+
+class Capital{
+}
+
+class Country{}
+
+class Port{}
+
+abstract class Location{
+    latitude
+    longitude
+    country
+    name
+}
+
+class FreightNerwork{}
+
+class MatrixGraph{}
+
+abstract class CommonGraph{}
+
+MatrixGraph ..> CommonGraph
+FreightNerwork ..> MatrixGraph
+Capital ..> Location
+Port ..> Location
+CreateFreightNetworkController ..> Company
+CreateFreightNetworkController ..> PortStoreDb
+Company "1" -- "1" PortStoreDb : uses >
+CreateFreightNetworkController ..> CountryStoreDb
+Company "1" -- "1" CountryStoreDb : uses >
+CreateFreightNetworkController ..> PortStore
+Company "1" -- "1" PortStore : uses >
+CreateFreightNetworkController ..> CountryStore
+Company "1" -- "1" CountryStore : uses >
+Country "1" -- "1" Capital : has >
+CreateFreightNetworkController ..> Country
+CreateFreightNetworkController ..> Port
+CountryStore "1" -- "1..*" Country: stores >
+PortStore "1" -- "1..*" Port: stores >
+Company "1" -- "1..*" Port: uses >
+Company "1" -- "1..*" Country: works in >
+FreightNerwork ..> Location
+CreateFreightNetworkController ..> FreightNerwork
+Company "1" -- "1" FreightNerwork : has >
+
+@enduml

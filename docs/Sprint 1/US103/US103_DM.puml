@@ -1,0 +1,65 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+
+class Company {
+    -designation
+}
+
+class TrafficManager{
+    -name
+}
+
+class Ship {
+    -mmmsiCode
+    -shipName
+    -imoCode
+    -callSignId
+    -currentCapacity /'added by us'/
+    -draft
+}
+
+/'class EnergyPower {
+    -numEnergyGenerators
+    -generatorsPower
+}'/
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+}
+
+/'Is VesselType necessary?
+class VesselType {
+    -vesselTypeId
+    -length
+    -width
+    -maxCapacity
+}
+'/
+
+/' retirar Message? '/
+/'class Message {}'/
+
+
+/'Ship "1" -- "*" Message : sends >'/
+Ship "1" -- "1..*" ShipPosition : has >
+TrafficManager "1" -- "1..*" ShipPosition : controls >
+Company "1" -- "1..*" Ship : owns >
+
+/'Ship "1" -- "1" EnergyPower : has >'/
+/'Ship "*" -- "1" VesselType : is of >'/
+
+
+
+
+@enduml

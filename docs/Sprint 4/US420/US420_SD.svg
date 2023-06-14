@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="619px" preserveAspectRatio="none" style="width:943px;height:619px;background:#FFFFFF;" version="1.1" viewBox="0 0 943 619" width="943px" zoomAndPan="magnify"><defs><filter height="300%" id="fqszb2q30kn9n" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="415.8672" style="stroke:#A80036;stroke-width:1.0;" width="10" x="46" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="402.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="304" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="250.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="598" y="273.7188"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="905" y="304.0703"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="905" y="364.4219"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="905" y="424.7734"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="51" x2="51" y1="89.6094" y2="533.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="309" x2="309" y1="89.6094" y2="533.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="603" x2="603" y1="89.6094" y2="533.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="738" x2="738" y1="89.6094" y2="533.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="827" x2="827" y1="89.6094" y2="533.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="910" x2="910" y1="89.6094" y2="533.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="5" y="86.5332">Port Manager</text><ellipse cx="51" cy="15" fill="#FEFECE" filter="url(#fqszb2q30kn9n)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M51,23 L51,50 M38,31 L64,31 M51,50 L38,65 M51,50 L64,65 " fill="none" filter="url(#fqszb2q30kn9n)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="5" y="547.0098">Port Manager</text><ellipse cx="51" cy="560.0859" fill="#FEFECE" filter="url(#fqszb2q30kn9n)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M51,568.0859 L51,595.0859 M38,576.0859 L64,576.0859 M51,595.0859 L38,610.0859 M51,595.0859 L64,610.0859 " fill="none" filter="url(#fqszb2q30kn9n)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="118" x="248" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="255" y="74.5332">GetVesselSinkUI</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="118" x="248" y="532.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="255" y="554.0098">GetVesselSinkUI</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="168" x="517" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="524" y="74.5332">GetVesselSinkController</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="168" x="517" y="532.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="154" x="524" y="554.0098">GetVesselSinkController</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="74" x="699" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="706" y="74.5332">Company</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="74" x="699" y="532.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="706" y="554.0098">Company</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="76" x="787" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="794" y="74.5332">ShipStore</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="76" x="787" y="532.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="62" x="794" y="554.0098">ShipStore</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="42" x="887" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="894" y="74.5332">Ship</text><rect fill="#FEFECE" filter="url(#fqszb2q30kn9n)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="42" x="887" y="532.4766"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="28" x="894" y="554.0098">Ship</text><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="415.8672" style="stroke:#A80036;stroke-width:1.0;" width="10" x="46" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="402.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="304" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="250.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="598" y="273.7188"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="905" y="304.0703"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="905" y="364.4219"/><rect fill="#FFFFFF" filter="url(#fqszb2q30kn9n)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="905" y="424.7734"/><polygon fill="#A80036" points="292,117.9609,302,121.9609,292,125.9609,296,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="56" x2="298" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="63" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="218" x="74" y="117.1045">asks to get how much the vessel sink</text><polygon fill="#A80036" points="67,148.3125,57,152.3125,67,156.3125,63,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="61" x2="303" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="73" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="107" x="84" y="147.4561">requests ship data</text><polygon fill="#A80036" points="292,178.6641,302,182.6641,292,186.6641,296,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="56" x2="298" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="63" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="89" x="74" y="177.8076">types ship data</text><polygon fill="#A80036" points="67,209.0156,57,213.0156,67,217.0156,63,213.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="61" x2="303" y1="213.0156" y2="213.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="73" y="208.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="84" y="208.1592">requests num of containers</text><polygon fill="#A80036" points="292,239.3672,302,243.3672,292,247.3672,296,243.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="56" x2="298" y1="243.3672" y2="243.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="63" y="238.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="139" x="74" y="238.5107">types num of containers</text><polygon fill="#A80036" points="586,269.7188,596,273.7188,586,277.7188,590,273.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="314" x2="592" y1="273.7188" y2="273.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="321" y="268.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="254" x="332" y="268.8623">getHowMuchSinkShip(ship, numContainers)</text><polygon fill="#A80036" points="893,300.0703,903,304.0703,893,308.0703,897,304.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="608" x2="899" y1="304.0703" y2="304.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="615" y="299.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="192" x="626" y="299.2139">totalMassPlaced(numContainers)</text><polygon fill="#A80036" points="893,360.4219,903,364.4219,893,368.4219,897,364.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="608" x2="899" y1="364.4219" y2="364.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="615" y="359.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="626" y="359.5654">getPressure(numContainers)</text><polygon fill="#A80036" points="893,420.7734,903,424.7734,893,428.7734,897,424.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="608" x2="899" y1="424.7734" y2="424.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="615" y="419.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="267" x="626" y="419.917">getDiffHeightAboveWaterLevel(numContainers)</text><polygon fill="#A80036" points="325,481.125,315,485.125,325,489.125,321,485.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="319" x2="597" y1="485.125" y2="485.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="331" y="480.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="25" x="349" y="480.2686">map</text><polygon fill="#A80036" points="62,511.4766,52,515.4766,62,519.4766,58,515.4766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="56" x2="303" y1="515.4766" y2="515.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="68" y="510.6201">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="86" y="510.6201">operation success</text><!--MD5=[a10a1f882c9ea4f04826dd2434e7c9a5]
+@startuml
+autonumber
+actor "Port Manager" as PM
+participant GetVesselSinkUI as UI
+participant GetVesselSinkController as CTRL
+participant "Company" as COMP
+participant "ShipStore" as STORE
+participant "Ship" as SHIP
+
+
+activate PM
+PM -> UI : asks to get how much the vessel sink
+
+activate UI
+UI - -> PM : requests ship data
+
+
+PM -> UI : types ship data
+
+
+UI - -> PM : requests num of containers
+
+
+PM -> UI : types num of containers
+
+/'aqui'/
+UI -> CTRL : getHowMuchSinkShip(ship, numContainers)
+activate CTRL
+
+
+
+CTRL -> SHIP : totalMassPlaced(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : getPressure(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : getDiffHeightAboveWaterLevel(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL - -> UI : map
+
+UI - -> PM : operation success
+
+deactivate PM
+@enduml
+
+@startuml
+autonumber
+actor "Port Manager" as PM
+participant GetVesselSinkUI as UI
+participant GetVesselSinkController as CTRL
+participant "Company" as COMP
+participant "ShipStore" as STORE
+participant "Ship" as SHIP
+
+
+activate PM
+PM -> UI : asks to get how much the vessel sink
+
+activate UI
+UI - -> PM : requests ship data
+
+
+PM -> UI : types ship data
+
+
+UI - -> PM : requests num of containers
+
+
+PM -> UI : types num of containers
+
+UI -> CTRL : getHowMuchSinkShip(ship, numContainers)
+activate CTRL
+
+
+
+CTRL -> SHIP : totalMassPlaced(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : getPressure(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : getDiffHeightAboveWaterLevel(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL - -> UI : map
+
+UI - -> PM : operation success
+
+deactivate PM
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

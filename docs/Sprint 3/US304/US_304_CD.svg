@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="338px" preserveAspectRatio="none" style="width:355px;height:338px;background:#FFFFFF;" version="1.1" viewBox="0 0 355 338" width="355px" zoomAndPan="magnify"><defs><filter height="300%" id="fwt43r3pcihc8" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[db5a2dc7bd09e145a88cbebb0a532daa]
+class AuditTrailController--><rect codeLine="7" fill="#FEFECE" filter="url(#fwt43r3pcihc8)" height="73.6094" id="AuditTrailController" style="stroke:#A80036;stroke-width:1.5;" width="316" x="25.5" y="7"/><ellipse cx="121.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M124.2188,28.875 Q123.6406,29.1875 123,29.3438 Q122.3594,29.5 121.6563,29.5 Q119.1563,29.5 117.8281,27.8281 Q116.5156,26.1563 116.5156,23 Q116.5156,19.8438 117.8281,18.1719 Q119.1563,16.5 121.6563,16.5 Q122.3594,16.5 123,16.6563 Q123.6563,16.8125 124.2188,17.125 L124.2188,19.9219 Q123.5938,19.3594 123,19.0938 Q122.4063,18.8125 121.7813,18.8125 Q120.4375,18.8125 119.75,19.875 Q119.0625,20.9375 119.0625,23 Q119.0625,25.0781 119.75,26.1406 Q120.4375,27.1875 121.7813,27.1875 Q122.4063,27.1875 123,26.9219 Q123.5938,26.6563 124.2188,26.0781 L124.2188,28.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="115" x="142.25" y="27.1543">AuditTrailController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="26.5" x2="340.5" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="31.5" y="53.2104">-company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="26.5" x2="340.5" y1="59.8047" y2="59.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="304" x="31.5" y="74.0151">+getContainerAuditTrail(containerId, cargoManifestId)</text><!--MD5=[3bcc8e894a474f5efdd25f278c4aabd2]
+class ContainerStoreDb--><rect codeLine="12" fill="#FEFECE" filter="url(#fwt43r3pcihc8)" height="52.8047" id="ContainerStoreDb" style="stroke:#A80036;stroke-width:1.5;" width="329" x="7" y="272"/><ellipse cx="113.75" cy="288" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M116.2188,293.875 Q115.6406,294.1875 115,294.3438 Q114.3594,294.5 113.6563,294.5 Q111.1563,294.5 109.8281,292.8281 Q108.5156,291.1563 108.5156,288 Q108.5156,284.8438 109.8281,283.1719 Q111.1563,281.5 113.6563,281.5 Q114.3594,281.5 115,281.6563 Q115.6563,281.8125 116.2188,282.125 L116.2188,284.9219 Q115.5938,284.3594 115,284.0938 Q114.4063,283.8125 113.7813,283.8125 Q112.4375,283.8125 111.75,284.875 Q111.0625,285.9375 111.0625,288 Q111.0625,290.0781 111.75,291.1406 Q112.4375,292.1875 113.7813,292.1875 Q114.4063,292.1875 115,291.9219 Q115.5938,291.6563 116.2188,291.0781 L116.2188,293.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="107" x="134.25" y="292.1543">ContainerStoreDb</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="335" y1="304" y2="304"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="317" x="13" y="318.2104">+getAuditTrailOfContainer(containerId, cargoManifestId)</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="16" fill="#FEFECE" filter="url(#fwt43r3pcihc8)" height="52.8047" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="142" x="195.5" y="142"/><ellipse cx="234.35" cy="158" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M236.8188,163.875 Q236.2406,164.1875 235.6,164.3438 Q234.9594,164.5 234.2563,164.5 Q231.7563,164.5 230.4281,162.8281 Q229.1156,161.1563 229.1156,158 Q229.1156,154.8438 230.4281,153.1719 Q231.7563,151.5 234.2563,151.5 Q234.9594,151.5 235.6,151.6563 Q236.2563,151.8125 236.8188,152.125 L236.8188,154.9219 Q236.1938,154.3594 235.6,154.0938 Q235.0063,153.8125 234.3813,153.8125 Q233.0375,153.8125 232.35,154.875 Q231.6625,155.9375 231.6625,158 Q231.6625,160.0781 232.35,161.1406 Q233.0375,162.1875 234.3813,162.1875 Q235.0063,162.1875 235.6,161.9219 Q236.1938,161.6563 236.8188,161.0781 L236.8188,163.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="253.65" y="162.1543">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="196.5" x2="336.5" y1="174" y2="174"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="201.5" y="188.2104">-getContainerStoreDb()</text><!--MD5=[c780216922e57efa123c268d6c789cfc]
+link AuditTrailController to Company--><path codeLine="20" d="M207.95,81.09 C220.12,99.05 234.65,120.5 246.2,137.53 " fill="none" id="AuditTrailController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="249.06,141.76,247.3115,132.0676,246.2504,137.624,240.694,136.563,249.06,141.76" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d5599aef9c1cbc2c42e0fbd382d9ad13]
+link AuditTrailController to ContainerStoreDb--><path codeLine="21" d="M181.05,81.38 C179.87,99.58 178.51,121.95 177.5,142 C175.33,185.23 173.53,235.27 172.48,266.65 " fill="none" id="AuditTrailController-to-ContainerStoreDb" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="172.31,271.9,176.5907,263.0301,172.4671,266.9025,168.5947,262.7788,172.31,271.9" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fbc6f6b55ef9a2c75f6c8bec36350c76]
+link Company to ContainerStoreDb--><path codeLine="22" d="M247.5,195.1 C230.93,217.42 207.02,249.64 190.46,271.95 " fill="none" id="Company-ContainerStoreDb" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="226.52,237.5813,234.2708,232.0698,229.5509,228.5667,226.52,237.5813" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="238.5" y="238.0669">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="234.4688" y="214.6622">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="186.1065" y="260.7572">1</text><!--MD5=[5dfedf06db5d2a6785794d8f62b50b1c]
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class AuditTrailController{
+- company
++ getContainerAuditTrail(containerId, cargoManifestId)
+}
+
+class ContainerStoreDb{
++ getAuditTrailOfContainer(containerId, cargoManifestId)
+}
+
+class Company{
+- getContainerStoreDb()
+}
+
+AuditTrailController ..> Company
+AuditTrailController ..> ContainerStoreDb
+Company "1" - - "1" ContainerStoreDb : uses >
+
+@enduml
+
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class AuditTrailController{
+- company
++ getContainerAuditTrail(containerId, cargoManifestId)
+}
+
+class ContainerStoreDb{
++ getAuditTrailOfContainer(containerId, cargoManifestId)
+}
+
+class Company{
+- getContainerStoreDb()
+}
+
+AuditTrailController ..> Company
+AuditTrailController ..> ContainerStoreDb
+Company "1" - - "1" ContainerStoreDb : uses >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

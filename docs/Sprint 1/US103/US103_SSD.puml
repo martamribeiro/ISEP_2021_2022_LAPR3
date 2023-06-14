@@ -1,0 +1,31 @@
+@startuml
+
+autonumber
+actor TrafficManager as TM
+
+activate TM
+TM -> ":System" : asks to obtain the positional messages temporally organized of a ship
+activate ":System"
+":System" --> TM : requests the ship's MMSI code
+deactivate ":System"
+TM -> ":System" : types the MMSI code
+activate ":System"
+":System" --> TM : requests initial date of the ship's position
+deactivate ":System"
+TM -> ":System" : types initial date
+activate ":System"
+alt the user wants data in a period
+":System" --> TM : requests final date of the ship's position
+deactivate ":System"
+TM -> ":System" : types the final date
+activate ":System"
+end
+":System" --> TM : displays ship's positional messages
+deactivate ":System"
+
+deactivate TM
+
+@enduml
+
+
+@enduml

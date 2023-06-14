@@ -1,0 +1,105 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+class Client {}
+
+class Container {
+   -containerId
+   -payload
+   -tare
+   -gross
+   -isoCode
+}
+
+class CargoManifest {
+    -cargoManifestId
+    -containerId
+}
+
+class Ship {
+    -mmsiCode
+    -shipName
+    -imoCode
+    -vesselTypeId
+    -callSignId
+    -cargo
+    -draft
+    -length
+    -width
+}
+
+class ShipTrip{
+    -route_id
+    -shipMmsi
+    /'has attribute phase?'/
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -country
+    -lat
+    -lon
+}
+
+/'new'/
+class Truck {
+    -truckId
+}
+
+class Route {
+    -route_id
+}
+
+class TruckTrip{
+    -route_id
+    -truck_Id
+    /'has attribute phase?'/
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+class Warehouse {
+    -identification
+    -name
+}
+
+
+Client "1" -- "1..*" Container : ships >
+Container "1..*"-- "2..*" CargoManifest : associated with >
+Ship "1" -- "1..*" Container : transports >
+CargoManifest "1..*" -- "0..1" Port : delivered at >
+CargoManifest "*" -- "0..1" Warehouse : delivered at >
+Ship "1" -- "*" Route : does >
+Route "1" -- "1..*" ShipTrip : contains >
+/'ShipTrip "*" -- "1" Port : to >'/
+/'pode ter --- em baixo'/
+ShipTrip "1" -- "2" CargoManifest : relates to >
+Truck "*" -- "1" Container : transports >
+Truck "1" -- "*" Route : does >
+Route "1" -- "*" TruckTrip : contains >
+TruckTrip "1" -- "2" CargoManifest : relates to >
+/'TruckTrip "*" -- "0..1" Warehouse : to >
+TruckTrip "*" -- "0..1" Port : to >'/
+
+
+
+@enduml

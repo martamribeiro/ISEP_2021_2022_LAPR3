@@ -1,0 +1,155 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+/'class Company{
+
+}'/
+
+class Ship{
+    **MMSI: Integer**
+    ---
+    **FK**_VesselTypeID: INTEGER
+    IMO: varchar(10)
+    CallSignId: varchar(40)
+    ShipName: varchar(40)
+    CurrentCapacity: NUMBER(6,2)
+    Draft: NUMBER(5,2)
+}
+
+class VesselType{
+    **VesselTypeID**: INTEGER
+    --
+    Length: NUMBER(5,2)
+    Width: NUMBER(5,2)
+    maxCapacity: NUMBER(6,2)
+}
+
+class ShipPosition{
+    **BaseDateTime**: DATE
+    **Latitude**: NUMBER(6,4)
+    **Longitude**: NUMBER(7,4)
+    --
+    FK_MMSI: NUMBER(9)
+    Sog: NUMBER(5,2)
+    Cog: NUMBER(5,2)
+    Heading: NUMBER(5,2)
+    Transceiver: varchar(20)
+}
+
+/' ShipPosition - BaseDateTime, MMSI'/
+
+class Container{
+    **ContainerID**: INTEGER
+    --
+    Payload: NUMBER(5,2)
+    Tare: NUMBER(5,2)
+    Gross: NUMBER(5,2)
+    CheckDigit
+    ISOCode: varchar(4)
+}
+
+class Refrigeration {
+    FK_**ContainerID** :INTEGER
+    ---
+    temperatureKept: NUMBER(5,2)
+}
+
+class EnergyPower{
+    **NumEnergyGenerators**:INTEGER
+    FK_**MMSI**: NUMBER(9)
+    ---
+    GeneratorsPower: NUMBER(5,2)
+}
+/'refrigeration state is ambigous'/
+
+/'manifest type(loading, unloading) changes its values'/
+class CargoManifest{
+    **CargoManifestID**:INTEGER
+    ---
+    FK_**port_id**:INTEGER
+    FK_MMSI:NUMBER(9)
+    TypeOfTransport:varchar(10)
+    Status:varchar(10)
+}
+
+class PositionInVehicule{
+    FK_**CargoManifestID**:INTEGER
+    FK_**ContainerID**:INTEGER
+    ---
+    ContainerPositionInVehiculeX:INTEGER
+    ContainerPositionInVehiculeY:INTEGER
+    ContainerPositionInVehiculeZ:INTEGER
+}
+
+class Port {
+    **portId**:INTEGER
+    ---
+    Name:varchar(40)
+    FK_LocationLongitude:NUMBER(6,4)
+    FK_LocationLatitude:NUMBER(7,4)
+}
+
+class Warehouse {
+    **warehouseId**:INTEGER
+    ---
+    Name:varchar(40)
+    FK_LocationLongitude:NUMBER(6,4)
+    FK_LocationLatitude:NUMBER(7,4)
+}
+
+class Country{
+    **Country**:varchar(70)
+    ---
+    Continent:varchar(30)
+}
+
+class PlaceLocation{
+    **locationLatitude**:NUMBER(6,4)
+    **LocationLongitude**:NUMBER(7,4)
+    ---
+    FK_Country:varchar(70)
+}
+
+class ContainerInCargoManifest{
+    FK_** ContainerID **: INTEGER
+    FK_** CargoManifestId **: INTEGER
+}
+
+
+/'class Truck{
+    truckID
+}
+
+class Transports{
+    truckId FK
+    warehouseId FK
+}'/
+
+
+
+
+Ship "1" -- "1..*" Container : transports >
+Container "1" -- "1" PositionInVehicule
+Ship "1" -- "1..*" ShipPosition
+Ship "*" -- "1" VesselType
+Ship "1" -- "1..*" CargoManifest
+CargoManifest "1" -- "1..*" ContainerInCargoManifest
+Container "*" -- "1" ContainerInCargoManifest
+/'Truck "1" -- "1..*" CargoManifest'/
+/'
+Truck "*" -- "1" Container
+'/
+Port "1" -- "1" PlaceLocation
+Warehouse "1" -- "1" PlaceLocation
+PlaceLocation "*" -- "1" Country
+Port "1" -- "*" CargoManifest
+Warehouse "1" -- "*" CargoManifest
+/'Relacoes N para N, falta relacao'/
+/'
+Truck "1..*" -- "1..*" Warehouse
+'/
+Container "*" -- "0..1" Refrigeration
+Ship "1" -- "1" EnergyPower : has >
+EnergyPower "1" -- "0..*" Refrigeration
+
+@enduml

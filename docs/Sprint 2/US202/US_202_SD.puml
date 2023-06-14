@@ -1,0 +1,64 @@
+@startuml
+autonumber
+'hide footbox
+actor "Traffic Manager" as TM
+participant ":ClosestShipUI  " as UI
+participant ":ClosestShipController" as CTRL
+participant ":Company" as CMP
+participant ":PortStore" as STORE
+participant ":Ship" as SHIP
+participant ":ShipStore" as SHSTORE
+participant ":PositionBST" as POS
+participant ":PortTree" as TREE
+participant ":KDTree" as KD
+
+activate TM
+TM -> UI : asks to find the closest port of a ship
+activate UI
+
+UI --> TM : asks for data(callSign, dateTime)
+deactivate UI
+TM -> UI : types requested data
+activate UI
+UI -> CTRL : ship = getShipByCallSign(callSign)
+activate CTRL
+CTRL -> CMP : getShipStore()
+activate CMP
+deactivate CMP
+CTRL -> SHSTORE : getShipByAnyCode(callSign)
+activate SHSTORE
+deactivate SHSTORE
+deactivate CTRL
+
+UI -> CTRL : getShipCoordinates(ship, dateTime)
+activate CTRL
+CTRL -> SHIP : getPositionsBST()
+activate SHIP
+SHIP -> POS : getPosInDateTime(dateTime)
+activate POS
+deactivate POS
+deactivate SHIP
+
+deactivate CTRL
+
+UI -> CTRL : port = findClosestPort(callSign, dateTime)
+activate CTRL
+CTRL -> CMP : getPortStore()
+activate CMP
+deactivate CMP
+CTRL -> STORE : findClosestPort(coordinates)
+activate STORE
+STORE -> TREE : findClosestPort(coordinates)
+activate TREE
+TREE -> KD : findNearestNeighbour(lat, lon)
+activate KD
+deactivate KD
+deactivate TREE
+deactivate STORE
+
+deactivate CTRL
+UI --> TM : shows Port
+deactivate UI
+deactivate TM
+
+@enduml

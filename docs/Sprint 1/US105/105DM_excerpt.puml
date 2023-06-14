@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Ship{
+   mmmsiCode
+   shipName
+   imoCode
+   numEnergyGenerators
+   generatorsPower
+   callSignId
+   draft
+    }
+class VesselType{
+    vesselTypeId
+    length
+    width
+    maxCapacity
+}
+
+class ShipPosition{
+    baseDateTime
+    latitude
+    longitude
+    sog
+    cog
+    heading
+    position
+    transceiver
+}
+
+
+Ship "1" -- "*" ShipPosition : Sends >
+Ship "1" -- "1" VesselType : is of >
+
+
+
+
+@enduml

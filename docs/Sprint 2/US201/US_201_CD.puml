@@ -1,0 +1,89 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class ImportPortsController {
+- company
+- port
+- savePort()
+- importPortFromFile(portsFileDTO)
+}
+
+class Company {
+- designation
+- portTree
+- portStore
+- getPortTree()
+- getPortStore()
+}
+
+class Port {
+- continent
+- country
+- portCode
+- portName
+- latitude
+- longitude
+- Port(continent, country, portCode, portName, latitude, longitude)
+- checkContinent(continent)
+- checkCountry(country)
+- checkPortCode(portCode)
+- checkPortName(portName)
+- checkLatitude(latitude)
+- checkLongitude(longitude)
+- getPortCode()
+- equals(otherObject)
+}
+
+class PortStore {
+- createPort(portsFileDTO)
+- savePort(port)
+- getPortTree()
+}
+
+class PortTree {
+- getPortByPortCode(portCode)
+}
+
+class PortsFileDTO{
+- continent
+- country
+- portCode
+- portName
+- latitude
+- longitude
+- PortsFileDTO(continent, country, portCode, portName, latitude, longitude)
+- getContinent()
+- getCountry()
+- getPortCode()
+- getPortName()
+- getLatitude()
+- getLongitude()
+}
+
+class PortsFileUtils{
+- dataLabels
+- getPortsDataToDTO(filePath)
+- attributesToDTO(portData)
+}
+
+class 2DTree{
+}
+
+Company "1" -- "1" PortStore : uses >
+PortStore "1" -- "1" PortTree : uses >
+PortTree "1" -- "1..*" Port : owns >
+ImportPortsController ..> Company
+ImportPortsController ..> PortTree
+ImportPortsController ..> Port
+ImportPortsController ..> PortStore
+2DTree <|- PortTree
+PortsFileUtils ..> PortsFileDTO
+ImportPortsController ..> PortsFileDTO
+
+
+
+@enduml

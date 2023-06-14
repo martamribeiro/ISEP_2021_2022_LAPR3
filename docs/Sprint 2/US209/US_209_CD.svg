@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="531px" preserveAspectRatio="none" style="width:890px;height:531px;background:#FFFFFF;" version="1.1" viewBox="0 0 890 531" width="890px" zoomAndPan="magnify"><defs><filter height="300%" id="f180vr96kmybyf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[387c7886ca19d97be437717f0ee466a0]
+class ShipOccupancyRatesController--><rect codeLine="7" fill="#FEFECE" filter="url(#f180vr96kmybyf)" height="144.8516" id="ShipOccupancyRatesController" style="stroke:#A80036;stroke-width:1.5;" width="519" x="42" y="7"/><ellipse cx="211.25" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M213.25,19.5 Q213.4531,19 213.6875,18.75 Q213.9219,18.5 214.1875,18.5 Q214.6563,18.5 214.9531,18.7813 Q215.25,19.0625 215.25,19.7188 L215.25,21.2813 Q215.25,21.9375 214.9688,22.2188 Q214.6875,22.5 214.25,22.5 Q213.8594,22.5 213.6094,22.3281 Q213.3594,22.1563 213.25,21.7031 Q213.2031,21.3906 213.0313,21.2188 Q212.7188,20.8906 212.1563,20.7031 Q211.5938,20.5 211.0313,20.5 Q210.3281,20.5 209.7344,20.7813 Q209.1563,21.0625 208.7031,21.6875 Q208.25,22.3125 208.25,23.1719 L208.25,24.0938 Q208.25,25.125 209.0938,25.8125 Q209.9375,26.5 211.4375,26.5 Q212.3281,26.5 212.9531,26.2969 Q213.3125,26.1875 213.7188,25.8281 Q213.9844,25.625 214.125,25.5625 Q214.2656,25.5 214.4375,25.5 Q214.7656,25.5 215,25.7656 Q215.25,26.0156 215.25,26.375 Q215.25,26.7188 214.9063,27.125 Q214.4063,27.7188 213.6094,28.0469 Q212.5625,28.5 211.2813,28.5 Q209.7813,28.5 208.5781,27.9063 Q207.6094,27.4375 206.9219,26.4219 Q206.25,25.4063 206.25,24.2031 L206.25,23.1094 Q206.25,21.8594 206.8438,20.7656 Q207.4531,19.6719 208.5,19.0938 Q209.5625,18.5 210.75,18.5 Q211.4688,18.5 212.0938,18.75 Q212.7188,19 213.25,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="172" x="231.75" y="27.9102">ShipOccupancyRatesController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="43" x2="560" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="48" y="54.4189">-company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="43" x2="560" y1="60.8359" y2="60.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="507" x="48" y="76.2549">-calculateOccupancyRate(maxCapacity, initialNumContainers, alreadyAddedRemovedContainersTripNum)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="296" x="48" y="90.0908">-getShipOccupancyRateByCargoManifestID(cargoManifestID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="236" x="48" y="103.9268">-getCargoManifestIDByMmsiAndDate(mmsi, date)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="48" y="117.7627">-checkIfShipExists(mmsi)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="256" x="48" y="131.5986">-getShipOccupancyRateByMmsiAndDate(mmsi, date)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="212" x="48" y="145.4346">-getMmsiByCargoManifest(cargoManifestID)</text><!--MD5=[80429a8c3a07863d2b9a5a642579b4cd]
+class ShipStoreDB--><rect codeLine="17" fill="#FEFECE" filter="url(#f180vr96kmybyf)" height="67.6719" id="ShipStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="167" x="7" y="435.5"/><ellipse cx="50.8" cy="451.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M52.8,448 Q53.0031,447.5 53.2375,447.25 Q53.4719,447 53.7375,447 Q54.2063,447 54.5031,447.2813 Q54.8,447.5625 54.8,448.2188 L54.8,449.7813 Q54.8,450.4375 54.5188,450.7188 Q54.2375,451 53.8,451 Q53.4094,451 53.1594,450.8281 Q52.9094,450.6563 52.8,450.2031 Q52.7531,449.8906 52.5813,449.7188 Q52.2688,449.3906 51.7063,449.2031 Q51.1438,449 50.5813,449 Q49.8781,449 49.2844,449.2813 Q48.7063,449.5625 48.2531,450.1875 Q47.8,450.8125 47.8,451.6719 L47.8,452.5938 Q47.8,453.625 48.6438,454.3125 Q49.4875,455 50.9875,455 Q51.8781,455 52.5031,454.7969 Q52.8625,454.6875 53.2688,454.3281 Q53.5344,454.125 53.675,454.0625 Q53.8156,454 53.9875,454 Q54.3156,454 54.55,454.2656 Q54.8,454.5156 54.8,454.875 Q54.8,455.2188 54.4563,455.625 Q53.9563,456.2188 53.1594,456.5469 Q52.1125,457 50.8313,457 Q49.3313,457 48.1281,456.4063 Q47.1594,455.9375 46.4719,454.9219 Q45.8,453.9063 45.8,452.7031 L45.8,451.6094 Q45.8,450.3594 46.3938,449.2656 Q47.0031,448.1719 48.05,447.5938 Q49.1125,447 50.3,447 Q51.0188,447 51.6438,447.25 Q52.2688,447.5 52.8,448 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="71.2" y="456.4102">ShipStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="173" y1="467.5" y2="467.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="121" x="13" y="482.9189">-checkIfShipExists(mmsi)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="155" x="13" y="496.7549">-getShipCargo(cargoManifestID)</text><!--MD5=[8d7ca94d2ddad896fa1b7a151fdd57c4]
+class ShipTripStoreDB--><rect codeLine="22" fill="#FEFECE" filter="url(#f180vr96kmybyf)" height="95.3438" id="ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="356" x="520.5" y="422"/><ellipse cx="648.25" cy="438" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M650.25,434.5 Q650.4531,434 650.6875,433.75 Q650.9219,433.5 651.1875,433.5 Q651.6563,433.5 651.9531,433.7813 Q652.25,434.0625 652.25,434.7188 L652.25,436.2813 Q652.25,436.9375 651.9688,437.2188 Q651.6875,437.5 651.25,437.5 Q650.8594,437.5 650.6094,437.3281 Q650.3594,437.1563 650.25,436.7031 Q650.2031,436.3906 650.0313,436.2188 Q649.7188,435.8906 649.1563,435.7031 Q648.5938,435.5 648.0313,435.5 Q647.3281,435.5 646.7344,435.7813 Q646.1563,436.0625 645.7031,436.6875 Q645.25,437.3125 645.25,438.1719 L645.25,439.0938 Q645.25,440.125 646.0938,440.8125 Q646.9375,441.5 648.4375,441.5 Q649.3281,441.5 649.9531,441.2969 Q650.3125,441.1875 650.7188,440.8281 Q650.9844,440.625 651.125,440.5625 Q651.2656,440.5 651.4375,440.5 Q651.7656,440.5 652,440.7656 Q652.25,441.0156 652.25,441.375 Q652.25,441.7188 651.9063,442.125 Q651.4063,442.7188 650.6094,443.0469 Q649.5625,443.5 648.2813,443.5 Q646.7813,443.5 645.5781,442.9063 Q644.6094,442.4375 643.9219,441.4219 Q643.25,440.4063 643.25,439.2031 L643.25,438.1094 Q643.25,436.8594 643.8438,435.7656 Q644.4531,434.6719 645.5,434.0938 Q646.5625,433.5 647.75,433.5 Q648.4688,433.5 649.0938,433.75 Q649.7188,434 650.25,434.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="668.75" y="442.9102">ShipTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="521.5" x2="875.5" y1="454" y2="454"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="221" x="526.5" y="469.4189">-getMmsiByCargoManifestID(cargoManifestID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="310" x="526.5" y="483.2549">-getAddedRemovedContainersShipTripMoment(cargoManifestID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="253" x="526.5" y="497.0908">-getEstDepartureDateFromShipTrip(cargoManifestID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="344" x="526.5" y="510.9268">-getInitialNumContainersPerShipTrip(cargoManifestID,estDepartureDate)</text><!--MD5=[9287bc2a51302962a18a68bfc2848f3a]
+class CargoManifestStoreDB--><rect codeLine="29" fill="#FEFECE" filter="url(#f180vr96kmybyf)" height="81.5078" id="CargoManifestStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="276" x="209.5" y="428.5"/><ellipse cx="280.25" cy="444.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M282.25,441 Q282.4531,440.5 282.6875,440.25 Q282.9219,440 283.1875,440 Q283.6563,440 283.9531,440.2813 Q284.25,440.5625 284.25,441.2188 L284.25,442.7813 Q284.25,443.4375 283.9688,443.7188 Q283.6875,444 283.25,444 Q282.8594,444 282.6094,443.8281 Q282.3594,443.6563 282.25,443.2031 Q282.2031,442.8906 282.0313,442.7188 Q281.7188,442.3906 281.1563,442.2031 Q280.5938,442 280.0313,442 Q279.3281,442 278.7344,442.2813 Q278.1563,442.5625 277.7031,443.1875 Q277.25,443.8125 277.25,444.6719 L277.25,445.5938 Q277.25,446.625 278.0938,447.3125 Q278.9375,448 280.4375,448 Q281.3281,448 281.9531,447.7969 Q282.3125,447.6875 282.7188,447.3281 Q282.9844,447.125 283.125,447.0625 Q283.2656,447 283.4375,447 Q283.7656,447 284,447.2656 Q284.25,447.5156 284.25,447.875 Q284.25,448.2188 283.9063,448.625 Q283.4063,449.2188 282.6094,449.5469 Q281.5625,450 280.2813,450 Q278.7813,450 277.5781,449.4063 Q276.6094,448.9375 275.9219,447.9219 Q275.25,446.9063 275.25,445.7031 L275.25,444.6094 Q275.25,443.3594 275.8438,442.2656 Q276.4531,441.1719 277.5,440.5938 Q278.5625,440 279.75,440 Q280.4688,440 281.0938,440.25 Q281.7188,440.5 282.25,441 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="126" x="300.75" y="449.4102">CargoManifestStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="210.5" x2="484.5" y1="460.5" y2="460.5"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="224" x="215.5" y="475.9189">-checkIfCargoManifestExists(cargoManifestID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="264" x="215.5" y="489.7549">-getNumContainersPerCargoManifest(cargoManifestID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="227" x="215.5" y="503.5908">-getCargoManifestByMmsiAndDate(mmsi, date)</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="35" fill="#FEFECE" filter="url(#f180vr96kmybyf)" height="131.0156" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="149" x="292" y="213"/><ellipse cx="335.8" cy="229" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M337.8,225.5 Q338.0031,225 338.2375,224.75 Q338.4719,224.5 338.7375,224.5 Q339.2063,224.5 339.5031,224.7813 Q339.8,225.0625 339.8,225.7188 L339.8,227.2813 Q339.8,227.9375 339.5188,228.2188 Q339.2375,228.5 338.8,228.5 Q338.4094,228.5 338.1594,228.3281 Q337.9094,228.1563 337.8,227.7031 Q337.7531,227.3906 337.5813,227.2188 Q337.2688,226.8906 336.7063,226.7031 Q336.1438,226.5 335.5813,226.5 Q334.8781,226.5 334.2844,226.7813 Q333.7063,227.0625 333.2531,227.6875 Q332.8,228.3125 332.8,229.1719 L332.8,230.0938 Q332.8,231.125 333.6438,231.8125 Q334.4875,232.5 335.9875,232.5 Q336.8781,232.5 337.5031,232.2969 Q337.8625,232.1875 338.2688,231.8281 Q338.5344,231.625 338.675,231.5625 Q338.8156,231.5 338.9875,231.5 Q339.3156,231.5 339.55,231.7656 Q339.8,232.0156 339.8,232.375 Q339.8,232.7188 339.4563,233.125 Q338.9563,233.7188 338.1594,234.0469 Q337.1125,234.5 335.8313,234.5 Q334.3313,234.5 333.1281,233.9063 Q332.1594,233.4375 331.4719,232.4219 Q330.8,231.4063 330.8,230.2031 L330.8,229.1094 Q330.8,227.8594 331.3938,226.7656 Q332.0031,225.6719 333.05,225.0938 Q334.1125,224.5 335.3,224.5 Q336.0188,224.5 336.6438,224.75 Q337.2688,225 337.8,225.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="356.2" y="233.9102">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="293" x2="440" y1="245" y2="245"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="64" x="298" y="260.4189">-shipStoreDB</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="82" x="298" y="274.2549">-shipTripStoreDB</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="298" y="288.0908">-cargoManifestStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="293" x2="440" y1="294.5078" y2="294.5078"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="298" y="309.9268">-getShipTripStoreDB()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="298" y="323.7627">-getShipStoreDB()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="298" y="337.5986">-getCargoManifestStoreDB()</text><!--MD5=[0b4cd8892e13de84c891c5e79895f9c9]
+link ShipOccupancyRatesController to Company--><path codeLine="44" d="M325.15,152.18 C331.12,170.28 337.53,189.69 343.47,207.7 " fill="none" id="ShipOccupancyRatesController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="345.13,212.73,346.1318,202.9322,343.5746,207.9781,338.5287,205.4209,345.13,212.73" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0ac4060ffa3778047ef49ab0f91439ff]
+link ShipOccupancyRatesController to ShipStoreDB--><path codeLine="45" d="M261.14,152.24 C250.16,171.9 238.32,193.24 227.5,213 C185.36,289.99 137.07,380.64 110.55,430.62 " fill="none" id="ShipOccupancyRatesController-to-ShipStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="108.05,435.33,115.8025,429.2555,110.394,430.9135,108.7361,425.5051,108.05,435.33" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ab8306d6de959d2844d4ec47a08091b6]
+link ShipOccupancyRatesController to ShipTripStoreDB--><path codeLine="46" d="M389.72,152.13 C412.55,171.42 436.8,192.61 458.5,213 C530.66,280.81 544.95,301.6 612.5,374 C625.64,388.08 639.76,403.49 652.69,417.69 " fill="none" id="ShipOccupancyRatesController-to-ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="656.3,421.67,653.2147,412.3169,652.9402,417.9671,647.29,417.6926,656.3,421.67" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[11cb4548593705074e1dfef8558619a0]
+link ShipOccupancyRatesController to CargoManifestStoreDB--><path codeLine="47" d="M267.85,152.25 C242.28,217.68 217.14,315.53 253.5,392 C259.37,404.35 268.33,415.37 278.42,424.92 " fill="none" id="ShipOccupancyRatesController-to-CargoManifestStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="282.18,428.38,278.239,419.354,278.4907,425.0053,272.8394,425.2569,282.18,428.38" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[507cfa299ee4dba6e3c71a3753442b74]
+link Company to ShipStoreDB--><path codeLine="48" d="M291.81,330.65 C243.12,363.99 181,406.53 138.73,435.47 " fill="none" id="Company-ShipStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="229.3745,386.0007,238.4981,383.3153,235.1772,378.4655,229.3745,386.0007" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="242.5" y="388.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="277.1132" y="332.5077">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="140.5362" y="424.7574">1</text><!--MD5=[8a472e17fa1b8e6b82718bab5653081a]
+link Company to ShipTripStoreDB--><path codeLine="49" d="M441.01,321.92 C493.2,351.63 562.94,391.33 616.68,421.92 " fill="none" id="Company-ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="570.8453,385.6493,564.4385,378.6205,561.5307,383.7287,570.8453,385.6493" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="575.5" y="388.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="449.0548" y="323.0851">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="597.1486" y="411.2524">1</text><!--MD5=[4ab6be66d0b2d15e041dac1ecef1ebf3]
+link Company to CargoManifestStoreDB--><path codeLine="50" d="M360.01,344.01 C357.2,372.03 353.99,403.97 351.52,428.48 " fill="none" id="Company-CargoManifestStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="361,388.1507,364.8287,379.4449,358.9803,378.8571,361,388.1507" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="370.5" y="388.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="351.9173" y="365.5636">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="344.6094" y="417.6223">1</text><!--MD5=[54af39fccff4dd27938aeef0c2972861]
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class ShipOccupancyRatesController{
+- company
+- calculateOccupancyRate(maxCapacity, initialNumContainers, alreadyAddedRemovedContainersTripNum)
+- getShipOccupancyRateByCargoManifestID(cargoManifestID)
+- getCargoManifestIDByMmsiAndDate(mmsi, date)
+- checkIfShipExists(mmsi)
+- getShipOccupancyRateByMmsiAndDate(mmsi, date)
+- getMmsiByCargoManifest(cargoManifestID)
+}
+
+class ShipStoreDB{
+- checkIfShipExists(mmsi)
+- getShipCargo(cargoManifestID)
+}
+
+class ShipTripStoreDB{
+- getMmsiByCargoManifestID(cargoManifestID)
+- getAddedRemovedContainersShipTripMoment(cargoManifestID)
+- getEstDepartureDateFromShipTrip(cargoManifestID)
+- getInitialNumContainersPerShipTrip(cargoManifestID,estDepartureDate)
+}
+
+class CargoManifestStoreDB{
+- checkIfCargoManifestExists(cargoManifestID)
+- getNumContainersPerCargoManifest(cargoManifestID)
+- getCargoManifestByMmsiAndDate(mmsi, date)
+}
+
+class Company{
+- shipStoreDB
+- shipTripStoreDB
+- cargoManifestStoreDB
+- getShipTripStoreDB()
+- getShipStoreDB()
+- getCargoManifestStoreDB()
+}
+
+ShipOccupancyRatesController ..> Company
+ShipOccupancyRatesController ..> ShipStoreDB
+ShipOccupancyRatesController ..> ShipTripStoreDB
+ShipOccupancyRatesController ..> CargoManifestStoreDB
+Company "1" - - "1" ShipStoreDB : uses >
+Company "1" - - "1" ShipTripStoreDB : uses >
+Company "1" - - "1" CargoManifestStoreDB : uses >
+
+@enduml
+
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class ShipOccupancyRatesController{
+- company
+- calculateOccupancyRate(maxCapacity, initialNumContainers, alreadyAddedRemovedContainersTripNum)
+- getShipOccupancyRateByCargoManifestID(cargoManifestID)
+- getCargoManifestIDByMmsiAndDate(mmsi, date)
+- checkIfShipExists(mmsi)
+- getShipOccupancyRateByMmsiAndDate(mmsi, date)
+- getMmsiByCargoManifest(cargoManifestID)
+}
+
+class ShipStoreDB{
+- checkIfShipExists(mmsi)
+- getShipCargo(cargoManifestID)
+}
+
+class ShipTripStoreDB{
+- getMmsiByCargoManifestID(cargoManifestID)
+- getAddedRemovedContainersShipTripMoment(cargoManifestID)
+- getEstDepartureDateFromShipTrip(cargoManifestID)
+- getInitialNumContainersPerShipTrip(cargoManifestID,estDepartureDate)
+}
+
+class CargoManifestStoreDB{
+- checkIfCargoManifestExists(cargoManifestID)
+- getNumContainersPerCargoManifest(cargoManifestID)
+- getCargoManifestByMmsiAndDate(mmsi, date)
+}
+
+class Company{
+- shipStoreDB
+- shipTripStoreDB
+- cargoManifestStoreDB
+- getShipTripStoreDB()
+- getShipStoreDB()
+- getCargoManifestStoreDB()
+}
+
+ShipOccupancyRatesController ..> Company
+ShipOccupancyRatesController ..> ShipStoreDB
+ShipOccupancyRatesController ..> ShipTripStoreDB
+ShipOccupancyRatesController ..> CargoManifestStoreDB
+Company "1" - - "1" ShipStoreDB : uses >
+Company "1" - - "1" ShipTripStoreDB : uses >
+Company "1" - - "1" CargoManifestStoreDB : uses >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

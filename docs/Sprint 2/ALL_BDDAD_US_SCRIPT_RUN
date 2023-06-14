@@ -1,0 +1,649 @@
+--GET_SHIPTRIP_ID
+create or replace function get_shiptrip_id(f_container_id container.container_id%type, f_shipment_id shipment.shipment_id%type) return integer
+is
+    f_shiptrip_id shipment.shiptrip_id%type;
+begin
+SELECT shiptrip_id into f_shiptrip_id
+FROM shipment
+WHERE container_id = f_container_id AND shipment_id = f_shipment_id;
+return (f_shiptrip_id);
+
+exception
+    when no_data_found then
+        return -1;
+end;
+/
+
+--GET_LOCATION
+create or replace function get_location(f_shiptrip_id shiptrip.shiptrip_id%type) return varchar
+is
+    f_arrival_date date;
+    f_departure_date date;
+    f_arrival_location  integer;
+    f_departure_location integer;
+    f_mmsi integer;
+    f_locationName varchar(100);
+begin
+select real_departure_date, real_arrival_date, arrival_location, departure_location, mmsi
+into f_departure_date, f_arrival_date, f_arrival_location, f_departure_location, f_mmsi
+from shiptrip
+where shiptrip_id = f_shiptrip_id;
+
+if f_arrival_date IS NOT NULL then  --the container is in the arrival port
+select name into f_locationName from port where port_id=f_arrival_location;
+return ('PORT, '||(f_locationName));
+elsif f_departure_date IS NULL then --the container is in the departure port
+select name into f_locationName from port where port_id=f_departure_location;
+return ('PORT, '||(f_locationName));
+else            --the container is in the ship
+select shipName into f_locationName from ship where mmsi=f_mmsi;
+return ('SHIP, '||(f_locationName));
+end if;
+
+exception
+    when no_data_found then
+        return ('There is no ship trip for that container and shipment id. Please verify if you inserted your data correctly.');
+end;
+
+/
+--get port id
+create or replace FUNCTION get_port(mmsi ship.mmsi%type) return integer
+AS
+    next_port Port.port_id%type;
+
+    unload_id ShipTrip.unloading_cargo_id%type;
+	location_id ShipTrip.arrival_location%type;
+	arrival_date ShipTrip.real_arrival_date%type;
+    departure_date ShipTrip.real_departure_date%type;
+
+CURSOR ship_trips(trip ShipTrip.MMSI%type) IS
+SELECT unloading_cargo_id, arrival_location, real_arrival_date, real_departure_date
+FROM ShipTrip
+WHERE mmsi=trip;
+
+BEGIN
+OPEN ship_trips(mmsi);
+LOOP
+FETCH ship_trips INTO unload_id, location_id, arrival_date, departure_date;
+		EXIT WHEN ship_trips%notfound;
+
+		IF arrival_date IS null AND departure_date IS NOT null THEN
+            next_port := location_id;
+END IF;
+END LOOP;
+CLOSE ship_trips;
+return next_port;
+exception
+    when no_data_found then
+        return null;
+
+END;
+/
+--get list of offloaded containers
+create or replace function offcontainers_id(mmsi ship.mmsi%type) return SYS_REFCURSOR
+is
+    container_cursor SYS_REFCURSOR;
+
+
+    unload_id ShipTrip.unloading_cargo_id%type;
+	location_id ShipTrip.arrival_location%type;
+	arrival_date ShipTrip.real_arrival_date%type;
+    departure_date ShipTrip.real_departure_date%type;
+CURSOR ship_trips(trip ShipTrip.MMSI%type) IS
+SELECT unloading_cargo_id, arrival_location, real_arrival_date, real_departure_date
+FROM ShipTrip
+WHERE mmsi=trip;
+
+
+begin
+OPEN ship_trips(mmsi);
+LOOP
+FETCH ship_trips INTO unload_id, location_id, arrival_date, departure_date;
+		EXIT WHEN ship_trips%notfound;
+
+		IF arrival_date IS null AND departure_date IS NOT null THEN
+            open container_cursor for
+select container.container_id, container.isocode, container.payload, positioninvehicule.containerpositionx, positioninvehicule.containerpositiony, positioninvehicule.containerpositionz
+FROM container
+         left join positioninvehicule on container.container_id = positioninvehicule.container_id
+where container.container_id IN (SELECT containerincargomanifest.container_id from containerincargomanifest where containerincargomanifest.cargomanifest_id = unload_id);
+END IF;
+END LOOP;
+CLOSE ship_trips;
+return (container_cursor);
+exception
+    when no_data_found then
+        return null;
+end;
+/
+create or replace function load_containers_id(mmsi ship.mmsi%type) return SYS_REFCURSOR
+is
+    container_cursor SYS_REFCURSOR;
+
+
+    load_id ShipTrip.loading_cargo_id%type;
+	location_id ShipTrip.arrival_location%type;
+	arrival_date ShipTrip.real_arrival_date%type;
+    departure_date ShipTrip.real_departure_date%type;
+CURSOR ship_trips(trip ShipTrip.MMSI%type) IS
+SELECT loading_cargo_id, arrival_location, real_arrival_date, real_departure_date
+FROM ShipTrip
+WHERE mmsi=trip;
+
+
+begin
+OPEN ship_trips(mmsi);
+LOOP
+FETCH ship_trips INTO load_id, location_id, arrival_date, departure_date;
+		EXIT WHEN ship_trips%notfound;
+
+		IF arrival_date IS null AND departure_date IS NOT null THEN
+            open container_cursor for
+select container.container_id, container.isocode, container.payload, positioninvehicule.containerpositionx, positioninvehicule.containerpositiony, positioninvehicule.containerpositionz
+FROM container
+         left join positioninvehicule on container.container_id = positioninvehicule.container_id
+where container.container_id IN (SELECT containerincargomanifest.container_id from containerincargomanifest where containerincargomanifest.cargomanifest_id = load_id);
+END IF;
+END LOOP;
+CLOSE ship_trips;
+return (container_cursor);
+exception
+    when no_data_found then
+        return null;
+end;
+/
+
+--US207--
+
+CREATE OR REPLACE PROCEDURE count_CargoManifests_Avg_Containers (givenYear in Varchar, mmsiCode in Varchar, numCargoManifests out Integer, mediaCont out Integer)
+IS
+    shipscode Ship.mmsi%type;
+    loadcargoscode cargomanifest.cargomanifest_id%type;
+    unloadcargoscode cargomanifest.cargomanifest_id%type;
+    numContainersInCm Integer;
+    somaTotalContainer Integer;
+    contadorCm Integer;
+
+Cursor cargosLoad IS
+Select loading_cargo_id
+from shiptrip
+where mmsi=mmsiCode AND extract(year from real_departure_date)=givenYear;
+
+Cursor cargosUnload IS
+Select unloading_cargo_id
+from shiptrip
+where mmsi=mmsiCode AND extract(year from real_arrival_date)=givenYear;
+BEGIN
+    contadorCm :=0;
+    somaTotalContainer:=0;
+
+open cargosLoad;
+LOOP
+fetch cargosLoad INTO loadcargoscode;
+        Exit When cargosLoad%notfound;
+        contadorCm := contadorCm + 1;
+select count(*) into numContainersInCm from containerincargomanifest where cargomanifest_id=loadcargoscode;
+somaTotalContainer := somaTotalContainer + numContainersInCm;
+END LOOP;
+
+open cargosUnload;
+LOOP
+fetch cargosUnload INTO unloadcargoscode;
+        Exit When cargosUnload%notfound;
+        contadorCm := contadorCm + 1;
+select count(*) into numContainersInCm from containerincargomanifest where cargomanifest_id=unloadcargoscode;
+somaTotalContainer := somaTotalContainer + numContainersInCm;
+END LOOP;
+
+    numCargoManifests := contadorCm;
+    mediaCont := (somaTotalContainer / contadorCm);
+    dbms_output.put_line('final number of CM ' || numCargoManifests);
+    dbms_output.put_line('mean of containers ' || mediaCont);
+END;
+/
+
+--CHECK IF CARGO MANIFEST EXISTS
+create or replace function check_if_cargoManifest_exists(f_cargoManifest_id cargomanifest.cargomanifest_id%type) return integer
+is
+f_result integer;
+begin
+select count(*) into f_result
+from cargomanifest
+where cargomanifest_id = f_cargomanifest_id;
+return (f_result);
+exception
+when no_data_found then
+return 0;
+end;
+/
+
+--GET ADDED AND REMOVED CONTAINERS IN A SHIP TRIP FOR A MOMENT
+create or replace function get_added_removed_containers_ship_trip_moment(f_cargoManifest_id cargoManifest.cargoManifest_id%type) return integer --est date como parametro
+is
+f_shiptrip_id shipTrip.shiptrip_id%type;
+f_loading_cargo_id shipTrip.loading_cargo_id%type;
+f_unloading_cargo_id shipTrip.unloading_cargo_id%type;
+f_num_added_removed_containers_ship_trip_moment integer:=0;
+begin
+select shiptrip_id into f_shiptrip_id
+from shipTrip
+where loading_cargo_id=f_cargoManifest_id or unloading_cargo_id=f_cargoManifest_id;
+select loading_cargo_id, unloading_cargo_id into f_loading_cargo_id, f_unloading_cargo_id
+from shipTrip
+where shiptrip_id = f_shiptrip_id;
+f_num_added_removed_containers_ship_trip_moment := f_num_added_removed_containers_ship_trip_moment + get_num_containers_per_cargoManifest(f_loading_cargo_id);
+if f_unloading_cargo_id=f_cargoManifest_id then
+f_num_added_removed_containers_ship_trip_moment := f_num_added_removed_containers_ship_trip_moment + get_num_containers_per_cargoManifest(f_unloading_cargo_id);
+end if;
+return f_num_added_removed_containers_ship_trip_moment;
+exception
+when no_data_found then
+return 0;
+end;
+/
+
+--GET EST DEPARTURE DATE FROM SHIP TRIP
+create or replace function get_est_departure_date_from_ship_trip(f_cargoManifest_id cargoManifest.cargoManifest_id%type) return shipTrip.est_departure_date%type
+is
+f_shiptrip_id shipTrip.shiptrip_id%type;
+f_est_departure_date shipTrip.est_departure_date%type;
+begin
+select shiptrip_id into f_shiptrip_id
+from shipTrip
+where loading_cargo_id = f_cargoManifest_id OR unloading_cargo_id = f_cargoManifest_id;
+select est_departure_date into f_est_departure_date
+from shipTrip
+where shiptrip_id = f_shiptrip_id;
+return f_est_departure_date;
+end;
+/
+
+--GET INITIAL NUM CONTAINERS PER SHIP TRIP
+create or replace function get_initial_num_containers_per_ship_trip(f_cargoManifest_id cargoManifest.cargoManifest_id%type,
+f_est_departure_date shipTrip.est_departure_date%type, f_mmsi ship.mmsi%type) return integer
+is
+f_comp_loading_cargo_id cargoManifest.cargoManifest_id%type;
+f_comp_unloading_cargo_id cargoManifest.cargoManifest_id%type;
+f_initial_num_containers_per_ship_trip integer:=0;
+cursor neededShipTrips
+is
+(select loading_cargo_id, unloading_cargo_id
+from shipTrip
+where mmsi=f_mmsi AND est_departure_date < f_est_departure_date);
+begin
+open neededShipTrips;
+loop
+fetch neededShipTrips into f_comp_loading_cargo_id, f_comp_unloading_cargo_id;
+exit when neededShipTrips%notfound;
+f_initial_num_containers_per_ship_trip := f_initial_num_containers_per_ship_trip + get_num_containers_per_cargoManifest(f_comp_loading_cargo_id) - get_num_containers_per_cargoManifest(f_comp_unloading_cargo_id);
+end loop;
+return f_initial_num_containers_per_ship_trip;
+exception
+when no_data_found then
+return 0;
+end;
+/
+
+--GET SHIP MAX CAPACITY
+create or replace function get_max_capacity(f_cargoManifest_id cargoManifest.cargoManifest_id%type) return integer
+is
+f_mmsi shipTrip.mmsi%type;
+f_max_capacity integer;
+begin
+select mmsi into f_mmsi
+from shipTrip
+where loading_cargo_id = f_cargoManifest_id OR unloading_cargo_id = f_cargoManifest_id;
+select to_number(currentCapacity) into f_max_capacity
+from ship
+where mmsi = f_mmsi;
+return (f_max_capacity);
+exception
+when no_data_found then
+return 0;
+end;
+/
+
+--GET MMSI BY CARGO MANIFEST ID
+create or replace function get_mmsi_by_cargo_manifest_id(f_cargoManifest_id cargoManifest.cargoManifest_id%type) return integer --est date como parametro
+is
+f_shiptrip_id shipTrip.shiptrip_id%type;
+f_mmsi ship.mmsi%type;
+begin
+select shiptrip_id into f_shiptrip_id
+from shipTrip
+where loading_cargo_id=f_cargoManifest_id or unloading_cargo_id=f_cargoManifest_id;
+select mmsi into f_mmsi
+from shipTrip
+where shiptrip_id = f_shiptrip_id;
+return f_mmsi;
+exception
+when no_data_found then
+return -1;
+end;
+/
+
+--GET NUM CONTAINERS PER CARGO MANIFEST
+create or replace function get_num_containers_per_cargoManifest(f_cargoManifest_id cargoManifest.cargoManifest_id%type) return integer
+is
+f_num_containers_per_cargoManifest integer;
+begin
+select count(*) into f_num_containers_per_cargoManifest
+from containerInCargoManifest
+where cargoManifest_id = f_cargoManifest_id;
+return (f_num_containers_per_cargoManifest);
+exception
+when no_data_found then
+return 0;
+end;
+/
+
+--CHECK IF CARGO MANIFEST EXISTS
+create or replace function check_if_cargoManifest_exists(f_cargoManifest_id cargomanifest.cargomanifest_id%type) return integer
+is
+f_result integer;
+begin
+select count(*) into f_result
+from cargomanifest
+where cargomanifest_id = f_cargomanifest_id;
+return (f_result);
+exception
+when no_data_found then
+return 0;
+end;
+/
+
+create or replace function check_if_ship_exists(f_mmsi ship.mmsi%type) return integer
+is
+f_result integer;
+begin
+select count(*) into f_result
+from ship
+where mmsi = f_mmsi;
+return (f_result);
+exception
+when no_data_found then
+return 0;
+end;
+
+/
+
+--GET CARGO MANIFEST BY MMSI AND DATE
+create or replace function get_cargo_manifest_by_mmsi_and_date(f_mmsi shipTrip.mmsi%type, f_date shipTrip.est_departure_date%type) return cargoManifest.cargoManifest_id%type
+is
+f_shiptrip_id shipTrip.shiptrip_id%type;
+f_unloading_cargo_id cargoManifest.cargoManifest_id%type;
+f_est_departure_date shipTrip.est_departure_date%type;
+f_est_arrival_date shipTrip.est_arrival_date%type;
+f_cargoManifest_id cargoManifest.cargoManifest_id%type;
+begin
+select shiptrip_id, unloading_cargo_id, est_departure_date, est_arrival_date, loading_cargo_id
+into f_shiptrip_id, f_unloading_cargo_id, f_est_departure_date, f_est_arrival_date, f_cargoManifest_id
+from
+    (select * from
+        (select * from shipTrip
+         where mmsi=f_mmsi AND est_departure_date<=f_date)
+     order by est_departure_date desc)
+where rownum=1;
+if f_est_arrival_date <= f_date then
+select unloading_cargo_id into f_cargoManifest_id
+from shipTrip
+where shiptrip_id=f_shiptrip_id;
+end if;
+return (f_cargoManifest_id);
+exception
+when no_data_found then
+return -1;
+end;
+/
+
+create or replace PROCEDURE get_validated_ship_location(daydate in date, ship in Ship.mmsi%type, locations out varchar)
+IS
+    locationCode port.port_id%type;
+    shiptripid Shiptrip.shiptrip_id%type;
+
+BEGIN
+        -- since we know the ship is available on monday we have to get the closest arrival to monday and extract its port
+select shiptrip_id into shiptripid from shiptrip where mmsi = ship AND
+        EST_ARRIVAL_DATE = (select max(EST_ARRIVAL_DATE) from shiptrip where mmsi=ship);
+select arrival_location into locationCode from shiptrip where shiptrip_id = shiptripid;
+select name into locations from port where port_id = locationCode;
+
+END;
+/
+
+create or replace PROCEDURE check_availability_of_ship(daydate in date, ship in Ship.mmsi%type, isValid out boolean)
+IS
+    estDepartDate date;
+    estArrivalDate date;
+
+Cursor tripsOfShip IS
+select est_departure_date, est_arrival_date
+from shiptrip
+where mmsi=ship;
+
+BEGIN
+open tripsOfShip;
+LOOP
+fetch tripsOfShip INTO estDepartDate, estArrivalDate;
+        Exit When tripsOfShip%notfound;
+        --if the arriavl date is before the monday is valid
+        if daydate > estArrivalDate then
+            isValid := true;
+        -- if the date was not before monday then if the depart date is AFTER monday ship is available
+        elsif daydate < estDepartDate then
+            isValid := true;
+        -- else false
+else
+            isValid := false;
+            exit;
+end if;
+END LOOP;
+END;
+/
+
+create or replace PROCEDURE available_ships_after_day (daydate in Varchar, ships out Varchar, locationsOfShips out Varchar)
+IS
+    shipscode Ship.mmsi%type;
+    hasArrivalBefore integer;
+    availableShips Varchar(32700);
+    locations Varchar(32700);
+    nextmonday date;
+    isAvailable boolean;
+
+Cursor shipsInTrips IS
+select distinct (mmsi)
+from shiptrip;
+
+BEGIN
+
+    nextMonday := TO_DATE(daydate, 'dd/mm/yyyy');
+    locationsOfShips := '';
+    ships := '';
+open shipsInTrips;
+LOOP
+fetch shipsInTrips INTO shipscode;
+        Exit When shipsInTrips%notfound;
+        --makes avaialbility false by default
+        isAvailable := false;
+        --checks ships is available;
+        check_availability_of_ship(nextmonday, shipscode, isAvailable);
+        if isAvailable then
+             ships := ships || ' ' || shipscode;
+             get_validated_ship_location(nextMonday, shipscode, locations);
+             locationsOfShips := locationsOfShips || ' ' || locations;
+end if;
+END LOOP;
+    dbms_output.put_line('Available ships mmsi: ' || ships);
+    dbms_output.put_line('Locations: ' || locationsOfShips);
+EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+        ships := 'no data';
+        locationsOfShips := 'no data';
+END;
+
+/
+--TESTS 204
+--Check the Ship Trip ID for Container ID 2116393 and Shipment ID 374
+SET SERVEROUTPUT ON;
+begin
+    dbms_output.put_line('US204');
+    dbms_output.put_line('the ship trip is: '||get_shiptrip_id(2549246,374));
+end;
+/
+--Check the if raises exception and Ship Trip Id = -1 when there isn't data found
+SET SERVEROUTPUT ON;
+begin
+    dbms_output.put_line('US204');
+    dbms_output.put_line('the ship trip is: '||get_shiptrip_id(1,2));
+end;
+/
+--Check if the method works properly
+SET SERVEROUTPUT ON;
+begin
+    dbms_output.put_line('US204');
+    dbms_output.put_line('The location id is: '||get_location(16347));
+end;
+/
+--Check if raises exception
+SET SERVEROUTPUT ON;
+begin
+    dbms_output.put_line('US204');
+    dbms_output.put_line('The location id is: '||get_location(2));
+end;
+
+/
+
+declare
+    next_port Port.port_id%type;
+begin
+    dbms_output.put_line('US205 AND US206');
+    next_port := get_port(256888000);
+    dbms_output.put_line ('Port id: '|| next_port);
+end;
+
+/
+declare
+   cont_id container.container_id%type;
+   iso_code container.isocode%type;
+   pay_load container.payload%type;
+   pos_x positioninvehicule.containerpositionx%type;
+   pos_y positioninvehicule.containerpositiony%type;
+   pos_z positioninvehicule.containerpositionz%type;
+   cursor_test SYS_REFCURSOR;
+
+begin
+    cursor_test := offcontainers_id(256888000);
+    dbms_output.put_line('US205');
+
+    loop
+        fetch cursor_test into cont_id, iso_code, pay_load, pos_x, pos_y, pos_z;
+        exit when cursor_test%notfound;
+        dbms_output.put_line ('id: ' || cont_id);
+        dbms_output.put_line ('iso: ' || iso_code);
+        dbms_output.put_line ('load: ' || pay_load);
+        dbms_output.put_line ('posx: '  ||pos_x);
+        dbms_output.put_line ('posy: ' || pos_y);
+        dbms_output.put_line ('posz: ' || pos_z);
+    end loop;
+end;
+/
+
+declare
+   cont_id container.container_id%type;
+   iso_code container.isocode%type;
+   pay_load container.payload%type;
+   pos_x positioninvehicule.containerpositionx%type;
+   pos_y positioninvehicule.containerpositiony%type;
+   pos_z positioninvehicule.containerpositionz%type;
+   cursor_test SYS_REFCURSOR;
+
+begin
+    cursor_test := load_containers_id(256888000);
+    dbms_output.put_line('US206');
+    loop
+        fetch cursor_test into cont_id, iso_code, pay_load, pos_x, pos_y, pos_z;
+        exit when cursor_test%notfound;
+        dbms_output.put_line ('id: ' || cont_id);
+        dbms_output.put_line ('iso: '  || iso_code);
+        dbms_output.put_line ('load: ' || pay_load);
+        dbms_output.put_line ('posx: ' ||  pos_x);
+        dbms_output.put_line ('posy: ' ||  pos_y);
+        dbms_output.put_line ('posz: ' || pos_z);
+    end loop;
+end;
+/
+--US207
+declare
+numCm integer;
+mean integer;
+begin
+dbms_output.put_line('US207');
+count_cargomanifests_avg_containers('2021', '305373000', numCm, mean);
+end;
+
+/
+
+--US208
+declare
+f_cargoManifest_id cargomanifest.cargomanifest_id%type:=77329;
+f_result integer;
+f_check integer;
+f_maxCapacity integer;
+f_estDepDate shipTrip.est_departure_date%type;
+f_mmsi ship.mmsi%type;
+f_initialNumContainers integer;
+f_alreadyAddedRemovedContainersTripNum integer;
+begin
+dbms_output.put_line('US208');
+f_check:=check_if_cargomanifest_exists(f_cargoManifest_id);
+if f_check=0 then
+dbms_output.put_line(' INVALID INPUT ');
+end if;
+f_maxCapacity:=get_max_capacity(f_cargoManifest_id);
+f_estDepDate:=get_est_departure_date_from_ship_trip(f_cargoManifest_id);
+f_mmsi:=get_mmsi_by_cargo_manifest_id(f_cargoManifest_id);
+f_initialNumContainers:=get_initial_num_containers_per_ship_trip(f_cargoManifest_id,f_estDepDate,f_mmsi);
+f_alreadyAddedRemovedContainersTripNum:=get_added_removed_containers_ship_trip_moment(f_cargoManifest_id);
+f_result:=((f_initialNumContainers+f_alreadyAddedRemovedContainersTripNum)*100)/f_maxCapacity;
+dbms_output.put_line(' US208 Result ' || f_result);
+end;
+/
+--US209
+alter session set nls_date_format = 'DD-MM-YYYY';
+/
+
+declare
+f_mmsi shipTrip.mmsi%type:=212351001;
+f_date shipTrip.est_departure_date%type:='25-02-2021';
+f_resultado integer;
+f_check integer;
+f_cargoManifest_id cargomanifest.cargomanifest_id%type;
+f_maxCapacity integer;
+f_estDepDate shipTrip.est_departure_date%type;
+f_initialNumContainers integer;
+f_alreadyAddedRemovedContainersTripNum integer;
+begin
+dbms_output.put_line('US209');
+f_check:=check_if_ship_exists(f_mmsi);
+if f_check=0 then
+dbms_output.put_line(' INVALID INPUT ');
+end if;
+f_cargoManifest_id:=get_cargo_manifest_by_mmsi_and_date(f_mmsi, f_date);
+f_maxCapacity:=get_max_capacity(f_cargoManifest_id);
+f_estDepDate:=get_est_departure_date_from_ship_trip(f_cargoManifest_id);
+f_mmsi:=get_mmsi_by_cargo_manifest_id(f_cargoManifest_id);
+f_initialNumContainers:=get_initial_num_containers_per_ship_trip(f_cargoManifest_id,f_estDepDate,f_mmsi);
+f_alreadyAddedRemovedContainersTripNum:=get_added_removed_containers_ship_trip_moment(f_cargoManifest_id);
+f_resultado:=((f_initialNumContainers+f_alreadyAddedRemovedContainersTripNum)*100)/f_maxCapacity;
+dbms_output.put_line(' US209 Result ' || f_resultado);
+end;
+/
+
+--US210
+declare
+availableShips Varchar(32700);
+locations Varchar(32700);
+begin
+dbms_output.put_line('US210');
+available_ships_after_day ('13/12/2021', availableShips, locations);
+end;

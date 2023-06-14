@@ -1,0 +1,64 @@
+@startuml
+
+autonumber
+actor "Traffic Manager" as TM
+
+participant "ShowPositionalMessagesUI" as UI
+participant "ShowPositionalMessagesController" as CTRL
+participant "Company" as COMP
+participant "ShipStore" as SHIP_STORE
+participant "shipsBST:\nShipsBST" as BstShip
+participant "ship:\nShip" as S
+participant "ShipPosition" as SP
+participant "positionsBST:\nPositionsBST" as BstPosition
+/'participant "vesselType:\nVesselType" as VESSEL_TYPE'/
+/'participant "messagesWithVesselType:\nMap<String, List<String>>" as MAP'/
+
+
+activate TM
+TM -> "UI" : asks to obtain the positional messages temporally organized of a ship
+activate "UI"
+"UI" --> TM : requests the ship's MMSI code
+deactivate "UI"
+TM -> "UI" : types the MMSI code
+activate "UI"
+UI -> CTRL : isValidShip(mmsiCode)
+activate CTRL
+CTRL -> COMP : getShipStore()
+activate COMP
+deactivate COMP
+CTRL -> SHIP_STORE : shipsBST = getShipsBstMmsi()
+activate SHIP_STORE
+deactivate SHIP_STORE
+CTRL -> BstShip : ship = getShipByMmsiCode(mmsiCode)
+activate BstShip
+deactivate BstShip
+CTRL --> UI : result
+deactivate CTRL
+"UI" --> TM : requests data(initialDate, finalDate)
+deactivate "UI"
+TM -> "UI" : types requested data
+activate "UI"
+UI -> CTRL : showPositionalMessages(initialDate, finalDate)
+activate CTRL
+CTRL -> S : positionsBST = getPositionsBST()
+activate S
+deactivate S
+CTRL -> BstPosition : listPositionalMessage = getPositionalMessages(initialDate, finalDate)
+activate BstPosition
+deactivate BstPosition
+/'CTRL -> S : vesselType = getVesselType()
+activate S
+deactivate S'/
+/'CTRL --> MAP** : create()'/
+note over CTRL, COMP
+The wished information is then put into a file.
+end note
+CTRL --> UI : result
+"UI" --> TM : sends ship's positional messages
+
+deactivate "UI"
+
+deactivate TM
+
+@enduml

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="420px" preserveAspectRatio="none" style="width:456px;height:420px;background:#FFFFFF;" version="1.1" viewBox="0 0 456 420" width="456px" zoomAndPan="magnify"><defs><filter height="300%" id="fvubw6tg4hfxa" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[3c3fbae2781f8bcfc5f45c350fe1a1c8]
+class TripThresholdController--><rect codeLine="7" fill="#FEFECE" filter="url(#fvubw6tg4hfxa)" height="75.6719" id="TripThresholdController" style="stroke:#A80036;stroke-width:1.5;" width="163" x="25.5" y="7"/><ellipse cx="40.5" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M42.5,19.5 Q42.7031,19 42.9375,18.75 Q43.1719,18.5 43.4375,18.5 Q43.9063,18.5 44.2031,18.7813 Q44.5,19.0625 44.5,19.7188 L44.5,21.2813 Q44.5,21.9375 44.2188,22.2188 Q43.9375,22.5 43.5,22.5 Q43.1094,22.5 42.8594,22.3281 Q42.6094,22.1563 42.5,21.7031 Q42.4531,21.3906 42.2813,21.2188 Q41.9688,20.8906 41.4063,20.7031 Q40.8438,20.5 40.2813,20.5 Q39.5781,20.5 38.9844,20.7813 Q38.4063,21.0625 37.9531,21.6875 Q37.5,22.3125 37.5,23.1719 L37.5,24.0938 Q37.5,25.125 38.3438,25.8125 Q39.1875,26.5 40.6875,26.5 Q41.5781,26.5 42.2031,26.2969 Q42.5625,26.1875 42.9688,25.8281 Q43.2344,25.625 43.375,25.5625 Q43.5156,25.5 43.6875,25.5 Q44.0156,25.5 44.25,25.7656 Q44.5,26.0156 44.5,26.375 Q44.5,26.7188 44.1563,27.125 Q43.6563,27.7188 42.8594,28.0469 Q41.8125,28.5 40.5313,28.5 Q39.0313,28.5 37.8281,27.9063 Q36.8594,27.4375 36.1719,26.4219 Q35.5,25.4063 35.5,24.2031 L35.5,23.1094 Q35.5,21.8594 36.0938,20.7656 Q36.7031,19.6719 37.75,19.0938 Q38.8125,18.5 40,18.5 Q40.7188,18.5 41.3438,18.75 Q41.9688,19 42.5,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="131" x="54.5" y="27.9102">TripThresholdController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="26.5" x2="187.5" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="31.5" y="54.4189">-company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="26.5" x2="187.5" y1="60.8359" y2="60.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="150" x="31.5" y="76.2549">-getVoyagesBelowThreshold()</text><!--MD5=[8d7ca94d2ddad896fa1b7a151fdd57c4]
+class ShipTripStoreDB--><rect codeLine="12" fill="#FEFECE" filter="url(#fvubw6tg4hfxa)" height="53.8359" id="ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="124" x="7" y="339"/><ellipse cx="22" cy="355" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24,351.5 Q24.2031,351 24.4375,350.75 Q24.6719,350.5 24.9375,350.5 Q25.4063,350.5 25.7031,350.7813 Q26,351.0625 26,351.7188 L26,353.2813 Q26,353.9375 25.7188,354.2188 Q25.4375,354.5 25,354.5 Q24.6094,354.5 24.3594,354.3281 Q24.1094,354.1563 24,353.7031 Q23.9531,353.3906 23.7813,353.2188 Q23.4688,352.8906 22.9063,352.7031 Q22.3438,352.5 21.7813,352.5 Q21.0781,352.5 20.4844,352.7813 Q19.9063,353.0625 19.4531,353.6875 Q19,354.3125 19,355.1719 L19,356.0938 Q19,357.125 19.8438,357.8125 Q20.6875,358.5 22.1875,358.5 Q23.0781,358.5 23.7031,358.2969 Q24.0625,358.1875 24.4688,357.8281 Q24.7344,357.625 24.875,357.5625 Q25.0156,357.5 25.1875,357.5 Q25.5156,357.5 25.75,357.7656 Q26,358.0156 26,358.375 Q26,358.7188 25.6563,359.125 Q25.1563,359.7188 24.3594,360.0469 Q23.3125,360.5 22.0313,360.5 Q20.5313,360.5 19.3281,359.9063 Q18.3594,359.4375 17.6719,358.4219 Q17,357.4063 17,356.2031 L17,355.1094 Q17,353.8594 17.5938,352.7656 Q18.2031,351.6719 19.25,351.0938 Q20.3125,350.5 21.5,350.5 Q22.2188,350.5 22.8438,350.75 Q23.4688,351 24,351.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="36" y="359.9102">ShipTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="130" y1="371" y2="371"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="13" y="386.4189">-getListVoyages()</text><!--MD5=[80429a8c3a07863d2b9a5a642579b4cd]
+class ShipStoreDB--><rect codeLine="16" fill="#FEFECE" filter="url(#fvubw6tg4hfxa)" height="81.5078" id="ShipStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="276" x="166" y="325"/><ellipse cx="264.25" cy="341" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M266.25,337.5 Q266.4531,337 266.6875,336.75 Q266.9219,336.5 267.1875,336.5 Q267.6563,336.5 267.9531,336.7813 Q268.25,337.0625 268.25,337.7188 L268.25,339.2813 Q268.25,339.9375 267.9688,340.2188 Q267.6875,340.5 267.25,340.5 Q266.8594,340.5 266.6094,340.3281 Q266.3594,340.1563 266.25,339.7031 Q266.2031,339.3906 266.0313,339.2188 Q265.7188,338.8906 265.1563,338.7031 Q264.5938,338.5 264.0313,338.5 Q263.3281,338.5 262.7344,338.7813 Q262.1563,339.0625 261.7031,339.6875 Q261.25,340.3125 261.25,341.1719 L261.25,342.0938 Q261.25,343.125 262.0938,343.8125 Q262.9375,344.5 264.4375,344.5 Q265.3281,344.5 265.9531,344.2969 Q266.3125,344.1875 266.7188,343.8281 Q266.9844,343.625 267.125,343.5625 Q267.2656,343.5 267.4375,343.5 Q267.7656,343.5 268,343.7656 Q268.25,344.0156 268.25,344.375 Q268.25,344.7188 267.9063,345.125 Q267.4063,345.7188 266.6094,346.0469 Q265.5625,346.5 264.2813,346.5 Q262.7813,346.5 261.5781,345.9063 Q260.6094,345.4375 259.9219,344.4219 Q259.25,343.4063 259.25,342.2031 L259.25,341.1094 Q259.25,339.8594 259.8438,338.7656 Q260.4531,337.6719 261.5,337.0938 Q262.5625,336.5 263.75,336.5 Q264.4688,336.5 265.0938,336.75 Q265.7188,337 266.25,337.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="284.75" y="345.9102">ShipStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="167" x2="441" y1="357" y2="357"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="139" x="172" y="372.4189">-getShipMaxCapacity(shipID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="223" x="172" y="386.2549">-getNumContainersShipDay(shipID, someDate)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="264" x="172" y="400.0908">-calculateOccupancyRate(maxCapacity, capacityTime)</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="22" fill="#FEFECE" filter="url(#fvubw6tg4hfxa)" height="103.3438" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="118" x="122" y="144"/><ellipse cx="151.85" cy="160" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M153.85,156.5 Q154.0531,156 154.2875,155.75 Q154.5219,155.5 154.7875,155.5 Q155.2563,155.5 155.5531,155.7813 Q155.85,156.0625 155.85,156.7188 L155.85,158.2813 Q155.85,158.9375 155.5688,159.2188 Q155.2875,159.5 154.85,159.5 Q154.4594,159.5 154.2094,159.3281 Q153.9594,159.1563 153.85,158.7031 Q153.8031,158.3906 153.6313,158.2188 Q153.3188,157.8906 152.7563,157.7031 Q152.1938,157.5 151.6313,157.5 Q150.9281,157.5 150.3344,157.7813 Q149.7563,158.0625 149.3031,158.6875 Q148.85,159.3125 148.85,160.1719 L148.85,161.0938 Q148.85,162.125 149.6938,162.8125 Q150.5375,163.5 152.0375,163.5 Q152.9281,163.5 153.5531,163.2969 Q153.9125,163.1875 154.3188,162.8281 Q154.5844,162.625 154.725,162.5625 Q154.8656,162.5 155.0375,162.5 Q155.3656,162.5 155.6,162.7656 Q155.85,163.0156 155.85,163.375 Q155.85,163.7188 155.5063,164.125 Q155.0063,164.7188 154.2094,165.0469 Q153.1625,165.5 151.8813,165.5 Q150.3813,165.5 149.1781,164.9063 Q148.2094,164.4375 147.5219,163.4219 Q146.85,162.4063 146.85,161.2031 L146.85,160.1094 Q146.85,158.8594 147.4438,157.7656 Q148.0531,156.6719 149.1,156.0938 Q150.1625,155.5 151.35,155.5 Q152.0688,155.5 152.6938,155.75 Q153.3188,156 153.85,156.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="169.15" y="164.9102">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="123" x2="239" y1="176" y2="176"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="128" y="191.4189">-ShipStoreDB</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="83" x="128" y="205.2549">-ShipTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="123" x2="239" y1="211.6719" y2="211.6719"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="88" x="128" y="227.0908">-getShipStoreDB()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="106" x="128" y="240.9268">-getShipTripStoreDB()</text><!--MD5=[72601d4cb56260714d0cf873fe5fe019]
+link TripThresholdController to Company--><path codeLine="29" d="M125.48,83.09 C133.93,100.04 144.11,120.47 153.43,139.18 " fill="none" id="TripThresholdController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="155.78,143.89,155.3454,134.0507,153.5497,139.415,148.1854,137.6193,155.78,143.89" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5dd95aae7de6a1c5617be33824f9c0dd]
+link TripThresholdController to ShipTripStoreDB--><path codeLine="30" d="M102.57,83.22 C95.02,146.55 79.82,274.18 72.76,333.44 " fill="none" id="TripThresholdController-to-ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="72.14,338.61,77.1925,330.1559,72.7408,333.6462,69.2504,329.1946,72.14,338.61" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[507cfa299ee4dba6e3c71a3753442b74]
+link Company to ShipStoreDB--><path codeLine="32" d="M217.9,247.06 C236.09,271.97 257.71,301.59 274.74,324.91 " fill="none" id="Company-ShipStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="256.9484,290.214,253.9883,281.1758,249.2411,284.6418,256.9484,290.214" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="263" y="291.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="215.5969" y="268.9313">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="262.1094" y="314.0403">1</text><!--MD5=[8a472e17fa1b8e6b82718bab5653081a]
+link Company to ShipTripStoreDB--><path codeLine="33" d="M147.4,247.06 C127.29,277.3 102.58,314.48 86.34,338.91 " fill="none" id="Company-ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="127.2319,290.3397,134.6869,284.4342,129.7919,281.1801,127.2319,290.3397" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="139" y="291.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="135.1828" y="268.9313">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="82.5405" y="328.3502">1</text><!--MD5=[d914dd3655f3d7c32abe9034775b7231]
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class TripThresholdController{
+- company
+- getVoyagesBelowThreshold()
+}
+
+class ShipTripStoreDB{
+- getListVoyages()
+}
+
+class ShipStoreDB{
+- getShipMaxCapacity(shipID)
+- getNumContainersShipDay(shipID, someDate)
+- calculateOccupancyRate(maxCapacity, capacityTime)
+}
+
+class Company{
+- ShipStoreDB
+- ShipTripStoreDB
+- getShipStoreDB()
+- getShipTripStoreDB()
+}
+
+TripThresholdController ..> Company
+TripThresholdController ..> ShipTripStoreDB
+
+Company "1" - - "1" ShipStoreDB : uses >
+Company "1" - - "1" ShipTripStoreDB : uses >
+
+@enduml
+
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class TripThresholdController{
+- company
+- getVoyagesBelowThreshold()
+}
+
+class ShipTripStoreDB{
+- getListVoyages()
+}
+
+class ShipStoreDB{
+- getShipMaxCapacity(shipID)
+- getNumContainersShipDay(shipID, someDate)
+- calculateOccupancyRate(maxCapacity, capacityTime)
+}
+
+class Company{
+- ShipStoreDB
+- ShipTripStoreDB
+- getShipStoreDB()
+- getShipTripStoreDB()
+}
+
+TripThresholdController ..> Company
+TripThresholdController ..> ShipTripStoreDB
+
+Company "1" - - "1" ShipStoreDB : uses >
+Company "1" - - "1" ShipTripStoreDB : uses >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

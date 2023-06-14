@@ -1,0 +1,25 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class AuditTrailController{
+- company
++ getContainerAuditTrail(containerId, cargoManifestId)
+}
+
+class ContainerStoreDb{
++ getAuditTrailOfContainer(containerId, cargoManifestId)
+}
+
+class Company{
+- getContainerStoreDb()
+}
+
+AuditTrailController ..> Company
+AuditTrailController ..> ContainerStoreDb
+Company "1" -- "1" ContainerStoreDb : uses >
+
+@enduml

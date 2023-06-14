@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/class-diagram
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class PortManager{
+    -name
+}
+
+class Company{}
+
+class Port{
+    -continent
+    -country
+    -portCode
+    -portName
+    -latitude
+    -longitude
+}
+
+PortManager "1" -- "1..*" Port : imports >
+Company "1" -- "1..*" Port : manages >
+
+@enduml

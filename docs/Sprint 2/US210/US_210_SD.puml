@@ -1,0 +1,28 @@
+@startuml
+autonumber
+'hide footbox
+actor "Traffic Manager" as SC
+participant ":ShipCaptainUi  " as UI
+participant ":findAvailableShipsController" as CTRL
+participant ":Company" as CP
+participant ":ShipStoreDB" as SS
+
+
+activate SC
+SC -> UI : asks to obtain the available ships on Monday next week and their location
+activate UI
+UI -> CTRL : getNextMondayAvailableShips()
+activate CTRL
+CTRL --> CP : shipStoreDatabase = company.getShipStoreDatabase()
+activate CP
+deactivate CP
+CTRL --> SS : availableShipsLocations = shipStoreDatabase.getNextMondayAvailableShips()
+activate SS
+deactivate SS
+CTRL --> UI : availableShipsLocations
+deactivate CTRL
+UI --> SC : show available ships on Monday next week and their location
+deactivate UI
+deactivate SC
+
+@enduml

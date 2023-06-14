@@ -1,0 +1,47 @@
+create or replace PROCEDURE check_availability_of_ship(daydate in date, ship in Ship.mmsi%type, isValid out boolean)
+IS
+    estDepartDate date;
+    estArrivalDate date;
+
+Cursor tripsOfShip IS
+        select est_departure_date, est_arrival_date
+        from shiptrip
+        where mmsi=ship;
+
+BEGIN
+open tripsOfShip;
+    LOOP
+        fetch tripsOfShip INTO estDepartDate, estArrivalDate;
+        Exit When tripsOfShip%notfound;
+        --if the arriavl date is before the monday is valid
+        if daydate > estArrivalDate then
+            isValid := true;
+        -- if the date was not before monday then if the depart date is AFTER monday ship is available
+        elsif daydate < estDepartDate then
+            isValid := true;
+        -- else false
+        else
+            isValid := false;
+            exit;
+        end if;
+    END LOOP;
+END;
+/
+create or replace trigger trgShipAvailability
+before insert or update on ShipTrip
+                            for each row
+declare
+f_mmsi shipTrip.mmsi%type;
+f_estDepDate shipTrip.est_departure_date%type;
+f_isValid boolean;
+
+begin
+f_mmsi:= :new.mmsi;
+f_estDepDate:= :new.est_departure_date;
+f_isValid := false;
+check_availability_of_ship(f_estDepDate, f_mmsi, f_isValid);
+if not f_isValid then
+raise_application_error(-20010,'Currently, the ship is not available in this date.');
+end if;
+end;
+/

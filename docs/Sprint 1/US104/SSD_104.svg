@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="309px" preserveAspectRatio="none" style="width:517px;height:309px;background:#FFFFFF;" version="1.1" viewBox="0 0 517 309" width="517px" zoomAndPan="magnify"><defs><filter height="300%" id="f7o0rt19epml6" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f7o0rt19epml6)" height="117.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="60.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f7o0rt19epml6)" height="87.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="464.5" y="119.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="65" x2="65" y1="88.2969" y2="224.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="469" x2="469" y1="88.2969" y2="224.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="5" y="84.9951">Traffic manager</text><ellipse cx="65.5" cy="15" fill="#FEFECE" filter="url(#f7o0rt19epml6)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M65.5,23 L65.5,50 M52.5,31 L78.5,31 M65.5,50 L52.5,65 M65.5,50 L78.5,65 " fill="none" filter="url(#f7o0rt19epml6)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="5" y="236.8232">Traffic manager</text><ellipse cx="65.5" cy="250.125" fill="#FEFECE" filter="url(#f7o0rt19epml6)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M65.5,258.125 L65.5,285.125 M52.5,266.125 L78.5,266.125 M65.5,285.125 L52.5,300.125 M65.5,285.125 L78.5,300.125 " fill="none" filter="url(#f7o0rt19epml6)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f7o0rt19epml6)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="432" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="439" y="72.9951">:System</text><rect fill="#FEFECE" filter="url(#f7o0rt19epml6)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="432" y="223.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="439" y="243.8232">:System</text><rect fill="#FFFFFF" filter="url(#f7o0rt19epml6)" height="117.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="60.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f7o0rt19epml6)" height="87.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="464.5" y="119.4297"/><polygon fill="#A80036" points="452.5,115.4297,462.5,119.4297,452.5,123.4297,456.5,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="70.5" x2="458.5" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="77.5" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="339" x="90.5" y="114.3638">wishes to make a Summary of a ship's movements.</text><polygon fill="#A80036" points="81.5,144.5625,71.5,148.5625,81.5,152.5625,77.5,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="75.5" x2="463.5" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="87.5" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="229" x="100.5" y="143.4966">asks what ship's code to search for</text><polygon fill="#A80036" points="452.5,173.6953,462.5,177.6953,452.5,181.6953,456.5,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="70.5" x2="458.5" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="77.5" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="90.5" y="172.6294">inserts needed data</text><polygon fill="#A80036" points="81.5,202.8281,71.5,206.8281,81.5,210.8281,77.5,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="75.5" x2="468.5" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="87.5" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="357" x="100.5" y="201.7622">returns a summary of the searched ship's movements.</text><!--MD5=[c61e79b4ea3694633f3ce2d79ebc2270]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Traffic manager" as TM
+
+activate TM
+TM-> ":System" : wishes to make a Summary of a ship's movements.
+activate ":System"
+":System" - -> TM : asks what ship's code to search for
+TM-> ":System" : inserts needed data
+":System" - -> TM : returns a summary of the searched ship's movements.
+
+deactivate ":System"
+
+@enduml
+
+@startuml
+
+autonumber
+actor "Traffic manager" as TM
+
+activate TM
+TM-> ":System" : wishes to make a Summary of a ship's movements.
+activate ":System"
+":System" - -> TM : asks what ship's code to search for
+TM-> ":System" : inserts needed data
+":System" - -> TM : returns a summary of the searched ship's movements.
+
+deactivate ":System"
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

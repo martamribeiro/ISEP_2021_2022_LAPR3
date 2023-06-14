@@ -1,0 +1,32 @@
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ":ShipCaptainUi  " as UI
+participant ":NumCargoManifestsController" as CTRL
+participant ":Company" as CP
+participant ":ShipStoreDatabase" as SS
+
+
+activate SC
+SC -> UI : asks how many cargo manifests were transported during\n a given year and the average number of containers per manifest.
+activate UI
+UI --> SC : asks for data(year to search for)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getNumberOfCMAndAverageContForYear(year, mmsi)
+activate CTRL
+CTRL --> CP : shipStoreDatabase = company.getShipStoreDatabase()
+activate CP
+deactivate CP
+CTRL --> SS : numOfCmAndAvgContainer = shipStoreDatabase.getNumberOfCMAndAverageContForYear(year,mmsi)
+activate SS
+deactivate SS
+CTRL --> UI : numOfCmAndAvgContainer
+deactivate CTRL
+UI --> SC : show number of cargo manifests and average container number
+deactivate UI
+deactivate SC
+
+@enduml

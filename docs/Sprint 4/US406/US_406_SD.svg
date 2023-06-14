@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="658px" preserveAspectRatio="none" style="width:1359px;height:658px;background:#FFFFFF;" version="1.1" viewBox="0 0 1359 658" width="1359px" zoomAndPan="magnify"><defs><filter height="300%" id="fi4t69plfdfts" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="455.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="49" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="433.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="566" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="372.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="778" y="152.3125"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="201.4063" style="stroke:#A80036;stroke-width:1.0;" width="10" x="938.5" y="268.0156"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1083.5" y="182.6641"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1083.5" y="298.3672"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="54" x2="54" y1="89.6094" y2="573.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="570.5" x2="570.5" y1="89.6094" y2="573.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="782.5" x2="782.5" y1="89.6094" y2="573.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="943.5" x2="943.5" y1="89.6094" y2="573.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1088.5" x2="1088.5" y1="89.6094" y2="573.125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1297" x2="1297" y1="89.6094" y2="573.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="5" y="86.5332">Fleet Manager</text><ellipse cx="54" cy="15" fill="#FEFECE" filter="url(#fi4t69plfdfts)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M54,23 L54,50 M41,31 L67,31 M54,50 L41,65 M54,50 L67,65 " fill="none" filter="url(#fi4t69plfdfts)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="5" y="586.6582">Fleet Manager</text><ellipse cx="54" cy="599.7344" fill="#FEFECE" filter="url(#fi4t69plfdfts)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M54,607.7344 L54,634.7344 M41,615.7344 L67,615.7344 M54,634.7344 L41,649.7344 M54,634.7344 L67,649.7344 " fill="none" filter="url(#fi4t69plfdfts)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="127" x="505.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="512.5" y="74.5332">:TripThresholdUI</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="127" x="505.5" y="572.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="512.5" y="593.6582">:TripThresholdUI</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="169" x="696.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="703.5" y="74.5332">:TripThresholdController</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="169" x="696.5" y="572.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="703.5" y="593.6582">:TripThresholdController</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="124" x="879.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="886.5" y="74.5332">:ShipTripStoreDB</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="124" x="879.5" y="572.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="110" x="886.5" y="593.6582">:ShipTripStoreDB</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1047.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1054.5" y="74.5332">:Company</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1047.5" y="572.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1054.5" y="593.6582">:Company</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1246" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="1253" y="74.5332">:ShipStoreDB</text><rect fill="#FEFECE" filter="url(#fi4t69plfdfts)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1246" y="572.125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="1253" y="593.6582">:ShipStoreDB</text><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="455.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="49" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="433.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="566" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="372.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="778" y="152.3125"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="201.4063" style="stroke:#A80036;stroke-width:1.0;" width="10" x="938.5" y="268.0156"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1083.5" y="182.6641"/><rect fill="#FFFFFF" filter="url(#fi4t69plfdfts)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1083.5" y="298.3672"/><polygon fill="#A80036" points="554,117.9609,564,121.9609,554,125.9609,558,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="59" x2="560" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="66" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="477" x="77" y="117.1045">asks to know which ship voyages had an occupancy rate below a certain threshold</text><polygon fill="#A80036" points="766,148.3125,776,152.3125,766,156.3125,770,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="576" x2="772" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="583" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="172" x="594" y="147.4561">getVoyagesBelowThreshold();</text><polygon fill="#A80036" points="1071.5,178.6641,1081.5,182.6641,1071.5,186.6641,1075.5,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="788" x2="1077.5" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="795" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="806" y="177.8076">getShipTripStoreDB()</text><polygon fill="#A80036" points="926.5,264.0156,936.5,268.0156,926.5,272.0156,930.5,268.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="788" x2="932.5" y1="268.0156" y2="268.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="795" y="263.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="102" x="806" y="263.1592">getListVoyages();</text><polygon fill="#A80036" points="1071.5,294.3672,1081.5,298.3672,1071.5,302.3672,1075.5,298.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="948.5" x2="1077.5" y1="298.3672" y2="298.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="955.5" y="293.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="966.5" y="293.5107">getShipStoreDB();</text><polygon fill="#A80036" points="1285.5,354.7188,1295.5,358.7188,1285.5,362.7188,1289.5,358.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="948.5" x2="1291.5" y1="358.7188" y2="358.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="955.5" y="353.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="966.5" y="353.8623">getShipMaxCapacity(shipID);</text><polygon fill="#A80036" points="1285.5,410.0703,1295.5,414.0703,1285.5,418.0703,1289.5,414.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="948.5" x2="1291.5" y1="414.0703" y2="414.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="955.5" y="409.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="293" x="966.5" y="409.2139">getNumContainersShipDay(shipID, departureDate);</text><polygon fill="#A80036" points="1285.5,465.4219,1295.5,469.4219,1285.5,473.4219,1289.5,469.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="943.5" x2="1291.5" y1="469.4219" y2="469.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="950.5" y="464.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="314" x="961.5" y="464.5654">calculateOccupancyRate(maxCapacity, capacityTime)</text><polygon fill="#A80036" points="587,520.7734,577,524.7734,587,528.7734,583,524.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="581" x2="782" y1="524.7734" y2="524.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="593" y="519.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="604" y="519.917">voyageList</text><polygon fill="#A80036" points="65,551.125,55,555.125,65,559.125,61,555.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="59" x2="570" y1="555.125" y2="555.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="71" y="550.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="333" x="89" y="550.2686">return lsit of voyages with occupancy rate below threshold</text><!--MD5=[0b93e852a4007414b122ec78cc833f9e]
+@startuml
+autonumber
+'hide footbox
+actor "Fleet Manager" as SC
+participant ":TripThresholdUI  " as UI
+participant ":TripThresholdController" as CTRL
+participant ":ShipTripStoreDB" as CMS
+participant ":Company" as CMP
+participant ":ShipStoreDB" as SSDB
+
+activate SC
+SC -> UI : asks to know which ship voyages had an occupancy rate below a certain threshold
+
+activate UI
+UI -> CTRL : getVoyagesBelowThreshold();
+activate CTRL
+CTRL -> CMP : getShipTripStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : getListVoyages();
+activate CMS
+CMS -> CMP : getShipStoreDB();
+activate CMP
+deactivate CMP
+CMS -> SSDB : getShipMaxCapacity(shipID);
+|||
+CMS -> SSDB : getNumContainersShipDay(shipID, departureDate);
+|||
+CMS -> SSDB : calculateOccupancyRate(maxCapacity, capacityTime)
+deactivate CMS
+
+|||
+CTRL - -> UI : voyageList
+deactivate CTRL
+UI - -> SC : return lsit of voyages with occupancy rate below threshold
+deactivate UI
+deactivate SC
+
+@enduml
+
+@startuml
+autonumber
+actor "Fleet Manager" as SC
+participant ":TripThresholdUI  " as UI
+participant ":TripThresholdController" as CTRL
+participant ":ShipTripStoreDB" as CMS
+participant ":Company" as CMP
+participant ":ShipStoreDB" as SSDB
+
+activate SC
+SC -> UI : asks to know which ship voyages had an occupancy rate below a certain threshold
+
+activate UI
+UI -> CTRL : getVoyagesBelowThreshold();
+activate CTRL
+CTRL -> CMP : getShipTripStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : getListVoyages();
+activate CMS
+CMS -> CMP : getShipStoreDB();
+activate CMP
+deactivate CMP
+CMS -> SSDB : getShipMaxCapacity(shipID);
+|||
+CMS -> SSDB : getNumContainersShipDay(shipID, departureDate);
+|||
+CMS -> SSDB : calculateOccupancyRate(maxCapacity, capacityTime)
+deactivate CMS
+
+|||
+CTRL - -> UI : voyageList
+deactivate CTRL
+UI - -> SC : return lsit of voyages with occupancy rate below threshold
+deactivate UI
+deactivate SC
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

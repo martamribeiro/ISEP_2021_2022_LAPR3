@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+actor TrafficManager as C
+participant "ShortestPathUI" as UI
+participant "ShortestPathController" as CTRL
+participant "Company" as COMPANY
+participant "FreightNetwork" as NET
+
+activate C
+C -> UI : asks for the shortest path between two locals (city and/or port)
+activate UI
+UI --> C : asks for data(i.e.,beg,end,path)
+C -> UI : inserts needed data
+UI -> CTRL : getShortestPath(beg,end,path)
+activate CTRL
+alt if the desired path is a land path
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : getShortestPath(net,beg,end)
+activate NET
+|||
+deactivate NET
+else if the desired path is a maritime path
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : getShortestPath(net,beg,end)
+activate NET
+|||
+deactivate NET
+else if the desired path is a land or sea path
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : getShortestPath(net,beg,end)
+activate NET
+|||
+deactivate NET
+end
+CTRL --> UI : shortestPath
+deactivate CTRL
+UI --> C : returns the shortest path
+deactivate UI
+
+deactivate C
+
+
+@enduml

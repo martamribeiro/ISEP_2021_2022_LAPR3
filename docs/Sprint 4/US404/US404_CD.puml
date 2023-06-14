@@ -1,0 +1,20 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class GetIdleShipsController{
+    +getIdleShips()
+}
+
+class Company {
+    +getShipStoreDB()
+}
+
+class ShipStoreDB {
+    +getIdleShips(dataBaseConnection)
+}
+
+GetIdleShipsController ..> Company
+GetIdleShipsController ..> ShipStoreDB
+Company "1" -- "1" ShipStoreDB : uses >
+
+@enduml

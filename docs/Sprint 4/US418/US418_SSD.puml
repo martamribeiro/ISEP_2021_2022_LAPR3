@@ -1,0 +1,21 @@
+@startuml
+autonumber
+actor "Ship Captain" as PM
+
+activate PM
+PM -> ":System" : asks to get the unladen center of mass of a ship
+
+activate ":System"
+":System" --> PM : requests ship mmsi
+
+
+PM -> ":System" : types ship mmsi
+
+
+":System" --> PM : returns successfully unladen center of mass
+
+
+
+
+deactivate PM
+@enduml

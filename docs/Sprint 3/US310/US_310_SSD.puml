@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Port Manager" as SC
+
+activate SC
+SC-> ":System" : wants a map of the occupation of the existing resources in the port during a given month
+activate ":System"
+":System" --> SC : asks for data(i.e.,portID, month, year)
+SC-> ":System" : inserts needed data
+":System" --> SC : shows desired map
+
+deactivate ":System"
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+autonumber
+actor "Fleet Manager" as FM
+participant "GetIdleShipsUI" as UI
+participant "GetIdleShipsController" as CTRL
+participant "Company" as COMP
+participant "App" as APP
+participant "databaseConnection:\nDatabaseConnection" as CONNECTION
+participant "shipStoreDB:\nShipStoreDB" as SHIP_STORE_DB
+
+activate FM
+FM -> UI : asks to know the number of days each ship has been idle since the beginning of the current year.
+activate UI
+UI -> CTRL : getIdleShips()
+activate CTRL
+
+CTRL -> COMP : shipStoreDB = getShipStoreDB()
+activate COMP
+deactivate COMP
+
+CTRL -> APP : databaseConnection = getInstance().getDatabaseConnection()
+activate APP
+deactivate APP
+
+CTRL -> SHIP_STORE_DB : idleShips = getIdleShips(dataBaseConnection)
+activate SHIP_STORE_DB
+deactivate SHIP_STORE_DB
+
+CTRL --> UI : idleShips
+
+UI --> FM : shows successfully ships and its idle times
+
+deactivate FM
+@enduml

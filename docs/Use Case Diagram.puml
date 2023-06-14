@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+actor "Traffic Manager" as TM
+actor "Project Manager" as PM
+
+rectangle System {
+(UC 102 - Search the details of a ship using any of its codes: MMSI, IMO or Call Sign) --> (UC 101 - Import ships from a text file into a BST) #brown;line.dashed;text:black : <<Include>>
+(UC 103 - Obtain the positional messages temporally \norganized associated with each ship) --> (UC 101 - Import ships from a text file into a BST) #brown;line.dashed;text:black : <<Include>>
+(UC 104 - As a traffic manager I wish to make a Summary of a ship's movements.) --> (UC 101 - Import ships from a text file into a BST) #brown;line.dashed;text:black : <<Include>>
+(UC 105 - List for all ships the MMSI, the total number of movements, Travelled Distance and Delta Distance) --> (UC 101 - Import ships from a text file into a BST) #brown;line.dashed;text:black : <<Include>>
+(UC 105 - List for all ships the MMSI, the total number of movements, Travelled Distance and Delta Distance) --> (UC 104 - As a traffic manager I wish to make a Summary of a ship's movements) #brown;line.dashed;text:black : <<Include>>
+(UC 106 - Get the top-N ships with the most kilometres travelled and their average speed) --> (UC 101 - Import ships from a text file into a BST) #brown;line.dashed;text:black : <<Include>>
+(UC 106 - Get the top-N ships with the most kilometres travelled and their average speed) --> (UC 104 - As a traffic manager I wish to make a Summary of a ship's movements) #brown;line.dashed;text:black : <<Include>>
+(UC 107 - Obtain pairs of ships with routes with close departure/arrival coordinates \nand different Travelled Distance) --> (UC 101 - Import ships from a text file into a BST) #brown;line.dashed;text:black : <<Include>>
+(UC 107 - Obtain pairs of ships with routes with close departure/arrival coordinates \nand different Travelled Distance) --> (UC 104 - As a traffic manager I wish to make a Summary of a ship's movements) #brown;line.dashed;text:black : <<Include>>
+
+TM --> (UC 103 - Obtain the positional messages temporally \norganized associated with each ship)
+TM --> (UC 107 - Obtain pairs of ships with routes with close departure/arrival coordinates \nand different Travelled Distance)
+TM --> (UC 104 - As a traffic manager I wish to make a Summary of a ship's movements.)
+TM --> (UC 102 - Search the details of a ship using any of its codes: MMSI, IMO or Call Sign)
+TM --> (UC 105 - List for all ships the MMSI, the total number of movements, Travelled Distance and Delta Distance)
+TM --> (UC 106 - Get the top-N ships with the most kilometres travelled and their average speed)
+PM --> (UC 108 - Wants the team to develop the data model required to \nsupport all the functionality and to fulfill the purpose of the system to develop)
+PM --> (UC 109 - Wants the team to draft an SQL script to test whether the database verifies all the data integrity restrictions)
+PM --> (UC 110 - Wants the team to define the naming conventions)
+PM --> (UC 111 - Wants the team to create a SQL script to load the database with a minimum set of data sufficient)
+}
+
+@enduml

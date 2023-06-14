@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="451px" preserveAspectRatio="none" style="width:1448px;height:451px;background:#FFFFFF;" version="1.1" viewBox="0 0 1448 451" width="1448px" zoomAndPan="magnify"><defs><filter height="300%" id="f1k8knva5pibrf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="247.8125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="43.5" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="423.5" y="121.9609"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="164.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="423.5" y="182.6641"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="104.0547" style="stroke:#A80036;stroke-width:1.0;" width="10" x="642.5" y="213.0156"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1096.5" y="243.3672"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="48" x2="48" y1="89.6094" y2="365.4219"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="428" x2="428" y1="89.6094" y2="365.4219"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="647" x2="647" y1="89.6094" y2="365.4219"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1101" x2="1101" y1="89.6094" y2="365.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="5" y="86.5332">Ship Captain</text><ellipse cx="48.5" cy="15" fill="#FEFECE" filter="url(#f1k8knva5pibrf)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M48.5,23 L48.5,50 M35.5,31 L61.5,31 M48.5,50 L35.5,65 M48.5,50 L61.5,65 " fill="none" filter="url(#f1k8knva5pibrf)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="5" y="378.9551">Ship Captain</text><ellipse cx="48.5" cy="392.0313" fill="#FEFECE" filter="url(#f1k8knva5pibrf)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M48.5,400.0313 L48.5,427.0313 M35.5,408.0313 L61.5,408.0313 M48.5,427.0313 L35.5,442.0313 M48.5,427.0313 L61.5,442.0313 " fill="none" filter="url(#f1k8knva5pibrf)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1k8knva5pibrf)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="147" x="353" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="360" y="74.5332">:ContainersLoadedUI</text><rect fill="#FEFECE" filter="url(#f1k8knva5pibrf)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="147" x="353" y="364.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="360" y="385.9551">:ContainersLoadedUI</text><rect fill="#FEFECE" filter="url(#f1k8knva5pibrf)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="197" x="547" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="554" y="74.5332">:ContainersLoadedController</text><rect fill="#FEFECE" filter="url(#f1k8knva5pibrf)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="197" x="547" y="364.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="554" y="385.9551">:ContainersLoadedController</text><rect fill="#FEFECE" filter="url(#f1k8knva5pibrf)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="105" x="1047" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="1054" y="74.5332">:ShipTripStore</text><rect fill="#FEFECE" filter="url(#f1k8knva5pibrf)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="105" x="1047" y="364.4219"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="1054" y="385.9551">:ShipTripStore</text><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="247.8125" style="stroke:#A80036;stroke-width:1.0;" width="10" x="43.5" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="423.5" y="121.9609"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="164.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="423.5" y="182.6641"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="104.0547" style="stroke:#A80036;stroke-width:1.0;" width="10" x="642.5" y="213.0156"/><rect fill="#FFFFFF" filter="url(#f1k8knva5pibrf)" height="73.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1096.5" y="243.3672"/><polygon fill="#A80036" points="411.5,117.9609,421.5,121.9609,411.5,125.9609,415.5,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="53.5" x2="417.5" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="60.5" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="333" x="71.5" y="117.1045">asks for the list of containers to be loaded in the next port</text><polygon fill="#A80036" points="64.5,148.3125,54.5,152.3125,64.5,156.3125,60.5,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="58.5" x2="427.5" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="70.5" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="81.5" y="147.4561">asks for mmsi</text><polygon fill="#A80036" points="411.5,178.6641,421.5,182.6641,411.5,186.6641,415.5,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="53.5" x2="417.5" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="60.5" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="71.5" y="177.8076">types requested data</text><polygon fill="#A80036" points="630.5,209.0156,640.5,213.0156,630.5,217.0156,634.5,213.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="433.5" x2="636.5" y1="213.0156" y2="213.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="440.5" y="208.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179" x="451.5" y="208.1592">getListloadedContainers(mmsi)</text><polygon fill="#A80036" points="1084.5,239.3672,1094.5,243.3672,1084.5,247.3672,1088.5,243.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="652.5" x2="1090.5" y1="243.3672" y2="243.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="659.5" y="238.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="414" x="670.5" y="238.5107">List&lt;&gt;loadedList = getListLoadedContainers(databaseConection, mmsi)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1106.5" x2="1148.5" y1="273.7188" y2="273.7188"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1148.5" x2="1148.5" y1="273.7188" y2="286.7188"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1107.5" x2="1148.5" y1="286.7188" y2="286.7188"/><polygon fill="#A80036" points="1117.5,282.7188,1107.5,286.7188,1117.5,290.7188,1113.5,286.7188" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1113.5" y="268.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="317" x="1124.5" y="268.8623">nextPortID = getNextPortID(databaseConection, mmsi)</text><polygon fill="#A80036" points="444.5,313.0703,434.5,317.0703,444.5,321.0703,440.5,317.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="438.5" x2="646.5" y1="317.0703" y2="317.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="450.5" y="312.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="59" x="461.5" y="312.2139">loadedList</text><polygon fill="#A80036" points="59.5,343.4219,49.5,347.4219,59.5,351.4219,55.5,347.4219" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="53.5" x2="427.5" y1="347.4219" y2="347.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="65.5" y="342.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="335" x="76.5" y="342.5654">displays the list of containers to be loaded in the next port</text><!--MD5=[7a3465e99718e84708ed3fea715a6528]
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ":ContainersLoadedUI" as UI
+participant ":ContainersLoadedController" as CTRL
+participant ":ShipTripStore" as SBST
+
+activate SC
+SC -> UI :asks for the list of containers to be loaded in the next port
+activate UI
+UI - -> SC : asks for mmsi
+deactivate UI
+SC -> UI : types requested data
+activate UI
+
+UI -> CTRL : getListloadedContainers(mmsi)
+activate CTRL
+CTRL -> SBST : List<>loadedList = getListLoadedContainers(databaseConection, mmsi)
+
+activate SBST
+SBST -> SBST : nextPortID = getNextPortID(databaseConection, mmsi)
+CTRL -> UI : loadedList
+deactivate SBST
+deactivate CTRL
+UI - -> SC : displays the list of containers to be loaded in the next port
+deactivate UI
+deactivate SC
+
+@enduml
+
+@startuml
+autonumber
+actor "Ship Captain" as SC
+participant ":ContainersLoadedUI" as UI
+participant ":ContainersLoadedController" as CTRL
+participant ":ShipTripStore" as SBST
+
+activate SC
+SC -> UI :asks for the list of containers to be loaded in the next port
+activate UI
+UI - -> SC : asks for mmsi
+deactivate UI
+SC -> UI : types requested data
+activate UI
+
+UI -> CTRL : getListloadedContainers(mmsi)
+activate CTRL
+CTRL -> SBST : List<>loadedList = getListLoadedContainers(databaseConection, mmsi)
+
+activate SBST
+SBST -> SBST : nextPortID = getNextPortID(databaseConection, mmsi)
+CTRL -> UI : loadedList
+deactivate SBST
+deactivate CTRL
+UI - -> SC : displays the list of containers to be loaded in the next port
+deactivate UI
+deactivate SC
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

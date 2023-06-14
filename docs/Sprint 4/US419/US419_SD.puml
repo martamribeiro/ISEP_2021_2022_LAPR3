@@ -1,0 +1,48 @@
+@startuml
+autonumber
+actor "Port Manager" as PM
+participant GetCenterMassOfLoadedShipUI as UI
+participant GetCenterMassOfLoadedShipController as CTRL
+participant "Company" as COMP
+participant "ShipStore" as STORE
+participant "Ship" as SHIP
+
+
+activate PM
+PM -> UI : asks to get the center of mass of a ship loaded with containers
+
+activate UI
+UI --> PM : requests ship data
+
+
+PM -> UI : types ship data
+
+
+UI --> PM : requests data about the block of containers to be added
+
+
+PM -> UI : types block of containers data
+
+UI -> CTRL : getCenterOfMassLoadedShip(ship, nContainers, blockOne, blockTwo)
+activate CTRL
+
+
+
+CTRL -> SHIP : addNewBlockOfContainersToShip(blockOne, nContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : addNewBlockOfContainersToShip(blockTwo, nContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : loadCenterOfMass = getCenterOfMass()
+activate SHIP
+deactivate SHIP
+
+CTRL --> UI : loadCenterOfMass
+
+UI --> PM : operation success
+
+deactivate PM
+@enduml

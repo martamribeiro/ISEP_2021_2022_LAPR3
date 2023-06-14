@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="255px" preserveAspectRatio="none" style="width:499px;height:255px;background:#FFFFFF;" version="1.1" viewBox="0 0 499 255" width="499px" zoomAndPan="magnify"><defs><filter height="300%" id="f1vkin1t290neq" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1vkin1t290neq)" height="52.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="51" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1vkin1t290neq)" height="39.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="450" y="121.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="56" x2="56" y1="89.6094" y2="170.3125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="455" x2="455" y1="89.6094" y2="170.3125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="5" y="86.5332">TrafficManager</text><ellipse cx="56" cy="15" fill="#FEFECE" filter="url(#f1vkin1t290neq)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M56,23 L56,50 M43,31 L69,31 M56,50 L43,65 M56,50 L69,65 " fill="none" filter="url(#f1vkin1t290neq)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="96" x="5" y="183.8457">TrafficManager</text><ellipse cx="56" cy="196.9219" fill="#FEFECE" filter="url(#f1vkin1t290neq)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M56,204.9219 L56,231.9219 M43,212.9219 L69,212.9219 M56,231.9219 L43,246.9219 M56,231.9219 L69,246.9219 " fill="none" filter="url(#f1vkin1t290neq)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1vkin1t290neq)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="64" x="421" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="428" y="74.5332">:System</text><rect fill="#FEFECE" filter="url(#f1vkin1t290neq)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="64" x="421" y="169.3125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="428" y="190.8457">:System</text><rect fill="#FFFFFF" filter="url(#f1vkin1t290neq)" height="52.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="51" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1vkin1t290neq)" height="39.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="450" y="121.9609"/><polygon fill="#A80036" points="438,117.9609,448,121.9609,438,125.9609,442,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="61" x2="444" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="68" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="359" x="79" y="117.1045">asks the pairs of ships with close departure/arrival coordinates</text><polygon fill="#A80036" points="67,148.3125,57,152.3125,67,156.3125,63,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="61" x2="449" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="73" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="180" x="84" y="147.4561">shows successfully information</text><!--MD5=[23b573d77caca07406a337bf7cd7abe3]
+@startuml
+
+autonumber
+actor TrafficManager as TM
+
+activate TM
+TM -> ":System" : asks the pairs of ships with close departure/arrival coordinates
+activate ":System"
+":System" - -> TM : shows successfully information
+
+
+deactivate TM
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

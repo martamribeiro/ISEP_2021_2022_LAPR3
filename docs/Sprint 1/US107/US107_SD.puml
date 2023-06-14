@@ -1,0 +1,95 @@
+@startuml
+
+
+autonumber
+actor "Traffic Manager" as TM
+
+participant "ShowPairsOfShipsUI" as UI
+participant "ShowPairsOfShipsController" as CTRL
+participant "Company" as COMP
+participant "ShipStore" as SHIP_STORE
+participant "shipsBST:\nShipsBST" as BstShip
+participant "ship:\nShip" as S
+participant "ship2\nShip" as S2
+/'participant "ShipPosition" as SP'/
+participant "positionsBST:\nPositionsBST" as BstPosition
+participant "positionsBST2:\nPositionsBST" as BstPosition2
+participant "listShipsWithIntendedTD:\nList<Ship>" as ITERATOR
+participant "infoPair:\nTreeMap<Double, String>" as TREEMAP
+participant "listPairsOfShips:\nList<TreeMap<Double, String>>" as LIST
+
+
+activate TM
+TM -> "UI" : asks the pairs of ships with close departure/arrival coordinates
+activate "UI"
+UI -> CTRL : getPairsOfShip()
+activate CTRL
+CTRL -> COMP : getShipStore()
+activate COMP
+deactivate COMP
+CTRL -> SHIP_STORE : shipsBST = getShipsBstMmsi()
+activate SHIP_STORE
+deactivate SHIP_STORE
+CTRL -> BstShip : getPairsOfShips()
+/'decide what kind of list'/
+activate BstShip
+/'BstShip -> BstShip : listOfShips = inOrder() '/
+note over BstShip, S
+The **listShipsWithIntendedTD** contains only the ships
+with Travelled Distance >= 10.
+end note
+BstShip -> BstShip : getShipsInOrderWithIntendedTD()
+activate BstShip
+BstShip --> BstShip : listShipsWithIntendedTD
+deactivate BstShip
+|||
+loop for each ship in listShipsWithIntendedTD
+BstShip --> TREEMAP** : create()
+BstShip -> ITERATOR : ship = next()
+activate ITERATOR
+deactivate ITERATOR
+/'BstShip -> S : travelledDistance = getTravelledDistance()
+activate S
+deactivate S
+'/
+BstShip -> S : positionsBST = getPositionsBST()
+activate S
+deactivate S
+BstShip -> BstPosition : travelledDistance = getTotalDistance()
+activate BstPosition
+deactivate BstPosition
+BstShip -> BstShip : fillTreeMapForEachShip(listShipsWithIntendedTD, infoPair, \n       travelledDistance, positionsBST, ship1MMSI, indexShip)
+ref over BstShip
+SD_fillTreeMapForEachShip()
+end
+activate BstShip
+deactivate BstShip
+/'alteração alt em baixo: travelledDistance2 >= 10 em vez de > 10'/
+/'alt travelledDistance >= 10'/
+
+alt !infoPair.isEmpty()
+BstShip -> LIST : add(infoPair)
+end
+activate LIST
+deactivate LIST
+/'end'/
+end
+
+BstShip --> CTRL : listPairsOfShips
+deactivate BstShip
+note over CTRL
+The desired data is put into a **file**
+end note
+CTRL --> UI : result
+deactivate CTRL
+"UI" --> TM : shows successfully information
+
+deactivate "UI"
+
+
+
+
+
+deactivate TM
+
+@enduml

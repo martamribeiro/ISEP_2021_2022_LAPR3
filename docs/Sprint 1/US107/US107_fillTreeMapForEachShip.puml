@@ -1,0 +1,96 @@
+@startuml
+
+title SD_fillTreeMapForEachShip(listShipsWithIntendedTD, infoPair, travelledDistance, positionsBST, ship1MMSI, indexShip)
+
+participant "ShipsBST" as BstShip
+participant "ship:\nShip" as S
+participant "ship2\nShip" as S2
+/'participant "ShipPosition" as SP'/
+participant "positionsBST:\nPositionsBST" as BstPosition
+participant "positionsBST2:\nPositionsBST" as BstPosition2
+participant "listShipsWithIntendedTD:\nList<Ship>" as ITERATOR
+participant "infoPair:\nTreeMap<Double, String>" as TREEMAP
+participant "listPairsOfShips:\nList<TreeMap<Double, String>>" as LIST
+
+
+[o-> BstShip : fillTreeMapForEachShip(listShipsWithIntendedTD, infoPair, travelledDistance, positionsBST, ship1MMSI, indexShip)
+
+activate BstShip
+loop for each Ship after ship in listShipsWithIntendedTD
+BstShip -> ITERATOR : ship2 = get(j)
+activate ITERATOR
+deactivate ITERATOR
+BstShip -> S2 : positionsBST2 = getPositionsBST()
+activate S2
+deactivate S2
+BstShip -> BstPosition2 : travelledDistance2 = getTotalDistance()
+activate BstPosition2
+deactivate BstPosition2
+/'BstShip -> S2 : travelledDistance2 = getTravelledDistance()
+activate S2
+deactivate S2'/
+/'alteração alt em baixo: && travelledDistance2 >= 10'/
+/'alt travelledDistance != travelledDistance2 && travelledDistance2 >= 10'/
+alt travelledDistance != travelledDistance2
+/'BstShip -> BstPosition : arrivalLat = getArrivalLatitude()
+activate BstPosition
+deactivate BstPosition
+BstShip -> BstPosition : arrivalLog = getArrivalLongitude()
+activate BstPosition
+deactivate BstPosition
+BstShip -> BstPosition2 : arrivalLat2 = getArrivalLatitude()
+activate BstPosition2
+deactivate BstPosition2
+BstShip -> BstPosition2 : arrivalLog2 = getArrivalLongitude()
+activate BstPosition2
+deactivate BstPosition2
+BstShip -> BstPosition : arrivalDistance = distanceBetweenInKm(arrivalLat, arrivalLat2, arrivalLog, arrivalLog2)'/
+BstShip -> BstPosition : arrivalDistance = getArrivalDistance(positionsBST2)
+activate BstPosition
+deactivate BstPosition
+alt arrivalDistance <= 5
+/'BstShip -> BstPosition : depLat = getDeparLatitude()
+activate BstPosition
+deactivate BstPosition
+BstShip -> BstPosition : depLog = getDepartLongitude()
+activate BstPosition
+deactivate BstPosition
+BstShip -> BstPosition2 : depLat2 = getDepartLatitude()
+activate BstPosition2
+deactivate BstPosition2
+BstShip -> BstPosition2 : depLog2 = getDepartLongitude()
+activate BstPosition2
+deactivate BstPosition2
+BstShip -> BstPosition : depDistance = distanceBetweenInKm(depLat, depLat2, depLog, depLog2)
+activate BstPosition
+deactivate BstPosition'/
+BstShip -> BstPosition : depDistance = getDepartureDistance(positionsBST2)
+activate BstPosition
+deactivate BstPosition
+alt depDistance <= 5
+
+BstShip -> BstPosition : numMovs = size()
+activate BstPosition
+deactivate BstPosition
+BstShip -> BstPosition2 : numMovs2 = size()
+activate BstPosition2
+deactivate BstPosition2
+
+note over BstShip, S
+The **diffTravDist** is the module of the difference
+between the Travelled Distances.
+The **allInfo** is a string containing the necessary info to show.
+end note
+
+BstShip -> TREEMAP : put(diffTravDist, allInfo)
+activate TREEMAP
+deactivate TREEMAP
+end
+end
+end
+end
+deactivate BstShip
+
+[<-- BstShip : result
+
+@enduml

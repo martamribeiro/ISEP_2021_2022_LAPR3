@@ -1,0 +1,45 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class Company{}
+
+class ShipCaptain{}
+
+class Ship {
+    -mmsi
+    -imo
+    -callSign
+    -shipName
+    -vesselType
+    -length
+    -width
+    -draft
+    -cargo
+    -totalMass
+}
+
+class Mass {
+    - x
+    - y
+    - length
+    - width
+}
+
+class Container {
+   -containerId
+   -payload
+   -tare
+   -gross
+   -isoCode
+}
+
+Company "1" -- "1..*" Ship : owns >
+ShipCaptain "1" -- "1..*" Ship : analyses >
+Ship "1" -- "1..*" Mass : has >
+Ship "1..*"-- "1..*" Container : transports >
+Container "1" -- "1" Mass : has >
+
+@enduml

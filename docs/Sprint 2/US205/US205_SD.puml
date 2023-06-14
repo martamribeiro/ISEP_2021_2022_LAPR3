@@ -1,0 +1,30 @@
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ":ContainersOffLoadedUI" as UI
+participant ":ContainersOffLoadedController" as CTRL
+participant ":ShipTripStore" as SBST
+
+activate SC
+SC -> UI :asks for the list of containers to be offloaded in the next port
+activate UI
+UI --> SC : asks for mmsi
+deactivate UI
+SC -> UI : types requested data
+activate UI
+
+UI -> CTRL : getListOffloadedContainers(mmsi)
+activate CTRL
+CTRL -> SBST : List<>offloadedList = getListOffloadedContainers(databaseConection, mmsi)
+
+activate SBST
+SBST -> SBST : nextPortID = getNextPortID(databaseConection, mmsi)
+CTRL -> UI : offloadedList
+deactivate SBST
+deactivate CTRL
+UI --> SC : displays the list of containers to be offloaded in the next port
+deactivate UI
+deactivate SC
+
+@enduml

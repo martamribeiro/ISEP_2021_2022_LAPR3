@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Fleet Manager" as SC
+
+activate SC
+SC-> ":System" : asks to know the average occupancy rate per manifest of a given ship during a given period
+activate ":System"
+":System" --> SC : asks for data(i.e.,shipID, month1, year1, day1, month2, year2, day2)
+SC-> ":System" : inserts needed data
+":System" --> SC : tells the average occupancy rate per manifest of a given ship during the given period
+
+deactivate ":System"
+
+@enduml

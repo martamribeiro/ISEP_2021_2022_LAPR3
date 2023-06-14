@@ -1,0 +1,51 @@
+.section .data
+	.equ TOTAL_SIZE, 60
+	.equ X_OFFSET, 52
+	.equ Y_OFFSET, 54
+	.equ Z_OFFSET, 56
+	.equ TEMPERATURE_OFFSET, 58
+.section .text
+	.global is_refrigerated		
+	
+	is_refrigerated:
+		# prologue
+		pushq %rbp # save the original value of RBP
+		movq %rsp, %rbp # copy the current stack pointer to RBP
+		subq $2, %rsp
+		pushq %rbx
+		# ###########################################
+		movslq %esi, %rsi # making size quad to compare with counter
+		movq $0, %r9 # counter is quad to be part of the offset
+		movq $0, %r10
+		find_container:
+			cmpw X_OFFSET(%rdi,%r10, 4), %dx # compare x
+			jne keep_search
+			cmpw Y_OFFSET(%rdi, %r10, 4), %cx # compare x
+			jne keep_search
+			cmpw Z_OFFSET(%rdi, %r10, 4), %r8w # compare x
+			jne keep_search
+
+			leaq (%rdi, %r10, 4), %rbx
+			movq %rbx, %rdi
+			jmp check_refrigeration
+
+		keep_search:
+			incq %r9
+			addq $15, %r10
+			cmpq %rsi, %r9
+			jl find_container
+
+		check_refrigeration:
+			movl $0, %eax
+			cmpb $0, TEMPERATURE_OFFSET(%rdi)
+			je end
+			movl $1, %eax
+
+		end:
+			# Epilogue	
+			popq %rbx
+			movq %rbp, %rsp # restore the previous stack pointer ("clear" the stack)
+			popq %rbp    # restore the previous stack frame pointer	
+			ret
+		
+		

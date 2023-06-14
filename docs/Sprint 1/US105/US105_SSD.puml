@@ -1,0 +1,14 @@
+@startuml
+autonumber
+actor "Unknown" as OE
+
+activate OE
+OE -> ":System" : asks to list for all ships the MMSI, the total number of movements, Travelled Distance and Delta Distance
+activate ":System"
+
+":System" --> OE : show ships ordered by Travelled Distance
+":System" --> OE : show ships ordered by Total Number of Movements
+deactivate ":System"
+deactivate OE
+
+@enduml

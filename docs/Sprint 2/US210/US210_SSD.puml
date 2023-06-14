@@ -1,0 +1,11 @@
+@startuml
+autonumber
+actor "Traffic Manager" as TM
+
+activate TM
+TM -> ":System" : asks to obtain the available ships on Monday next week and their location
+activate ":System"
+":System" --> TM : shows successfully available ships
+
+deactivate TM
+@enduml

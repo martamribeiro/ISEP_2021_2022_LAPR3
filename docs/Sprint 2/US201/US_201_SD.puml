@@ -1,0 +1,55 @@
+@startuml
+autonumber
+'hide footbox
+actor "Port Manager" as PM
+participant ":ImportPortsUI  " as UI
+participant ":ImportPortsController" as CTRL
+participant ":PortFileUtils" as TFU
+participant ":Company" as CMP
+participant ":PortStore" as STORE
+participant ":Port" as PORT
+participant ":PortTree" as TREE
+
+activate PM
+PM -> UI : asks to import ports from a text file into a BST
+activate UI
+UI -> CTRL** : create()
+UI --> PM : asks for data(i.e., pathOfFile)
+deactivate UI
+PM -> UI : types requested data
+activate UI
+UI -> TFU** : create()
+activate TFU
+UI -> TFU : List<PortsFileDTO>portsOfFile = getPortsDataToDTO(pathOfFile)
+deactivate TFU
+UI -> CTRL : importPortsFromFile(portsFileDTO)
+activate CTRL
+alt for each PortsFileDTO of the list
+CTRL -> CMP : getPortStore()
+activate CMP
+|||
+deactivate CMP
+CTRL -> STORE : createPort(portsFileDTO)
+activate STORE
+STORE -> PORT** : create(continent, country, portCode, portName, latitude, longitude)
+activate PORT
+deactivate STORE
+PORT --> CTRL : newPort
+deactivate PORT
+alt if Port is new in the system
+CTRL -> CTRL : savePort()
+CTRL -> STORE : savePort(port)
+activate STORE
+STORE -> TREE : insert(port)
+activate TREE
+|||
+deactivate TREE
+deactivate STORE
+end
+CTRL --> UI : result
+deactivate CTRL
+UI --> PM : informs of operation success or fail
+deactivate UI
+deactivate PM
+
+@enduml

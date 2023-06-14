@@ -1,0 +1,53 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class ShortestPathController {
+    +getShortestPath(beg,end,path)
+    +getShortestLandPath(beg,end)
+    +getShortestMaritimePath(beg,end)
+    +getShortestLandOrSeaPath(beg,end)
+}
+
+class Company {
+    -designation
+    +getFreightNetwork()
+}
+
+class FreightNetwork {
+    +getShortestPath(net,beg,end)
+}
+
+abstract class Location{
+    -latitude
+    -longitude
+}
+
+class Port {
+    -name
+    -latitude
+    -longitude
+}
+
+class Capital{
+    -name
+    -latitude
+    -longitude
+}
+
+class MatrixGraph {}
+
+abstract class CommonGraph {}
+
+interface Graph <<interface>> {}
+
+ShortestPathController ..> Company
+Company "1" -- "1" FreightNetwork : knows >
+Location <|-- Port
+Location <|-- Capital
+FreightNetwork "1" -- "1..*" Location : of >
+FreightNetwork ..> MatrixGraph
+CommonGraph <|- MatrixGraph
+CommonGraph --> Graph
+
+@enduml

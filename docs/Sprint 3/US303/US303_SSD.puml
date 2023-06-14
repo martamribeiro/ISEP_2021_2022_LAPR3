@@ -1,0 +1,13 @@
+@startuml
+autonumber
+actor TrafficManager as C
+
+activate C
+C -> ":System" : asks to list the n closeness locals by continent
+activate ":System"
+
+":System" --> C : returns a map of the closeness places by continent
+deactivate ":System"
+
+deactivate C
+@enduml

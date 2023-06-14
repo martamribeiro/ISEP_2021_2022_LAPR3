@@ -1,0 +1,78 @@
+@startuml
+autonumber
+'hide footbox
+actor "Unknown" as ADM
+
+participant "TopNUI" as UI
+participant "TopNController" as CTRL
+participant "ShipBST" as STORE
+participant "Company" as COMP
+participant "ShipStore" as SHSTR
+participant "PositionBST" as BST
+participant "Position" as POS
+participant "Ship" as SHIP
+
+
+activate ADM
+ADM -> UI : asks to see the top-N ships with the most km travelled and their meanSOG
+activate UI
+loop while top-N ships and meanSOGwant to be seen
+UI -> ADM : requests initial and final Base Date Time and N ships to be sorted
+deactivate UI
+
+ADM -> UI : inserts requested data (initial, final, N)
+activate UI
+UI -> CTRL : List<E> getShipsByDate(initial, final)
+activate CTRL
+CTRL -> COMP : shipBST = getShipStore()
+        activate COMP
+        COMP -> SHSTR : getShipsBstMmsi()
+        activate SHSTR
+        deactivate SHSTR
+        deactivate COMP
+CTRL -> STORE : List<E> getShipsByDate(initial, final)
+activate STORE
+STORE -> SHIP : positionBST = getPositionsBST()
+
+activate SHIP
+deactivate SHIP
+STORE -> BST : baseDateTime = getShipDate(mmsi)
+activate BST
+deactivate STORE
+BST -> POS : getBaseDateTime()
+activate POS
+deactivate BST
+deactivate POS
+
+CTRL -> UI : shipList
+deactivate CTRL
+
+UI -> CTRL : Map<VesselType, Map<Ship, Set<Double>>> getShipWithMean(listShip, num)
+activate CTRL
+CTRL -> STORE : shipByVessel = Map<VesselType, Map<Ship, Set<Double>>> getShipWithMean(listShip, num)
+activate STORE
+STORE -> STORE : List<E> sortNShips(shipList)
+STORE -> SHIP : getVesselType()
+activate SHIP
+deactivate SHIP
+
+STORE -> SHIP : positionBST = getPositionsBST()
+activate SHIP
+deactivate SHIP
+
+STORE -> BST : totalDistance = getTotalDistance()
+activate BST
+deactivate BST
+
+STORE -> BST : meanSOG = getMeanSOG()
+activate BST
+deactivate BST
+deactivate STORE
+CTRL -> UI : return shipByVessel
+deactivate CTRL
+UI -> ADM : returns sorted ships with the most km travelled and their meanSOG
+deactivate UI
+end
+deactivate ADM
+
+@enduml

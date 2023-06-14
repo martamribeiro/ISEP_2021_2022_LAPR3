@@ -1,0 +1,35 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CreateMapContainersPortController{
+- company
+- calculateOccupancyRate(maxCapacity, currentCapacity)
+- getOccupancyRateByPortIDandDate(portID, month, year, day)
+- checkIfPortExists(portID)
+- getOccupancyMap(portID, month, year)
+- getMap28dMonth(portID, month, year)
+- getMap29dMonth(portID, month, year)
+- getMap30dMonth(portID, month, year)
+- getMap31dMonth(portID, month, year)
+}
+
+class PortStoreDB{
+- getPortMaxCapacity(portID)
+- getPortOccupancyInDay(portID, date)
+- checkIfPortExists(portID)
+}
+
+class Company{
+- PortStoreDB
+- getPortStoreDB()
+}
+
+CreateMapContainersPortController ..> Company
+CreateMapContainersPortController ..> PortStoreDB
+Company "1" -- "1" PortStoreDB : uses >
+
+@enduml

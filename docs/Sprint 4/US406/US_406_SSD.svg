@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="255px" preserveAspectRatio="none" style="width:615px;height:255px;background:#FFFFFF;" version="1.1" viewBox="0 0 615 255" width="615px" zoomAndPan="magnify"><defs><filter height="300%" id="f1crhc1jcefad3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1crhc1jcefad3)" height="61.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="49" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1crhc1jcefad3)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="566" y="121.9609"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="54" x2="54" y1="89.6094" y2="170.3125"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="571" x2="571" y1="89.6094" y2="170.3125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="5" y="86.5332">Fleet Manager</text><ellipse cx="54" cy="15" fill="#FEFECE" filter="url(#f1crhc1jcefad3)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M54,23 L54,50 M41,31 L67,31 M54,50 L41,65 M54,50 L67,65 " fill="none" filter="url(#f1crhc1jcefad3)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="5" y="183.8457">Fleet Manager</text><ellipse cx="54" cy="196.9219" fill="#FEFECE" filter="url(#f1crhc1jcefad3)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M54,204.9219 L54,231.9219 M41,212.9219 L67,212.9219 M54,231.9219 L41,246.9219 M54,231.9219 L67,246.9219 " fill="none" filter="url(#f1crhc1jcefad3)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1crhc1jcefad3)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="64" x="537" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="544" y="74.5332">:System</text><rect fill="#FEFECE" filter="url(#f1crhc1jcefad3)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="64" x="537" y="169.3125"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="544" y="190.8457">:System</text><rect fill="#FFFFFF" filter="url(#f1crhc1jcefad3)" height="61.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="49" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f1crhc1jcefad3)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="566" y="121.9609"/><polygon fill="#A80036" points="554,117.9609,564,121.9609,554,125.9609,558,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="59" x2="560" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="66" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="477" x="77" y="117.1045">asks to know which ship voyages had an occupancy rate below a certain threshold</text><polygon fill="#A80036" points="70,148.3125,60,152.3125,70,156.3125,66,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64" x2="570" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="76" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="333" x="87" y="147.4561">return lsit of voyages with occupancy rate below threshold</text><!--MD5=[14933817d5a777ef087ca2f72032394d]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Fleet Manager" as SC
+
+activate SC
+SC-> ":System" : asks to know which ship voyages had an occupancy rate below a certain threshold
+activate ":System"
+":System" - -> SC : return lsit of voyages with occupancy rate below threshold
+
+deactivate ":System"
+
+@enduml
+
+@startuml
+
+autonumber
+actor "Fleet Manager" as SC
+
+activate SC
+SC-> ":System" : asks to know which ship voyages had an occupancy rate below a certain threshold
+activate ":System"
+":System" - -> SC : return lsit of voyages with occupancy rate below threshold
+
+deactivate ":System"
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

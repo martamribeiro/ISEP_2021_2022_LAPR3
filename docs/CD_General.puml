@@ -1,0 +1,392 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class Company{
+    - designation
+    - shipsBST
+    - shipStoreDB
+    - shipTripStoreDB
+    - cargoManifestStoreDB
+    + getBstShip()
+    + getShipTripStoreDB()
+    + getShipStoreDB()
+    + getCargoManifestStoreDB()
+    + getRouteStoreDB()
+}
+
+class BST{
+    + size()
+}
+
+class Ship {
+    - positionsBST
+    - MMSI
+    - vesselName
+    - IMO
+    - callSign
+    - vesselTypeID
+    - length
+    - width
+    - draft
+    - cargo
+    + Ship(positionsBST, MMSI, vesselName, IMO, callSign, vesselTypeID, length, width, draft, cargo)
+    + checkPositionsBST(positionsBST)
+    + checkMMSI(int MMSI)
+    + checkVesselName(vesselName)
+    + checkIMO(IMO)
+    + checkLength(length)
+    + checkWidth(width)
+    + checkDraft(draft)
+    + checkCargo(cargo)
+    + getName()
+    + getMovements()
+    + getMMSI()
+    + getPositionsBST()
+    + setPositionsBST(positionsBST)
+    + equals(Object otherObject)
+}
+
+class ShipsBST{
+    + findShipByMmsi(MMSI)
+    + getShipByBaseDateTime(initialBaseDate, finalBaseDate)
+    + sortNShips(shipList)
+    + getShipWithMean(sortedShips, N)
+    + getShipByMmsiCode(mmsiCode)
+    + getPairsOfShips()
+    + getShipsInOrderWithIntendedTD()
+    + fillTreeMapForEachShip(listShipsWithIntendedTD, infoPair, \ntravelledDistance, positionsBST, ship1MMSI, indexShip)
+}
+
+class ShipsBSTImo{
+    + findShipByImo(imo)
+}
+class ShipsBSTCallSign{
+    + findShipByCallsign(callsign)
+ }
+
+class ShipStore{
+    + createShip(shipsFileDTO)
+    + validateShip(ship)
+    + saveShip(ship)
+    + getShipsBstMmsi()
+    + Ship findShipByAnyCode(code)
+}
+
+class ShipPosition{
+    - MMSI
+    - baseDateTime
+    - lat
+    - lon
+    - sog
+    - cog
+    - heading
+    - transcieverClass
+    - position
+    + ShipPosition(mmsi, baseDateTime, lat, lon, sog, cog, heading, transcieverClass)
+    + checkMMSI(mmsi)
+    + checkBaseDateTime(baseDateTime)
+    + checkLat(lat)
+    + checkLon(lon)
+    + checkSog(sog)
+    + checkCog(cog)
+    + checkHeading(heading)
+    + checkTranscieverClass(transcieverClass)
+    + getPositionsBST()
+    + getLatitude()
+    + getLongitude()
+    + getBaseTime()
+    + getSog()
+    + getCog()
+}
+
+class PositionsBST {
+    + getStartDate()
+    + getEndDate()
+    + getMaxSog()
+    + getMeanSog()
+    + getMeanCog()
+    + getDepartLatitude()
+    + getDepartLongitude()
+    + getArrivalLatitude()
+    + getArrivalLongitude()
+    + getTravelDistance()
+    + getDeltaDistance()
+    + getShipBaseDateTime(code)
+    + getPositinalMessages(initialDate, finalDate)
+    + getTotalDistance()
+    + getArrivalDistance()
+    + getDepartureDistance()
+    + hasPosition(shipPosition)
+    + validatePosition(shipPosition)
+    + savePosition(shipPosition)
+}
+
+class ImportShipsController {
+    - company
+    - ship
+    - shipPosition
+    - positionsBST
+    + saveShip()
+    + importShipFromFile(shipsFileDTO)
+}
+
+class ShipsFileDTO{
+    - positionDTO
+    - mmsi
+    - vesselType
+    - length
+    - width
+    - draft
+    - vesselName
+    - imo
+    - callSign
+    - cargo
+    + ShipsFileDTO(positionDTO, mmsi, vesselName, imo, callSign, vesselType, length, width, draft, cargo)
+    + getPositionDTO()
+    + getMmsi()
+    + getVesselName()
+    + getImo()
+    + getCallSign()
+    + getVesselType()
+    + getLength()
+    + getWidth()
+    + getCargo()
+    + getDraft()
+}
+
+class PositionDTO{
+    - baseDateTime
+    - lat
+    - lon
+    - sog
+    - cog
+    - heading
+    - transcieverClass
+    + PositionDTO(baseDateTime, lat, lon, sog, cog, heading, transcieverClass)
+    + getBaseDateTime()
+    + getLat()
+    + getLon()
+    + getSog()
+    + getCog()
+    + getHeading()
+    + getTranscieverClass()
+}
+
+class ShipsFileUtils{
+    - dataLabels
+    + getShipsDataToDTO(filePath)
+    + attributesToDTO(shipData)
+    + getDateOfString(stringFormatDate)
+    + positionToDTO(data)
+}
+
+class MovementSummaryController {
+    + getShipMovementSummary(MMSI)
+}
+
+class MovementSummaryDto{
+    - name
+    - startDate
+    - endDate
+    - maxSog
+    - meanSog
+    - meanCog
+    - departLatitude
+    - departLongitude
+    - arrivalLatitude
+    - arrivalLongitude
+    - travelledDist
+    - deltaDist
+}
+
+class AllShipMMSIController {
+    +sortedByTravelledDistance()
+    +sortedByTotalMovements()
+}
+
+class TopNController {
+    +getShipByBaseDateTime(initialBaseDate, finalBaseDate)
+    +getShipWithMean(sortedShips)
+}
+
+class ShowPositionalMessagesController {
+    +isValidShip(mmsiCode)
+    +showPositionalMessages(initialDate, finalDate)
+}
+
+class ShowPairsOfShipsController {
+    +getPairsOfShips()
+}
+
+class GetContainerSituationController{
+    +getContainerSituation(containerID, registrationCode)
+}
+
+class ShipOccupancyRatesController{
+    - company
+    + calculateOccupancyRate(maxCapacity, initialNumContainers, alreadyAddedRemovedContainersTripNum)
+    + getShipOccupancyRateByCargoManifestID(cargoManifestID)
+    + getCargoManifestIDByMmsiAndDate(mmsi, date)
+    + checkIfCargoManifestExists(cargoManifestID)
+    + checkIfShipExists(mmsi)
+    + getShipOccupancyRateByMmsiAndDate(mmsi, date)
+    + getMmsiByCargoManifest(cargoManifestID)
+}
+
+class GetContainerRouteController{
+    +getContainerPath(containerID, registrationCode)
+}
+
+class ColorMapController {
+    +colorMap()
+}
+
+class FreightNetwork {
+    +getOrderedCapitalsList()
+    +fillCapitalsToColor(capitalsToColor)
+    +colorMap()
+}
+
+abstract class Location{
+    -latitude
+    -longitude
+    -countryName
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -toPortsDistance
+}
+
+class Capital {
+    -name
+}
+
+class Country {
+    -continent
+    -name
+    -borders
+}
+
+class MatrixGraph {}
+
+abstract class CommonGraph {}
+
+interface Graph <<interface>> {}
+
+class ShipStoreDB{
+    + checkIfShipExists(mmsi)
+    + getShipCargo(cargoManifestID)
+}
+
+class ShipTripStoreDB {
+    +getShipTripId(databaseConnection, containerId, shipmentId)
+    +getLocation(databaseConnection, shipTripId)
+    + getMmsiByCargoManifestID(cargoManifestID)
+    + getAddedRemovedContainersShipTripMoment(cargoManifestID)
+    + getEstDepartureDateFromShipTrip(cargoManifestID)
+    + getInitialNumContainersPerShipTrip(cargoManifestID,estDepartureDate)
+}
+
+class CargoManifestStoreDB{
+    + checkIfCargoManifestExists(cargoManifestID)
+    + getNumContainersPerCargoManifest(cargoManifestID)
+    + getCargoManifestByMmsiAndDate(mmsi, date)
+}
+
+class RouteStoreDB {
+    +getRouteId(databaseConnection, containerId, registrationCode)
+    +getContainerSituation(databaseConnection, routeId)
+}
+
+
+
+
+MovementSummaryController ..> Company
+MovementSummaryController ..> ShipStore
+MovementSummaryController -- MovementSummaryDto: creates >
+Company "1" --> "*" Ship : knows
+Company "1" -- "1" ShipStore : uses >
+ShipStore "1" -- "1" ShipsBSTCallSign : uses >
+ShipStore "1" -- "1" ShipsBST : uses >
+ShipStore "1" -- "1" ShipsBSTImo : uses >
+ShipsBST ..> Ship
+ShipsBSTImo ..> Ship
+ShipsBSTCallSign ..> Ship
+Ship "1" -- "*" ShipPosition : sends >
+Ship "1" -- "1" PositionsBST : uses >
+/'PositionsBST ..> ShipPosition'/
+/'ShipsBST ..> BST'/
+ShipsBSTImo ..> BST
+ShipsBSTCallSign ..> BST
+/'PositionsBST ..> BST'/
+AllShipMMSIController ..> ShipsBST
+AllShipMMSIController ..> Company
+TopNController ..> ShipsBST
+TopNController ..> Company
+/'US103'/
+Company "1" -- "1" ShipsBST : uses >
+ShipsBST "1" -- "1..*" Ship : owns >
+/'Ship "1" -- "1" PositionsBST : uses >'/
+PositionsBST "1" -- "1..*" ShipPosition : has >
+ShowPositionalMessagesController ..> Company
+ShowPositionalMessagesController ..> ShipsBST
+ShowPositionalMessagesController ..> Ship
+ShowPositionalMessagesController ..> PositionsBST
+/'US107'/
+ShowPairsOfShipsController ..> Company
+ShowPairsOfShipsController ..> ShipsBST
+ShowPairsOfShipsController ..> Ship
+ShowPairsOfShipsController ..> PositionsBST
+/'US101'/
+ImportShipsController ..> Company
+ImportShipsController ..> ShipsBST
+ImportShipsController ..> Ship
+ImportShipsController ..> PositionsBST
+ImportShipsController ..> ShipPosition
+ImportShipsController ..> ShipStore
+ShipsFileUtils ..> ShipsFileDTO
+ShipsFileUtils ..> PositionDTO
+ImportShipsController ..> ShipsFileDTO
+ShipsFileDTO ..> PositionDTO
+GetContainerSituationController ..> Company
+GetContainerSituationController ..> RouteStoreDB
+Company "1" -- "1" ShipTripStoreDB : uses >
+FindAvailableShipsController ..> Company
+FindAvailableShipsController ..> ShipTripStoreDB
+
+BST <|- PositionsBST
+BST <|- ShipsBST
+
+/'US302'/
+ColorMapController ..> Company
+Company "1" -- "1" FreightNetwork : knows >
+ColorMapController ..> FreightNetwork
+Location <|-- Port
+Location <|-- Capital
+FreightNetwork "*" -- "1..*" Location : of >
+Country "1" -- "1" Capital : has >
+FreightNetwork ..> MatrixGraph
+CommonGraph <|- MatrixGraph
+CommonGraph --> Graph
+ColorMapController ..> Location
+ColorMapController ..> Capital
+ColorMapController ..> Port
+ColorMapController ..> MatrixGraph
+/'END US302'/
+
+/'US305'/
+GetContainerRouteController ..> Company
+GetContainerRouteController ..> RouteStoreDB
+Company "1" -- "1" RouteStoreDB : uses >
+/'END US305'/
+
+
+@enduml

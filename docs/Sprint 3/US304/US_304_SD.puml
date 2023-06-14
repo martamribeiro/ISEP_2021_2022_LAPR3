@@ -1,0 +1,33 @@
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ": AuditTrailUI" as UI
+participant ":AuditTrailController" as CTRL
+participant ":Company" as CMP
+participant ":ContainerStoreDb" as CMS
+
+activate SC
+SC -> UI : wants to check the audit trail of a given container of a given cargo manifest
+activate UI
+UI --> SC : asks for data(cargo manifest id, container id)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getContainerAuditTrail(containerId, cargoManifestId)
+activate CTRL
+CTRL -> CMP : getContainerStoreDb()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : auditTrail = getAuditTrailOfContainer(containerId, cargoManifestId)
+activate CMS
+|||
+deactivate CMS
+CTRL --> UI : result
+deactivate CTRL
+UI --> SC : informs of operation success or fail
+deactivate UI
+deactivate SC
+
+@enduml

@@ -1,0 +1,161 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+/'class Company{
+
+}'/
+
+
+class Ship{
+    MMSI
+    IMO
+    CallSignId
+    ShipName
+    VesselTypeID
+    CurrentCapacity
+    Draft
+    Length
+    Width
+    maxCapacity
+}
+
+class ShipTrip{
+    loading_cargo_id
+    unloading_cargo_id
+    mmsi
+    start_location_id
+    destination_location_id
+    est_departure_date
+    real_departure_date
+    est_arrival_date
+    real_arrival_date
+}
+class Shipment{
+    shipment_id
+    container_id
+    shiptrip_id
+}
+
+
+
+class ShipPosition{
+    shipposition_id
+    BaseDateTime
+    Latitude
+    Longitude
+    IMO
+    Sog
+    Cog
+    Heading
+    Position
+    Transceiver
+}
+
+class Container{
+    ContainerID
+    Payload
+    Tare
+    Gross
+    CheckDigit
+    ISOCode
+    /'locationId'/
+}
+
+
+class EnergyPower{
+    NumEnergyGenerators
+    MMSI
+    GeneratorsPower
+}
+/'refrigeration state is ambigous'/
+
+/'manifest type(loading, unloading) changes its values'/
+class CargoManifest{
+    CargoManifestID
+}
+
+class PositionInVehicule{
+    CargoManifestID
+    ContainerID
+    ContainerPositionInVehiculeX
+    ContainerPositionInVehiculeY
+    ContainerPositionInVehiculeZ
+}
+
+class Port {
+    portId
+    Name
+    locationId
+}
+
+class Warehouse {
+    warehouseId
+    Name
+   locationId
+}
+
+class Country{
+    Country
+    Continent_id
+}
+
+class Continent{
+    continent_id
+    continent_name
+}
+
+class PlaceLocation{
+    locationId
+    locationLatitude
+    LocationLongitude
+    Country
+}
+
+class ContainerInCargoManifest{
+    ContainerID
+    CargoManifestId
+    temperatureKept
+}
+
+
+/'class Truck{
+    truckID
+}
+
+class Transports{
+    truckId FK
+    warehouseId FK
+}'/
+
+
+
+
+Ship "1" -- "1..*" Container : transports >
+Ship "1" -- "1..*" ShipPosition
+ShipTrip "1" -- "1..2" CargoManifest : has >
+ShipTrip "1" -- "2" Port
+
+Ship "1" -- "*" ShipTrip : has >
+CargoManifest "1" -- "1..*" ContainerInCargoManifest
+Container "*" -- "1" ContainerInCargoManifest
+/'Truck "1" -- "1..*" CargoManifest'/
+/'
+Truck "*" -- "1" Container
+'/
+Port "0..1" -- "1" CargoManifest
+Warehouse "0..1" -- "1" CargoManifest
+PlaceLocation "*" -- "1" Country
+Continent "1" -- "1..*" Country
+PlaceLocation "1" -- "1" Port
+PlaceLocation "1" -- "1" Warehouse
+
+/'Relacoes N para N, falta relacao'/
+/'
+Truck "1..*" -- "1..*" Warehouse
+'/
+Ship "1" -- "*" EnergyPower : has >
+ContainerInCargoManifest "1..*" -- "1..*" PositionInVehicule
+EnergyPower "1" -- "1..*" ContainerInCargoManifest
+Container "1" -- "*" Shipment
+Shipment "1..*" -- "1" ShipTrip
+@enduml

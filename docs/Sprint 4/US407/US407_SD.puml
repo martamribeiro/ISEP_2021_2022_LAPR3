@@ -1,0 +1,34 @@
+@startuml
+autonumber
+actor "Port Manager" as PM
+participant "GetUnloadingLoadingMapUI" as UI
+participant "GetUnloadingLoadingMapController" as CTRL
+participant "Company" as COMP
+participant "App" as APP
+participant "databaseConnection:\nDatabaseConnection" as CONNECTION
+participant "cargoManifestStoreDB:\nCargoManifestStoreDB" as STORE_DB
+
+activate PM
+PM -> UI : asks to get a week in advance, the loading and unloading map based on ships and trucks load manifests and corresponding travel plans
+activate UI
+UI -> CTRL : getUnloadingLoadingMap()
+activate CTRL
+
+CTRL -> COMP : cargoManifestStoreDB = getCargoManifestDB()
+activate COMP
+deactivate COMP
+
+CTRL -> APP : databaseConnection = getInstance().getDatabaseConnection()
+activate APP
+deactivate APP
+
+CTRL -> STORE_DB : map = getUnloadingLoadingMap(dataBaseConnection)
+activate STORE_DB
+deactivate STORE_DB
+
+CTRL --> UI : map
+
+UI --> PM : operation success
+
+deactivate PM
+@enduml

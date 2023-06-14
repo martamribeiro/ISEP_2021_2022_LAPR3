@@ -1,0 +1,78 @@
+@startuml
+
+@startuml
+
+skinparam classAttributeIconSize 0
+
+
+class Ship {
+    -mmmsiCode
+    -shipName
+    -imoCode
+    -callSignId
+    -currentCapacity /'added by us'/
+    -draft
+    +getPositionsBST()
+}
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+    +getPositionsBST()
+}
+
+class ShipsBST {
+    +getPairsOfShips()
+    +getShipsInOrderWithIntendedTD()
+    +fillTreeMapForEachShip(listShipsWithIntendedTD, infoPair, \ntravelledDistance, positionsBST, ship1MMSI, indexShip)
+}
+
+class PositionsBST {
+    +getTotalDistance()
+    +getArrivalDistance()
+    +getDepartureDistance()
+}
+
+/'class ShowPairsOfShipsUI {}'/
+
+class ShowPairsOfShipsController {
+    +getPairsOfShips()
+}
+
+class Company {
+    -designation
+    +getBstShip()
+}
+
+class BST {
++size()
+}
+
+class ShipStore {}
+
+/'Ship "1" -- "1..*" ShipPosition : has >'/
+/'Company "1" -- "1..*" Ship : owns >'/
+
+/'Company "1" -- "1" ShipsBST : uses >'/
+Company "1" -- "1" ShipStore : uses >
+ShipStore "1" -- "1" ShipsBST : uses >
+ShipsBST "1" -- "1..*" Ship : owns >
+Ship "1" -- "1" PositionsBST : uses >
+PositionsBST "1" -- "1..*" ShipPosition : has >
+/'ShowPairsOfShipsUI ..> ShowPairsOfShipsController'/
+ShowPairsOfShipsController ..> Company
+ShowPairsOfShipsController ..> ShipsBST
+ShowPairsOfShipsController ..> Ship
+ShowPairsOfShipsController ..> PositionsBST
+ShipsBST ..> PositionsBST
+
+BST <|- PositionsBST
+BST <|- ShipsBST
+
+@enduml

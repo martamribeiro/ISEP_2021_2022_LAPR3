@@ -1,0 +1,53 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class ShipOccupancyRatesController{
+- company
+- calculateOccupancyRate(maxCapacity, initialNumContainers, alreadyAddedRemovedContainersTripNum)
+- getShipOccupancyRateByCargoManifestID(cargoManifestID)
+- getCargoManifestIDByMmsiAndDate(mmsi, date)
+- checkIfShipExists(mmsi)
+- getShipOccupancyRateByMmsiAndDate(mmsi, date)
+- getMmsiByCargoManifest(cargoManifestID)
+}
+
+class ShipStoreDB{
+- checkIfShipExists(mmsi)
+- getShipCargo(cargoManifestID)
+}
+
+class ShipTripStoreDB{
+- getMmsiByCargoManifestID(cargoManifestID)
+- getAddedRemovedContainersShipTripMoment(cargoManifestID)
+- getEstDepartureDateFromShipTrip(cargoManifestID)
+- getInitialNumContainersPerShipTrip(cargoManifestID,estDepartureDate)
+}
+
+class CargoManifestStoreDB{
+- checkIfCargoManifestExists(cargoManifestID)
+- getNumContainersPerCargoManifest(cargoManifestID)
+- getCargoManifestByMmsiAndDate(mmsi, date)
+}
+
+class Company{
+- shipStoreDB
+- shipTripStoreDB
+- cargoManifestStoreDB
+- getShipTripStoreDB()
+- getShipStoreDB()
+- getCargoManifestStoreDB()
+}
+
+ShipOccupancyRatesController ..> Company
+ShipOccupancyRatesController ..> ShipStoreDB
+ShipOccupancyRatesController ..> ShipTripStoreDB
+ShipOccupancyRatesController ..> CargoManifestStoreDB
+Company "1" -- "1" ShipStoreDB : uses >
+Company "1" -- "1" ShipTripStoreDB : uses >
+Company "1" -- "1" CargoManifestStoreDB : uses >
+
+@enduml

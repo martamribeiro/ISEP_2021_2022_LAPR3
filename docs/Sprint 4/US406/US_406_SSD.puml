@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Fleet Manager" as SC
+
+activate SC
+SC-> ":System" : asks to know which ship voyages had an occupancy rate below a certain threshold
+activate ":System"
+":System" --> SC : return lsit of voyages with occupancy rate below threshold
+
+deactivate ":System"
+
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+class Company {
+    -designation
+}
+
+class FreightNetwork {}
+
+abstract class Location{
+    -latitude
+    -longitude
+    -countryName
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -toPortsDistance
+}
+
+class Capital {
+    -name
+}
+
+class Country {
+    -continent
+    -name
+    -borders
+}
+
+class TrafficManager {}
+
+
+
+/'Multiplicidade'/
+Company "1" -- "1" FreightNetwork : knows >
+Location <|-- Port
+Location <|-- Capital
+FreightNetwork "*" -- "1..*" Location : of >
+Country "1" -- "1" Capital : has >
+/'Dúvidas'/
+TrafficManager "1..*" -- "1" FreightNetwork : manages >
+
+@enduml

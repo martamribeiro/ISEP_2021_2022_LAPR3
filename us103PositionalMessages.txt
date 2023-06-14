@@ -1,0 +1,36 @@
+Vessel Name: VARAMO
+Vessel Type ID: 70
+MMSI: 123456789
+
+>> SHIP POSITION
+Base Date Time: 13/02/2021 00:00:00
+Latitude: 23,008721
+Longitude: 24,092123
+Speed Over Ground (SOG): 10,200000
+Course Over Ground (COG): 320,900000
+Transciever Class: 300
+
+>> SHIP POSITION
+Base Date Time: 10/03/2021 00:00:00
+Latitude: -55,022056
+Longitude: -46,233056
+Speed Over Ground (SOG): 31,700000
+Course Over Ground (COG): 328,500000
+Transciever Class: 315
+
+>> SHIP POSITION
+Base Date Time: 07/04/2021 00:00:00
+Latitude: -42,033006
+Longitude: -47,223056
+Speed Over Ground (SOG): 25,800000
+Course Over Ground (COG): 330,300000
+Transciever Class: 302
+
+>> SHIP POSITION
+Base Date Time: 04/05/2021 00:00:00
+Latitude: -30,033056
+Longitude: -51,230000
+Speed Over Ground (SOG): 25,400000
+Course Over Ground (COG): 341,200000
+Transciever Class: 300
+

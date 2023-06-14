@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "Ship Captain" as PM
+
+activate PM
+PM -> ":System" : asks to get the center of mass of a ship loaded with containers
+
+activate ":System"
+":System" --> PM : requests ship data
+
+
+PM -> ":System" : types ship data
+
+activate ":System"
+":System" --> PM : requests data about the block of containers to be added
+
+
+PM -> ":System" : types block of containers data
+
+
+":System" --> PM : returns successfully center of mass
+
+
+
+
+deactivate PM
+@enduml

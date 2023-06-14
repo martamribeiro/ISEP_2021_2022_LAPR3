@@ -1,0 +1,40 @@
+@startuml
+autonumber
+'hide footbox
+actor "Fleet Manager" as SC
+participant ":TripThresholdUI  " as UI
+participant ":TripThresholdController" as CTRL
+participant ":ShipTripStoreDB" as CMS
+participant ":Company" as CMP
+participant ":ShipStoreDB" as SSDB
+
+activate SC
+SC -> UI : asks to know which ship voyages had an occupancy rate below a certain threshold
+
+activate UI
+UI -> CTRL : getVoyagesBelowThreshold();
+activate CTRL
+CTRL -> CMP : getShipTripStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : getListVoyages();
+activate CMS
+CMS -> CMP : getShipStoreDB();
+activate CMP
+deactivate CMP
+CMS -> SSDB : getShipMaxCapacity(shipID);
+|||
+CMS -> SSDB : getNumContainersShipDay(shipID, departureDate);
+|||
+CMS -> SSDB : calculateOccupancyRate(maxCapacity, capacityTime)
+deactivate CMS
+
+|||
+CTRL --> UI : voyageList
+deactivate CTRL
+UI --> SC : return lsit of voyages with occupancy rate below threshold
+deactivate UI
+deactivate SC
+
+@enduml

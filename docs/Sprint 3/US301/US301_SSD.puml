@@ -1,0 +1,13 @@
+@startuml
+autonumber
+actor TrafficManager as C
+
+activate C
+C -> ":System" : asks to import data from countries, ports,\n borders and seadists files from the database to build a freight network
+activate ":System"
+
+":System" --> C : informs operation succeed
+deactivate ":System"
+
+deactivate C
+@enduml

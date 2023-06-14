@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="410px" preserveAspectRatio="none" style="width:615px;height:410px;background:#FFFFFF;" version="1.1" viewBox="0 0 615 410" width="615px" zoomAndPan="magnify"><defs><filter height="300%" id="fxts89ox3iv6a" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[8b7774a30c2a3667a84edc7b1d0ac185]
+class CheckIfContainerExceedsShipCapacityController--><rect codeLine="7" fill="#FEFECE" filter="url(#fxts89ox3iv6a)" height="86.4141" id="CheckIfContainerExceedsShipCapacityController" style="stroke:#A80036;stroke-width:1.5;" width="594" x="7" y="7"/><ellipse cx="154.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M157.2188,28.875 Q156.6406,29.1875 156,29.3438 Q155.3594,29.5 154.6563,29.5 Q152.1563,29.5 150.8281,27.8281 Q149.5156,26.1563 149.5156,23 Q149.5156,19.8438 150.8281,18.1719 Q152.1563,16.5 154.6563,16.5 Q155.3594,16.5 156,16.6563 Q156.6563,16.8125 157.2188,17.125 L157.2188,19.9219 Q156.5938,19.3594 156,19.0938 Q155.4063,18.8125 154.7813,18.8125 Q153.4375,18.8125 152.75,19.875 Q152.0625,20.9375 152.0625,23 Q152.0625,25.0781 152.75,26.1406 Q153.4375,27.1875 154.7813,27.1875 Q155.4063,27.1875 156,26.9219 Q156.5938,26.6563 157.2188,26.0781 L157.2188,28.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="290" x="175.25" y="27.1543">CheckIfContainerExceedsShipCapacityController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="600" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="13" y="53.2104">-company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="600" y1="59.8047" y2="59.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="582" x="13" y="74.0151">-tryToCeateShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="13" y="86.8198">-deleteShipTrip(shipTripID)</text><!--MD5=[8d7ca94d2ddad896fa1b7a151fdd57c4]
+class ShipTripStoreDB--><rect codeLine="13" fill="#FEFECE" filter="url(#fxts89ox3iv6a)" height="91.2188" id="ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="567" x="8.5" y="305"/><ellipse cx="238.25" cy="321" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M240.7188,326.875 Q240.1406,327.1875 239.5,327.3438 Q238.8594,327.5 238.1563,327.5 Q235.6563,327.5 234.3281,325.8281 Q233.0156,324.1563 233.0156,321 Q233.0156,317.8438 234.3281,316.1719 Q235.6563,314.5 238.1563,314.5 Q238.8594,314.5 239.5,314.6563 Q240.1563,314.8125 240.7188,315.125 L240.7188,317.9219 Q240.0938,317.3594 239.5,317.0938 Q238.9063,316.8125 238.2813,316.8125 Q236.9375,316.8125 236.25,317.875 Q235.5625,318.9375 235.5625,321 Q235.5625,323.0781 236.25,324.1406 Q236.9375,325.1875 238.2813,325.1875 Q238.9063,325.1875 239.5,324.9219 Q240.0938,324.6563 240.7188,324.0781 L240.7188,326.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="99" x="258.75" y="325.1543">ShipTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="9.5" x2="574.5" y1="337" y2="337"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="14.5" y="351.2104">-triggerShipAvailability()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="186" x="14.5" y="364.0151">-checkIfShipTripExists(shipTripID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="149" x="14.5" y="376.8198">-deleteShipTrip(shipTripID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="555" x="14.5" y="389.6245">-createShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="20" fill="#FEFECE" filter="url(#fxts89ox3iv6a)" height="73.6094" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="140" x="316" y="154"/><ellipse cx="353.95" cy="170" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M356.4188,175.875 Q355.8406,176.1875 355.2,176.3438 Q354.5594,176.5 353.8563,176.5 Q351.3563,176.5 350.0281,174.8281 Q348.7156,173.1563 348.7156,170 Q348.7156,166.8438 350.0281,165.1719 Q351.3563,163.5 353.8563,163.5 Q354.5594,163.5 355.2,163.6563 Q355.8563,163.8125 356.4188,164.125 L356.4188,166.9219 Q355.7938,166.3594 355.2,166.0938 Q354.6063,165.8125 353.9813,165.8125 Q352.6375,165.8125 351.95,166.875 Q351.2625,167.9375 351.2625,170 Q351.2625,172.0781 351.95,173.1406 Q352.6375,174.1875 353.9813,174.1875 Q354.6063,174.1875 355.2,173.9219 Q355.7938,173.6563 356.4188,173.0781 L356.4188,175.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="373.05" y="174.1543">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="317" x2="455" y1="186" y2="186"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="128" x="322" y="200.2104">-cargoShipTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="317" x2="455" y1="206.8047" y2="206.8047"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="122" x="322" y="221.0151">-getShipTripStoreDB()</text><!--MD5=[c938fbb66762e15d5994021c0d019cad]
+link CheckIfContainerExceedsShipCapacityController to Company--><path codeLine="25" d="M328.83,93.08 C339.34,110.91 351.55,131.6 361.98,149.28 " fill="none" id="CheckIfContainerExceedsShipCapacityController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="364.59,153.7,363.476,143.9143,362.0555,149.39,356.5799,147.9695,364.59,153.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f448e771dea609c8ab9e07ef15b72bd7]
+link CheckIfContainerExceedsShipCapacityController to ShipTripStoreDB--><path codeLine="26" d="M301.29,93.08 C300.15,111.74 298.89,133.96 298,154 C295.8,203.51 294.16,260.11 293.15,299.62 " fill="none" id="CheckIfContainerExceedsShipCapacityController-to-ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="293.02,304.84,297.25,295.9458,293.1485,299.8417,289.2527,295.7402,293.02,304.84" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[8a472e17fa1b8e6b82718bab5653081a]
+link Company to ShipTripStoreDB--><path codeLine="27" d="M364.43,228.13 C350.83,250.93 333.16,280.54 318.67,304.81 " fill="none" id="Company-ShipTripStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="346.4377,270.86,353.5966,264.5989,348.5492,261.5868,346.4377,270.86" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="30" x="358" y="271.0669">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="352.195" y="247.6321">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="313.9997" y="294.0583">1</text><!--MD5=[c6512a23de35faa6e809d918c4fba170]
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CheckIfContainerExceedsShipCapacityController{
+- company
+- tryToCeateShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+- deleteShipTrip(shipTripID)
+}
+
+class ShipTripStoreDB{
+- triggerShipAvailability()
+- checkIfShipTripExists(shipTripID)
+- deleteShipTrip(shipTripID)
+- createShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+}
+
+class Company{
+- cargoShipTripStoreDB
+- getShipTripStoreDB()
+}
+
+CheckIfContainerExceedsShipCapacityController ..> Company
+CheckIfContainerExceedsShipCapacityController ..> ShipTripStoreDB
+Company "1" - - "1" ShipTripStoreDB : uses >
+
+@enduml
+
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class CheckIfContainerExceedsShipCapacityController{
+- company
+- tryToCeateShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+- deleteShipTrip(shipTripID)
+}
+
+class ShipTripStoreDB{
+- triggerShipAvailability()
+- checkIfShipTripExists(shipTripID)
+- deleteShipTrip(shipTripID)
+- createShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+}
+
+class Company{
+- cargoShipTripStoreDB
+- getShipTripStoreDB()
+}
+
+CheckIfContainerExceedsShipCapacityController ..> Company
+CheckIfContainerExceedsShipCapacityController ..> ShipTripStoreDB
+Company "1" - - "1" ShipTripStoreDB : uses >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

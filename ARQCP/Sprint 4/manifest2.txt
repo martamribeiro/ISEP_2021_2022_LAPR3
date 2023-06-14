@@ -1,0 +1,9 @@
+ship capacity -> x: 2	y: 2	z: 2
+id: 75284136	x: 0	y: 0	z: 0	is_refrigerated: 0	temperature: 0  k_material1:55  size1: 0.003  k_material2: 0.045  size2: 0.09  k_material3: 0.13  size3: 0.007
+id: 12546895	x: 0	y: 1	z: 0	is_refrigerated: 0	temperature: 0  k_material1:55  size1: 0.003  k_material2: 0.045  size2: 0.09  k_material3: 0.13  size3: 0.007
+id: 23658471	x: 0	y: 0	z: 1	is_refrigerated: 1	temperature: -5  k_material1:55  size1: 0.003  k_material2: 0.023  size2: 0.09  k_material3: 0.038  size3: 0.007
+id: 58246397	x: 0	y: 1	z: 1	is_refrigerated: 1	temperature: 7  k_material1:55  size1: 0.003  k_material2: 0.045  size2: 0.09  k_material3: 0.13  size3: 0.007
+id: 68542157	x: 1	y: 0	z: 0	is_refrigerated: 0	temperature: 0  k_material1:55  size1: 0.003  k_material2: 0.045  size2: 0.09  k_material3: 0.13  size3: 0.007
+id: 36847121	x: 1	y: 1	z: 0	is_refrigerated: 1	temperature: 7  k_material1:55  size1: 0.003  k_material2: 0.045  size2: 0.09  k_material3: 0.13  size3: 0.007
+id: 45821368	x: 1	y: 0	z: 1	is_refrigerated: 1	temperature: -5  k_material1:55  size1: 0.003  k_material2: 0.023  size2: 0.09  k_material3: 0.038  size3: 0.007
+id: 85472136	x: 1	y: 1	z: 1	is_refrigerated: 1	temperature: 7  k_material1:55  size1: 0.003  k_material2: 0.045  size2: 0.09  k_material3: 0.13  size3: 0.007

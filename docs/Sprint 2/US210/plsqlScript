@@ -1,0 +1,84 @@
+create or replace PROCEDURE get_validated_ship_location(daydate in date, ship in Ship.mmsi%type, locations out varchar)
+IS
+    locationCode port.port_id%type;
+    shiptripid Shiptrip.shiptrip_id%type;
+
+BEGIN
+        -- since we know the ship is available on monday we have to get the closest arrival to monday and extract its port
+        select shiptrip_id into shiptripid from shiptrip where mmsi = ship AND
+        EST_ARRIVAL_DATE = (select max(EST_ARRIVAL_DATE) from shiptrip where mmsi=ship);
+        select arrival_location into locationCode from shiptrip where shiptrip_id = shiptripid;
+        select name into locations from port where port_id = locationCode;
+        dbms_output.put_line('cargo load id: ' || locations);
+END;
+
+
+create or replace PROCEDURE check_availability_of_ship(daydate in date, ship in Ship.mmsi%type, isValid out boolean)
+IS
+    estDepartDate date;
+    estArrivalDate date;
+
+Cursor tripsOfShip IS
+        select est_departure_date, est_arrival_date
+        from shiptrip
+        where mmsi=ship;
+
+BEGIN
+open tripsOfShip;
+    LOOP
+        fetch tripsOfShip INTO estDepartDate, estArrivalDate;
+        Exit When tripsOfShip%notfound;
+        --if the arriavl date is before the monday is valid
+        if daydate > estArrivalDate then
+            isValid := true;
+        -- if the date was not before monday then if the depart date is AFTER monday ship is available
+        elsif daydate < estDepartDate then
+            isValid := true;
+        -- else false
+        else
+            isValid := false;
+            exit;
+        end if;
+    END LOOP;
+END;
+
+create or replace PROCEDURE available_ships_after_day (daydate in Varchar, ships out Varchar, locationsOfShips out Varchar)
+IS
+    shipscode Ship.mmsi%type;
+    hasArrivalBefore integer;
+    availableShips Varchar(32700);
+    locations Varchar(32700);
+    nextmonday date;
+    isAvailable boolean;
+
+    Cursor shipsInTrips IS
+        select distinct (mmsi)
+        from shiptrip;
+
+BEGIN
+
+    nextMonday := TO_DATE(daydate, 'dd/mm/yyyy');
+    locationsOfShips := '';
+    ships := '';
+   open shipsInTrips;
+    LOOP
+        fetch shipsInTrips INTO shipscode;
+         dbms_output.put_line('code ' || shipscode);
+        Exit When shipsInTrips%notfound;
+        --makes avaialbility false by default
+        isAvailable := false;
+        --checks ships is available;
+        check_availability_of_ship(nextmonday, shipscode, isAvailable);
+        if isAvailable then
+             ships := ships || ' ' || shipscode;
+             get_validated_ship_location(nextMonday, shipscode, locations);
+             locationsOfShips := locationsOfShips || ' ' || locations;
+        end if;
+    END LOOP;
+    dbms_output.put_line('trip ' || ships);
+    dbms_output.put_line('trip ' || locationsOfShips);
+     EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+        ships := 'no data';
+        locationsOfShips := 'no data';
+END;

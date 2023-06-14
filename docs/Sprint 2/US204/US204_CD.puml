@@ -1,0 +1,23 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class GetContainerSituationController{
+    +getLocation(containerID, shipmentID)
+}
+
+class ShipTripStoreDB {
+    +getShipTripId(databaseConnection, containerId, shipmentId)
+    +getLocation(databaseConnection, shipTripId)
+}
+
+class Company {
+    -designation
+    +getShipTripStoreDB()
+}
+
+GetContainerSituationController ..> Company
+GetContainerSituationController ..> ShipTripStoreDB
+Company "1" -- "1" ShipTripStoreDB : uses >
+
+@enduml

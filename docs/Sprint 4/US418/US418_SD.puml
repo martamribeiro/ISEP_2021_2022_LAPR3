@@ -1,0 +1,40 @@
+@startuml
+autonumber
+actor "Port Manager" as PM
+participant GetUnladenCenterMassUI as UI
+participant GetUnladenCenterMassController as CTRL
+participant "Company" as COMP
+participant "ShipStore" as STORE
+participant "Ship" as SHIP
+
+
+activate PM
+PM -> UI : asks to get the unladen center of mass of a ship
+
+activate UI
+UI --> PM : requests ship mmsi
+
+
+PM -> UI : types ship mmsi
+
+UI -> CTRL : getUnladeCenterOfMassOfShip(mmsi)
+activate CTRL
+
+CTRL -> COMP : shipStore = getShipStore()
+activate COMP
+deactivate COMP
+
+CTRL -> STORE : ship = getShipByAnyCode(mmsi)
+activate STORE
+deactivate STORE
+
+CTRL -> SHIP : unladenCenterOfMass = getUnladenCenterOfMass()
+activate SHIP
+deactivate SHIP
+
+CTRL --> UI : unladenCenterOfMass
+
+UI --> PM : operation success
+
+deactivate PM
+@enduml

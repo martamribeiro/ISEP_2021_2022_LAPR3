@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Port Manager" as SC
+
+activate SC
+SC-> ":System" : wants to know the occupancy rate for a warehouse and an estimate of the containers leaving the warehouse during the next 30 days
+activate ":System"
+":System" --> SC : asks for data(i.e.,warehouseID)
+SC-> ":System" : inserts needed data
+":System" --> SC : informs the warehouse occupancy rate and the estimated number of containers leaving it in the next 30 days
+
+deactivate ":System"
+
+@enduml

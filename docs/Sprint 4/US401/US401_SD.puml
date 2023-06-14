@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+actor TrafficManager as C
+participant "CentralPortsUI" as UI
+participant "CentralPortsController" as CTRL
+participant "Company" as COMPANY
+participant "freightNetwork:\nFreightNetwork" as NET
+participant "centralPorts:\nMap<String, Double>" as MAP
+
+activate C
+C -> UI : asks to list the n closeness locals by continent
+activate UI
+UI -> CTRL : getMostCentralPorts()
+activate CTRL
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : centralPorts = getMostCentralPorts()
+activate NET
+NET -> MAP : Map<String, Double> centralPorts : create
+NET -> CTRL : centralPorts
+deactivate NET
+CTRL --> UI : centralPorts
+
+UI --> C : displays the most central ports
+deactivate UI
+
+deactivate C
+
+
+@enduml

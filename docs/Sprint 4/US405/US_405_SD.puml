@@ -1,0 +1,45 @@
+@startuml
+autonumber
+'hide footbox
+actor "Fleet Manager" as SC
+participant ":AverageOccupancyShipTimeUI  " as UI
+participant ":AverageOccupancyShipTimeController" as CTRL
+participant ":Company" as CMP
+participant ":ShipStoreDB" as CMS
+
+activate SC
+SC -> UI : asks to know the average occupancy rate per manifest of a given ship during a given period
+activate UI
+UI --> SC : asks for data(i.e.,shipID, month1, year1, day1, month2, year2, day2)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getAverageOccupancyRateByShipIDandDates(shipID, month1, year1, day1, month2, year2, day2)
+activate CTRL
+alt if ship exists and dates are valid
+CTRL -> CMP : getShipStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getShipMaxCapacity(shipID)
+activate CMS
+|||
+deactivate CMS
+alt for each of the dates in the interval
+CTRL -> CMS: capacityTime = getNumContainersShipDay(shipID, someDate)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : occupancyRateDay = calculateOccupancyRate(maxCapacity, capacityTime)
+activate CTRL
+|||
+deactivate CTRL
+end
+end
+CTRL --> UI : return average ship's occupancy rate
+deactivate CTRL
+UI --> SC : informs the average occupancy rate of the given ship during a period of time
+deactivate UI
+deactivate SC
+
+@enduml

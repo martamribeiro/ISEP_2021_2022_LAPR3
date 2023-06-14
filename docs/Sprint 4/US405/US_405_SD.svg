@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="796px" preserveAspectRatio="none" style="width:1887px;height:796px;background:#FFFFFF;" version="1.1" viewBox="0 0 1887 796" width="1887px" zoomAndPan="magnify"><defs><filter height="300%" id="fuhx4yqvqtl34" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="593.2188" style="stroke:#A80036;stroke-width:1.0;" width="10" x="49" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="612" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="510.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="612" y="182.6641"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="449.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1216" y="213.0156"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="28" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1221" y="558.125"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1694" y="268.7188"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1796.5" y="354.0703"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1796.5" y="464.7734"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="405.1094" style="stroke:#000000;stroke-width:2.0;" width="805.5" x="1067.5" y="228.0156"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="202.0547" style="stroke:#000000;stroke-width:2.0;" width="785.5" x="1077.5" y="424.0703"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="54" x2="54" y1="89.6094" y2="710.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="616.5" x2="616.5" y1="89.6094" y2="710.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1220.5" x2="1220.5" y1="89.6094" y2="710.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1699" x2="1699" y1="89.6094" y2="710.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1801" x2="1801" y1="89.6094" y2="710.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="5" y="86.5332">Fleet Manager</text><ellipse cx="54" cy="15" fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M54,23 L54,50 M41,31 L67,31 M54,50 L41,65 M54,50 L67,65 " fill="none" filter="url(#fuhx4yqvqtl34)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="5" y="724.3613">Fleet Manager</text><ellipse cx="54" cy="737.4375" fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M54,745.4375 L54,772.4375 M41,753.4375 L67,753.4375 M54,772.4375 L41,787.4375 M54,772.4375 L67,787.4375 " fill="none" filter="url(#fuhx4yqvqtl34)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="221" x="504.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="511.5" y="74.5332">:AverageOccupancyShipTimeUI</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="221" x="504.5" y="709.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="199" x="511.5" y="731.3613">:AverageOccupancyShipTimeUI</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="263" x="1087.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="249" x="1094.5" y="74.5332">:AverageOccupancyShipTimeController</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="263" x="1087.5" y="709.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="249" x="1094.5" y="731.3613">:AverageOccupancyShipTimeController</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1658" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1665" y="74.5332">:Company</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1658" y="709.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1665" y="731.3613">:Company</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1750" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="1757" y="74.5332">:ShipStoreDB</text><rect fill="#FEFECE" filter="url(#fuhx4yqvqtl34)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="99" x="1750" y="709.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="1757" y="731.3613">:ShipStoreDB</text><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="593.2188" style="stroke:#A80036;stroke-width:1.0;" width="10" x="49" y="99.6094"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="612" y="121.9609"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="510.1641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="612" y="182.6641"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="449.4609" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1216" y="213.0156"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="28" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1221" y="558.125"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1694" y="268.7188"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1796.5" y="354.0703"/><rect fill="#FFFFFF" filter="url(#fuhx4yqvqtl34)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1796.5" y="464.7734"/><polygon fill="#A80036" points="600,117.9609,610,121.9609,600,125.9609,604,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="59" x2="606" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="66" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="523" x="77" y="117.1045">asks to know the average occupancy rate per manifest of a given ship during a given period</text><polygon fill="#A80036" points="70,148.3125,60,152.3125,70,156.3125,66,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64" x2="616" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="76" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="395" x="87" y="147.4561">asks for data(i.e.,shipID, month1, year1, day1, month2, year2, day2)</text><polygon fill="#A80036" points="600,178.6641,610,182.6641,600,186.6641,604,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="59" x2="606" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="66" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="77" y="177.8076">inserts needed data</text><polygon fill="#A80036" points="1204,209.0156,1214,213.0156,1204,217.0156,1208,213.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="622" x2="1210" y1="213.0156" y2="213.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="629" y="208.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="564" x="640" y="208.1592">getAverageOccupancyRateByShipIDandDates(shipID, month1, year1, day1, month2, year2, day2)</text><path d="M1067.5,228.0156 L1128.5,228.0156 L1128.5,236.0156 L1118.5,246.0156 L1067.5,246.0156 L1067.5,228.0156 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="405.1094" style="stroke:#000000;stroke-width:2.0;" width="805.5" x="1067.5" y="228.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="1082.5" y="242.5107">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="185" x="1143.5" y="241.4346">[if ship exists and dates are valid]</text><polygon fill="#A80036" points="1682,264.7188,1692,268.7188,1682,272.7188,1686,268.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1226" x2="1688" y1="268.7188" y2="268.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1233" y="263.8623">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="1244" y="263.8623">getShipStoreDB()</text><polygon fill="#A80036" points="1784.5,350.0703,1794.5,354.0703,1784.5,358.0703,1788.5,354.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1226" x2="1790.5" y1="354.0703" y2="354.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1233" y="349.2139">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="256" x="1244" y="349.2139">maxCapacity = getShipMaxCapacity(shipID)</text><path d="M1077.5,424.0703 L1138.5,424.0703 L1138.5,432.0703 L1128.5,442.0703 L1077.5,442.0703 L1077.5,424.0703 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="202.0547" style="stroke:#000000;stroke-width:2.0;" width="785.5" x="1077.5" y="424.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="1092.5" y="438.5654">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="200" x="1153.5" y="437.4893">[for each of the dates in the interval]</text><polygon fill="#A80036" points="1784.5,460.7734,1794.5,464.7734,1784.5,468.7734,1788.5,464.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1226" x2="1790.5" y1="464.7734" y2="464.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1233" y="459.917">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="360" x="1244" y="459.917">capacityTime = getNumContainersShipDay(shipID, someDate)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1231" x2="1273" y1="550.125" y2="550.125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1273" x2="1273" y1="550.125" y2="563.125"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1232" x2="1273" y1="563.125" y2="563.125"/><polygon fill="#A80036" points="1242,559.125,1232,563.125,1242,567.125,1238,563.125" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1238" y="545.2686">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="443" x="1249" y="545.2686">occupancyRateDay = calculateOccupancyRate(maxCapacity, capacityTime)</text><polygon fill="#A80036" points="633,658.4766,623,662.4766,633,666.4766,629,662.4766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="627" x2="1220" y1="662.4766" y2="662.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="639" y="657.6201">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="211" x="650" y="657.6201">return average ship's occupancy rate</text><polygon fill="#A80036" points="65,688.8281,55,692.8281,65,696.8281,61,692.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="59" x2="616" y1="692.8281" y2="692.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="71" y="687.9717">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="434" x="89" y="687.9717">informs the average occupancy rate of the given ship during a period of time</text><!--MD5=[88ecb8b8d971e0569755057ff9af2051]
+@startuml
+autonumber
+'hide footbox
+actor "Fleet Manager" as SC
+participant ":AverageOccupancyShipTimeUI  " as UI
+participant ":AverageOccupancyShipTimeController" as CTRL
+participant ":Company" as CMP
+participant ":ShipStoreDB" as CMS
+
+activate SC
+SC -> UI : asks to know the average occupancy rate per manifest of a given ship during a given period
+activate UI
+UI - -> SC : asks for data(i.e.,shipID, month1, year1, day1, month2, year2, day2)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getAverageOccupancyRateByShipIDandDates(shipID, month1, year1, day1, month2, year2, day2)
+activate CTRL
+alt if ship exists and dates are valid
+CTRL -> CMP : getShipStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getShipMaxCapacity(shipID)
+activate CMS
+|||
+deactivate CMS
+alt for each of the dates in the interval
+CTRL -> CMS: capacityTime = getNumContainersShipDay(shipID, someDate)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : occupancyRateDay = calculateOccupancyRate(maxCapacity, capacityTime)
+activate CTRL
+|||
+deactivate CTRL
+end
+end
+CTRL - -> UI : return average ship's occupancy rate
+deactivate CTRL
+UI - -> SC : informs the average occupancy rate of the given ship during a period of time
+deactivate UI
+deactivate SC
+
+@enduml
+
+@startuml
+autonumber
+actor "Fleet Manager" as SC
+participant ":AverageOccupancyShipTimeUI  " as UI
+participant ":AverageOccupancyShipTimeController" as CTRL
+participant ":Company" as CMP
+participant ":ShipStoreDB" as CMS
+
+activate SC
+SC -> UI : asks to know the average occupancy rate per manifest of a given ship during a given period
+activate UI
+UI - -> SC : asks for data(i.e.,shipID, month1, year1, day1, month2, year2, day2)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getAverageOccupancyRateByShipIDandDates(shipID, month1, year1, day1, month2, year2, day2)
+activate CTRL
+alt if ship exists and dates are valid
+CTRL -> CMP : getShipStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getShipMaxCapacity(shipID)
+activate CMS
+|||
+deactivate CMS
+alt for each of the dates in the interval
+CTRL -> CMS: capacityTime = getNumContainersShipDay(shipID, someDate)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : occupancyRateDay = calculateOccupancyRate(maxCapacity, capacityTime)
+activate CTRL
+|||
+deactivate CTRL
+end
+end
+CTRL - -> UI : return average ship's occupancy rate
+deactivate CTRL
+UI - -> SC : informs the average occupancy rate of the given ship during a period of time
+deactivate UI
+deactivate SC
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

@@ -1,0 +1,30 @@
+@startuml
+
+autonumber
+actor TrafficManager as C
+participant "ColorMapUI" as UI
+participant "ColorMapController" as CTRL
+participant "Company" as COMPANY
+participant "freightNetwork:\nFreightNetwork" as NET
+participant "coloredCapitals:\nMap<Location, Integer>" as MAP
+
+activate C
+C -> UI : asks to color the map using the minimum colors possible
+activate UI
+UI -> CTRL : colorMap()
+activate CTRL
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : coloredCapitals = colorMap()
+activate NET
+deactivate NET
+CTRL --> UI : coloredCapitals
+
+UI --> C : displays the colored map
+deactivate UI
+
+deactivate C
+
+
+@enduml

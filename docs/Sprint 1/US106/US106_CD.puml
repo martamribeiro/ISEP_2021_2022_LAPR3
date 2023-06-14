@@ -1,0 +1,72 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+
+class Ship {
+    -mmmsiCode
+    -shipName
+    -imoCode
+    -callSignId
+    -currentCapacity /'added by us'/
+    -draft
+}
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+    -getSOG()
+}
+
+class ShipStore {
+    -getShipsBstMmsi()
+}
+
+
+class TopNUI {}
+
+class TopNController {
+    -getShipByBaseDateTime(initialBaseDate, finalBaseDate)
+    -getShipWithMean(sortedShips)
+}
+
+class ShipsBST{
+    -getShipByBaseDateTime(initialBaseDate, finalBaseDate)
+    -sortNShips(shipList)
+    -getShipWithMean(sortedShips, N)
+}
+
+class PositionBST{
+    -getShipBaseDateTime(code)
+    -getMeanSOG()
+    -getTotalDistance()
+}
+class Company {
+    -getShipStore()
+}
+
+class BST{}
+
+Company "1" -- "1" ShipStore : uses >
+ShipStore ..> ShipsBST
+ShipsBST ..> PositionBST
+ShipsBST "1" -- "1..*" Ship : owns >
+TopNUI ..> TopNController
+TopNController ..> ShipsBST
+TopNController ..> Company
+ShipsBST -|> BST
+PositionBST -|> BST
+/'ShipsBST ..> Ship'/
+/'PositionBST ..> ShipPosition'/
+Company ..> Ship
+Ship "1" -- "1" PositionBST : uses >
+PositionBST "1" -- "1..*" ShipPosition : has >
+
+
+@enduml

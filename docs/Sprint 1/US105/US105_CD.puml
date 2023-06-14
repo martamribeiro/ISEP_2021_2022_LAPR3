@@ -1,0 +1,74 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+
+class Ship {
+    -mmmsiCode
+    -shipName
+    -imoCode
+    -callSignId
+    -currentCapacity /'added by us'/
+    -draft
+
+    -getMMSI()
+}
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+}
+
+class ShipStore {
+    -getShipsBstMmsi()
+}
+
+
+class AllShipUI {}
+
+class AllShipMMSIController {
+    -sortedByTravelledDistance()
+    -sortedByTotalMovements()
+}
+
+class ShipsBST{
+    -getAllShips()
+    -sortedByTravelledDistance()
+    -sortByTotalMovements()
+}
+
+class PositionBST{
+    -getTotalDistance()
+    -size()
+    -getDeltaDistance()
+}
+class Company {
+    -getShipStore()
+}
+
+class BST{}
+
+
+Company "1" -- "1" ShipStore : uses >
+ShipStore ..> ShipsBST
+ShipsBST "1" -- "1..*" Ship : owns >
+AllShipUI ..> AllShipMMSIController
+AllShipMMSIController ..> ShipsBST
+AllShipMMSIController ..> Company
+/'ShipsBST ..> Ship'/
+ShipsBST -|> BST
+ShipsBST ..> PositionBST
+/'PositionBST ..> ShipPosition'/
+PositionBST -|> BST
+Company ..> Ship
+PositionBST "1" -- "1..*" ShipPosition : has >
+Ship "1" -- "1" PositionBST : uses >
+
+
+@enduml

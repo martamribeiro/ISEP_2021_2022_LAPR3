@@ -1,0 +1,32 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CheckOccupancyRatesAndEstimationsWarehouseController{
+- company
+- calculateOccupancyRate(maxCapacity, currentCapacity)
+- getOccupancyRateByWarehouseID(warehouseID)
+- checkIfWarehouseExists(warehouseID)
+- getContainersOut30Days(warehouseID)
+}
+
+class WarehouseStoreDB{
+- getNumContainersOutWarehouse(warehouse_id)
+- getCurrentContainersWarehouse(warehouse_id)
+- checkIfWarehouseExists(warehouse_id)
+- getWarehouseMaxCapacity(warehouse_id)
+}
+
+class Company{
+- warehouseStoreDB
+- getwarehouseStoreDB()
+}
+
+CheckOccupancyRatesAndEstimationsWarehouseController ..> Company
+CheckOccupancyRatesAndEstimationsWarehouseController ..> WarehouseStoreDB
+Company "1" -- "1" WarehouseStoreDB : uses >
+
+@enduml

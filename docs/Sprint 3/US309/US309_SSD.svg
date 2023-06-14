@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="309px" preserveAspectRatio="none" style="width:808px;height:309px;background:#FFFFFF;" version="1.1" viewBox="0 0 808 309" width="808px" zoomAndPan="magnify"><defs><filter height="300%" id="f528icsb942pr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f528icsb942pr)" height="117.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="59.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f528icsb942pr)" height="87.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="755.5" y="119.4297"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="88.2969" y2="224.8281"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="760" x2="760" y1="88.2969" y2="224.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="5" y="84.9951">Traffic Manager</text><ellipse cx="64.5" cy="15" fill="#FEFECE" filter="url(#f528icsb942pr)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M64.5,23 L64.5,50 M51.5,31 L77.5,31 M64.5,50 L51.5,65 M64.5,50 L77.5,65 " fill="none" filter="url(#f528icsb942pr)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="5" y="236.8232">Traffic Manager</text><ellipse cx="64.5" cy="250.125" fill="#FEFECE" filter="url(#f528icsb942pr)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M64.5,258.125 L64.5,285.125 M51.5,266.125 L77.5,266.125 M64.5,285.125 L51.5,300.125 M64.5,285.125 L77.5,300.125 " fill="none" filter="url(#f528icsb942pr)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f528icsb942pr)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="723" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="730" y="72.9951">:System</text><rect fill="#FEFECE" filter="url(#f528icsb942pr)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="71" x="723" y="223.8281"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="730" y="243.8232">:System</text><rect fill="#FFFFFF" filter="url(#f528icsb942pr)" height="117.5313" style="stroke:#A80036;stroke-width:1.0;" width="10" x="59.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f528icsb942pr)" height="87.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="755.5" y="119.4297"/><polygon fill="#A80036" points="743.5,115.4297,753.5,119.4297,743.5,123.4297,747.5,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="69.5" x2="749.5" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="76.5" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="160" x="89.5" y="114.3638">tries to create a ship trip</text><polygon fill="#A80036" points="80.5,144.5625,70.5,148.5625,80.5,152.5625,76.5,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="74.5" x2="754.5" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="86.5" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="649" x="99.5" y="143.4966">asks for data(i.e.,shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)</text><polygon fill="#A80036" points="743.5,173.6953,753.5,177.6953,743.5,181.6953,747.5,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="69.5" x2="749.5" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="76.5" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="89.5" y="172.6294">inserts needed data</text><polygon fill="#A80036" points="80.5,202.8281,70.5,206.8281,80.5,210.8281,76.5,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="74.5" x2="759.5" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="86.5" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="230" x="99.5" y="201.7622">informs of operation success or fail</text><!--MD5=[16a9eb8d784a5ea49cbe3df5489e8038]
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Traffic Manager" as SC
+
+activate SC
+SC-> ":System" : tries to create a ship trip
+activate ":System"
+":System" - -> SC : asks for data(i.e.,shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+SC-> ":System" : inserts needed data
+":System" - -> SC : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml
+
+@startuml
+
+autonumber
+actor "Traffic Manager" as SC
+
+activate SC
+SC-> ":System" : tries to create a ship trip
+activate ":System"
+":System" - -> SC : asks for data(i.e.,shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+SC-> ":System" : inserts needed data
+":System" - -> SC : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

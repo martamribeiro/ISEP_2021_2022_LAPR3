@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class ShipCaptain{
+    -name
+}
+
+class Company{}
+
+class Ship {
+    -mmmsi
+    -imo
+    -callSign
+    -shipName
+    -vesselType
+    -length
+    -width
+    -draft
+    -cargo
+}
+
+class CargoManifest{
+    -containersInfo
+    -registationTime
+}
+
+class ShipTrip{
+    -shipTripID
+    -mmsi
+    -loadingCargoManifest
+    -unloadingCargoManifest
+}
+
+class Container{
+    -containerId
+    -payload
+    -tare
+    -gross
+    -isoCode
+}
+
+ShipCaptain "1" -- "1..*" ShipTrip : analyses >
+Company "1" -- "1..*" Ship : owns >
+Ship "1" -- "1..*" ShipTrip : owns >
+CargoManifest "1..*" -- "1..*" Container : contains >
+ShipTrip "1" -- "1..2" CargoManifest : contains >
+
+@enduml

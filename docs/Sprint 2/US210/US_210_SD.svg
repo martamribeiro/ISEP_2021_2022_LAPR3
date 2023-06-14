@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="262.2px" preserveAspectRatio="none" style="width:779px;height:262px;background:#FFFFFF;" version="1.1" viewBox="0 0 779 262" width="779.4px" zoomAndPan="magnify"><defs><filter height="300%" id="f7ntrw6jiw189" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="1.2"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="2.4" dy="2.4" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="140.4656" style="stroke:#A80036;stroke-width:0.6;" width="6" x="31.8" y="59.7656"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="127.0547" style="stroke:#A80036;stroke-width:0.6;" width="6" x="311.4" y="73.1766"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="90.6328" style="stroke:#A80036;stroke-width:0.6;" width="6" x="445.2" y="91.3875"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="18" style="stroke:#A80036;stroke-width:0.6;" width="6" x="661.8" y="109.5984"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="18" style="stroke:#A80036;stroke-width:0.6;" width="6" x="739.8" y="145.8094"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:5.0,5.0;" x1="34.8" x2="34.8" y1="53.7656" y2="211.0313"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:5.0,5.0;" x1="314.1" x2="314.1" y1="53.7656" y2="211.0313"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:5.0,5.0;" x1="447.9" x2="447.9" y1="53.7656" y2="211.0313"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:5.0,5.0;" x1="664.8" x2="664.8" y1="53.7656" y2="211.0313"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:5.0,5.0;" x1="742.5" x2="742.5" y1="53.7656" y2="211.0313"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="60" x="3" y="51.9199">Traffic Manager</text><ellipse cx="34.8" cy="9" fill="#FEFECE" filter="url(#f7ntrw6jiw189)" rx="4.8" ry="4.8" style="stroke:#A80036;stroke-width:1.2;"/><path d="M34.8,13.8 L34.8,30 M27,18.6 L42.6,18.6 M34.8,30 L27,39 M34.8,30 L42.6,39 " fill="none" filter="url(#f7ntrw6jiw189)" style="stroke:#A80036;stroke-width:1.2;"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="60" x="3" y="219.1512">Traffic Manager</text><ellipse cx="34.8" cy="226.9969" fill="#FEFECE" filter="url(#f7ntrw6jiw189)" rx="4.8" ry="4.8" style="stroke:#A80036;stroke-width:1.2;"/><path d="M34.8,231.7969 L34.8,247.9969 M27,236.5969 L42.6,236.5969 M34.8,247.9969 L27,256.9969 M34.8,247.9969 L42.6,256.9969 " fill="none" filter="url(#f7ntrw6jiw189)" style="stroke:#A80036;stroke-width:1.2;"/><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="69" x="278.7" y="31.8"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="55.8" x="282.9" y="44.7199">:ShipCaptainUi</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="69" x="278.7" y="210.4313"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="55.8" x="282.9" y="223.3512">:ShipCaptainUi</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="117" x="388.5" y="31.8"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="108.6" x="392.7" y="44.7199">:findAvailableShipsController</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="117" x="388.5" y="210.4313"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="108.6" x="392.7" y="223.3512">:findAvailableShipsController</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="46.8" x="640.2" y="31.8"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="38.4" x="644.4" y="44.7199">:Company</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="46.8" x="640.2" y="210.4313"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="38.4" x="644.4" y="223.3512">:Company</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="59.4" x="711.9" y="31.8"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="51" x="716.1" y="44.7199">:ShipStoreDB</text><rect fill="#FEFECE" filter="url(#f7ntrw6jiw189)" height="18.9656" style="stroke:#A80036;stroke-width:0.8999999999999999;" width="59.4" x="711.9" y="210.4313"/><text fill="#000000" font-family="sans-serif" font-size="8.4" lengthAdjust="spacing" textLength="51" x="716.1" y="223.3512">:ShipStoreDB</text><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="140.4656" style="stroke:#A80036;stroke-width:0.6;" width="6" x="31.8" y="59.7656"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="127.0547" style="stroke:#A80036;stroke-width:0.6;" width="6" x="311.4" y="73.1766"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="90.6328" style="stroke:#A80036;stroke-width:0.6;" width="6" x="445.2" y="91.3875"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="18" style="stroke:#A80036;stroke-width:0.6;" width="6" x="661.8" y="109.5984"/><rect fill="#FFFFFF" filter="url(#f7ntrw6jiw189)" height="18" style="stroke:#A80036;stroke-width:0.6;" width="6" x="739.8" y="145.8094"/><polygon fill="#A80036" points="304.2,70.7766,310.2,73.1766,304.2,75.5766,306.6,73.1766" style="stroke:#A80036;stroke-width:0.6;"/><line style="stroke:#A80036;stroke-width:0.6;" x1="37.8" x2="307.8" y1="73.1766" y2="73.1766"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="42" y="70.2627">1</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="255.6" x="48.6" y="70.2627">asks to obtain the available ships on Monday next week and their location</text><polygon fill="#A80036" points="438,88.9875,444,91.3875,438,93.7875,440.4,91.3875" style="stroke:#A80036;stroke-width:0.6;"/><line style="stroke:#A80036;stroke-width:0.6;" x1="317.4" x2="441.6" y1="91.3875" y2="91.3875"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="321.6" y="88.4736">2</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="109.8" x="328.2" y="88.4736">getNextMondayAvailableShips()</text><polygon fill="#A80036" points="654.6,107.1984,660.6,109.5984,654.6,111.9984,657,109.5984" style="stroke:#A80036;stroke-width:0.6;"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="451.2" x2="658.2" y1="109.5984" y2="109.5984"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="455.4" y="106.6846">3</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="192.6" x="462" y="106.6846">shipStoreDatabase = company.getShipStoreDatabase()</text><polygon fill="#A80036" points="732.6,143.4094,738.6,145.8094,732.6,148.2094,735,145.8094" style="stroke:#A80036;stroke-width:0.6;"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="451.2" x2="736.2" y1="145.8094" y2="145.8094"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="455.4" y="142.8955">4</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="270.6" x="462" y="142.8955">availableShipsLocations = shipStoreDatabase.getNextMondayAvailableShips()</text><polygon fill="#A80036" points="324,179.6203,318,182.0203,324,184.4203,321.6,182.0203" style="stroke:#A80036;stroke-width:0.6;"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="320.4" x2="447.6" y1="182.0203" y2="182.0203"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="327.6" y="179.1064">5</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="82.8" x="334.2" y="179.1064">availableShipsLocations</text><polygon fill="#A80036" points="41.4,197.8312,35.4,200.2313,41.4,202.6313,39,200.2313" style="stroke:#A80036;stroke-width:0.6;"/><line style="stroke:#A80036;stroke-width:0.6;stroke-dasharray:2.0,2.0;" x1="37.8" x2="313.8" y1="200.2313" y2="200.2313"/><text fill="#000000" font-family="sans-serif" font-size="7.8" font-weight="bold" lengthAdjust="spacing" textLength="4.2" x="45" y="197.3174">6</text><text fill="#000000" font-family="sans-serif" font-size="7.8" lengthAdjust="spacing" textLength="211.2" x="51.6" y="197.3174">show available ships on Monday next week and their location</text><!--MD5=[84ea0c0c75ffb83114bac8aee59d91de]
+@startuml
+autonumber
+'hide footbox
+actor "Traffic Manager" as SC
+participant ":ShipCaptainUi  " as UI
+participant ":findAvailableShipsController" as CTRL
+participant ":Company" as CP
+participant ":ShipStoreDB" as SS
+
+
+activate SC
+SC -> UI : asks to obtain the available ships on Monday next week and their location
+activate UI
+UI -> CTRL : getNextMondayAvailableShips()
+activate CTRL
+CTRL - -> CP : shipStoreDatabase = company.getShipStoreDatabase()
+activate CP
+deactivate CP
+CTRL - -> SS : availableShipsLocations = shipStoreDatabase.getNextMondayAvailableShips()
+activate SS
+deactivate SS
+CTRL - -> UI : availableShipsLocations
+deactivate CTRL
+UI - -> SC : show available ships on Monday next week and their location
+deactivate UI
+deactivate SC
+
+@enduml
+
+@startuml
+autonumber
+actor "Traffic Manager" as SC
+participant ":ShipCaptainUi  " as UI
+participant ":findAvailableShipsController" as CTRL
+participant ":Company" as CP
+participant ":ShipStoreDB" as SS
+
+
+activate SC
+SC -> UI : asks to obtain the available ships on Monday next week and their location
+activate UI
+UI -> CTRL : getNextMondayAvailableShips()
+activate CTRL
+CTRL - -> CP : shipStoreDatabase = company.getShipStoreDatabase()
+activate CP
+deactivate CP
+CTRL - -> SS : availableShipsLocations = shipStoreDatabase.getNextMondayAvailableShips()
+activate SS
+deactivate SS
+CTRL - -> UI : availableShipsLocations
+deactivate CTRL
+UI - -> SC : show available ships on Monday next week and their location
+deactivate UI
+deactivate SC
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

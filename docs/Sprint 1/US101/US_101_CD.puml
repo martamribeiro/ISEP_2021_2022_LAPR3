@@ -1,0 +1,158 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class ImportShipsController {
+- company
+- ship
+- shipPosition
+- positionsBST
+- saveShip()
+- importShipFromFile(shipsFileDTO)
+}
+
+class Company {
+- designation
+- shipsBST
+- getBstShip()
+}
+
+class Ship {
+- positionsBST
+- MMSI
+- vesselName
+- IMO
+- callSign
+- vesselTypeID
+- length
+- width
+- draft
+- cargo
+- Ship(positionsBST, MMSI, vesselName, IMO, callSign, vesselTypeID, length, width, draft, cargo)
+- checkPositionsBST(positionsBST)
+- checkMMSI(int MMSI)
+- checkVesselName(vesselName)
+- checkIMO(IMO)
+- checkLength(length)
+- checkWidth(width)
+- checkDraft(draft)
+- checkCargo(cargo)
+- getMMSI()
+- setPositionsBST(positionsBST)
+- equals(Object otherObject)
+}
+
+class ShipPosition {
+- MMSI
+- baseDateTime
+- lat
+- lon
+- sog
+- cog
+- heading
+- transcieverClass
+- ShipPosition(mmsi, baseDateTime, lat, lon, sog, cog, heading, transcieverClass)
+- checkMMSI(mmsi)
+- checkBaseDateTime(baseDateTime)
+- checkLat(lat)
+- checkLon(lon)
+- checkSog(sog)
+- checkCog(cog)
+- checkHeading(heading)
+- checkTranscieverClass(transcieverClass)
+}
+
+class ShipStore {
+- createShip(shipsFileDTO)
+- validateShip(ship)
+- saveShip(ship)
+- getShipsBstMmsi()
+}
+
+class ShipBST {
+- getShipByMmsiCode(mmsiCode)
+}
+
+class PositionsBST {
+- hasPosition(shipPosition)
+- validatePosition(shipPosition)
+- savePosition(shipPosition)
+}
+
+class ShipsFileDTO{
+- positionDTO
+- mmsi
+- vesselType
+- length
+- width
+- draft
+- vesselName
+- imo
+- callSign
+- cargo
+- ShipsFileDTO(positionDTO, mmsi, vesselName, imo, callSign, vesselType, length, width, draft, cargo)
+- getPositionDTO()
+- getMmsi()
+- getVesselName()
+- getImo()
+- getCallSign()
+- getVesselType()
+- getLength()
+- getWidth()
+- getCargo()
+- getDraft()
+}
+
+class PositionDTO{
+- baseDateTime
+- lat
+- lon
+- sog
+- cog
+- heading
+- transcieverClass
+- PositionDTO(baseDateTime, lat, lon, sog, cog, heading, transcieverClass)
+- getBaseDateTime()
+- getLat()
+- getLon()
+- getSog()
+- getCog()
+- getHeading()
+- getTranscieverClass()
+}
+
+class ShipsFileUtils{
+- dataLabels
+- getShipsDataToDTO(filePath)
+- attributesToDTO(shipData)
+- getDateOfString(stringFormatDate)
+- positionToDTO(data)
+}
+
+class BST{
+}
+
+Company "1" -- "1" ShipStore : uses >
+ShipStore "1" -- "1" ShipBST : uses >
+ShipBST "1" -- "1..*" Ship : owns >
+Ship "1" -- "1" PositionsBST : uses >
+PositionsBST "1" -- "1..*" ShipPosition : has >
+ImportShipsController ..> Company
+ImportShipsController ..> ShipBST
+ImportShipsController ..> Ship
+ImportShipsController ..> PositionsBST
+ImportShipsController ..> ShipPosition
+ImportShipsController ..> ShipStore
+BST <|- PositionsBST
+BST <|- ShipBST
+ShipsFileUtils ..> ShipsFileDTO
+ShipsFileUtils ..> PositionDTO
+ImportShipsController ..> ShipsFileDTO
+ShipsFileDTO ..> PositionDTO
+
+
+
+@enduml

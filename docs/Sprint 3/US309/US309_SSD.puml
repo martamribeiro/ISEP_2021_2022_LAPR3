@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Traffic Manager" as SC
+
+activate SC
+SC-> ":System" : tries to create a ship trip
+activate ":System"
+":System" --> SC : asks for data(i.e.,shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+SC-> ":System" : inserts needed data
+":System" --> SC : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml

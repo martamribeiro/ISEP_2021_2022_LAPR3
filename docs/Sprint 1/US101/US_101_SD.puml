@@ -1,0 +1,66 @@
+@startuml
+autonumber
+'hide footbox
+actor "Traffic Manager" as TM
+participant ":ImportShipsUI  " as UI
+participant ":ImportShipsController" as CTRL
+participant ":ShipFileUtils" as TFU
+participant ":Company" as CMP
+participant ":ShipStore" as STORE
+participant ":ShipsBST" as SBST
+participant ":Ship" as SHIP
+participant ":ShipPosition" as POS
+
+activate TM
+TM -> UI : asks to import ships from a text file into a BST
+activate UI
+UI -> CTRL** : create()
+UI --> TM : asks for data(i.e., pathOfFile)
+deactivate UI
+TM -> UI : types requested data
+activate UI
+UI -> TFU** : create()
+activate TFU
+UI -> TFU : List<ShipsFileDTO>shipsOfFile = getShipsDataToDTO(pathOfFile)
+deactivate TFU
+UI -> CTRL : importShipsFromFile(shipsFileDTO)
+activate CTRL
+alt for each ShipsFileDTO of the list
+alt if ship doesn't exist in the system
+CTRL -> CMP : getShipStore()
+activate CMP
+|||
+deactivate CMP
+CTRL -> STORE : createShip(shipsFileDTO)
+activate STORE
+STORE -> SHIP** : create(positionsBST, mmsi, vesselName, IMO, callSign, vesselType, leength, width, draft, cargo)
+activate SHIP
+deactivate STORE
+SHIP --> CTRL : newShip
+deactivate SHIP
+CTRL -> POS** : create(MMSI, baseDateTime, lat, lon, sog, cog, heading, transcieverClass)
+activate POS
+POS --> CTRL : firstShipPosition
+deactivate POS
+CTRL -> CTRL : saveShip()
+else if ship already exists in the system
+CTRL -> SHIP : create(positionsBST, mmsi, vesselName, IMO, callSign, vesselType, leength, width, draft, cargo)
+activate SHIP
+SHIP --> CTRL : existingShipCopy
+deactivate SHIP
+CTRL -> POS : create(MMSI, baseDateTime, lat, lon, sog, cog, heading, transcieverClass)
+activate POS
+POS --> CTRL : newShipPosition
+deactivate POS
+alt if existingShipCopy doesn't have the newShipPosition
+CTRL -> CTRL : saveShip()
+end
+end
+end
+CTRL --> UI : result
+deactivate CTRL
+UI --> TM : informs of operation success or fail
+deactivate UI
+deactivate TM
+
+@enduml

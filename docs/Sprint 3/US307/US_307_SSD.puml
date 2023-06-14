@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Port Manager" as SC
+
+activate SC
+SC-> ":System" : tries to create a truck trip
+activate ":System"
+":System" --> SC : asks for data(i.e.,truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+SC-> ":System" : inserts needed data
+":System" --> SC : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml

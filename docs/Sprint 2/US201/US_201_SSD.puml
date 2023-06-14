@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Port Manager" as PM
+
+activate PM
+PM-> ":System" : asks to import ports from a text file into a 2D Tree
+activate ":System"
+":System" --> PM : asks for data(i.e., file path)
+PM-> ":System" : inserts needed data
+":System" --> PM : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml

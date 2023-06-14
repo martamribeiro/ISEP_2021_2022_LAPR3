@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="435px" preserveAspectRatio="none" style="width:658px;height:435px;background:#FFFFFF;" version="1.1" viewBox="0 0 658 435" width="658px" zoomAndPan="magnify"><defs><filter height="300%" id="ftw0x0yojskt8" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[053848e642ffd807a7eef135829ef07d]
+class CheckIfContainerExceedsWarehouseCapacityController--><rect codeLine="7" fill="#FEFECE" filter="url(#ftw0x0yojskt8)" height="89.5078" id="CheckIfContainerExceedsWarehouseCapacityController" style="stroke:#A80036;stroke-width:1.5;" width="595" x="19" y="7"/><ellipse cx="158.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M160.75,19.5 Q160.9531,19 161.1875,18.75 Q161.4219,18.5 161.6875,18.5 Q162.1563,18.5 162.4531,18.7813 Q162.75,19.0625 162.75,19.7188 L162.75,21.2813 Q162.75,21.9375 162.4688,22.2188 Q162.1875,22.5 161.75,22.5 Q161.3594,22.5 161.1094,22.3281 Q160.8594,22.1563 160.75,21.7031 Q160.7031,21.3906 160.5313,21.2188 Q160.2188,20.8906 159.6563,20.7031 Q159.0938,20.5 158.5313,20.5 Q157.8281,20.5 157.2344,20.7813 Q156.6563,21.0625 156.2031,21.6875 Q155.75,22.3125 155.75,23.1719 L155.75,24.0938 Q155.75,25.125 156.5938,25.8125 Q157.4375,26.5 158.9375,26.5 Q159.8281,26.5 160.4531,26.2969 Q160.8125,26.1875 161.2188,25.8281 Q161.4844,25.625 161.625,25.5625 Q161.7656,25.5 161.9375,25.5 Q162.2656,25.5 162.5,25.7656 Q162.75,26.0156 162.75,26.375 Q162.75,26.7188 162.4063,27.125 Q161.9063,27.7188 161.1094,28.0469 Q160.0625,28.5 158.7813,28.5 Q157.2813,28.5 156.0781,27.9063 Q155.1094,27.4375 154.4219,26.4219 Q153.75,25.4063 153.75,24.2031 L153.75,23.1094 Q153.75,21.8594 154.3438,20.7656 Q154.9531,19.6719 156,19.0938 Q157.0625,18.5 158.25,18.5 Q158.9688,18.5 159.5938,18.75 Q160.2188,19 160.75,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="307" x="179.25" y="27.9102">CheckIfContainerExceedsWarehouseCapacityController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="20" x2="613" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="25" y="54.4189">-company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="20" x2="613" y1="60.8359" y2="60.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="583" x="25" y="76.2549">-tryToCreateTruckTrip(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="25" y="90.0908">-deleteTruckTrip(truckTripID)</text><!--MD5=[10a30e6932b60330790bf93e4d5e016e]
+class TruckTripStoreDB--><rect codeLine="13" fill="#FEFECE" filter="url(#ftw0x0yojskt8)" height="109.1797" id="TruckTripStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="637" x="7" y="312"/><ellipse cx="272.75" cy="328" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M274.75,324.5 Q274.9531,324 275.1875,323.75 Q275.4219,323.5 275.6875,323.5 Q276.1563,323.5 276.4531,323.7813 Q276.75,324.0625 276.75,324.7188 L276.75,326.2813 Q276.75,326.9375 276.4688,327.2188 Q276.1875,327.5 275.75,327.5 Q275.3594,327.5 275.1094,327.3281 Q274.8594,327.1563 274.75,326.7031 Q274.7031,326.3906 274.5313,326.2188 Q274.2188,325.8906 273.6563,325.7031 Q273.0938,325.5 272.5313,325.5 Q271.8281,325.5 271.2344,325.7813 Q270.6563,326.0625 270.2031,326.6875 Q269.75,327.3125 269.75,328.1719 L269.75,329.0938 Q269.75,330.125 270.5938,330.8125 Q271.4375,331.5 272.9375,331.5 Q273.8281,331.5 274.4531,331.2969 Q274.8125,331.1875 275.2188,330.8281 Q275.4844,330.625 275.625,330.5625 Q275.7656,330.5 275.9375,330.5 Q276.2656,330.5 276.5,330.7656 Q276.75,331.0156 276.75,331.375 Q276.75,331.7188 276.4063,332.125 Q275.9063,332.7188 275.1094,333.0469 Q274.0625,333.5 272.7813,333.5 Q271.2813,333.5 270.0781,332.9063 Q269.1094,332.4375 268.4219,331.4219 Q267.75,330.4063 267.75,329.2031 L267.75,328.1094 Q267.75,326.8594 268.3438,325.7656 Q268.9531,324.6719 270,324.0938 Q271.0625,323.5 272.25,323.5 Q272.9688,323.5 273.5938,323.75 Q274.2188,324 274.75,324.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="97" x="293.25" y="332.9102">TruckTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="643" y1="344" y2="344"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="151" x="13" y="359.4189">-triggerContainersWarehouse()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="625" x="13" y="373.2549">-createTruckTripWithUnloading(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="172" x="13" y="387.0908">-checkIfTruckTripExists(truckTripID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="137" x="13" y="400.9268">-deleteTruckTrip(truckTripID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="13" y="414.7627">-checkIfTruckExists(truckID)</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="21" fill="#FEFECE" filter="url(#ftw0x0yojskt8)" height="75.6719" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="129" x="350" y="158"/><ellipse cx="384.8" cy="174" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M386.8,170.5 Q387.0031,170 387.2375,169.75 Q387.4719,169.5 387.7375,169.5 Q388.2063,169.5 388.5031,169.7813 Q388.8,170.0625 388.8,170.7188 L388.8,172.2813 Q388.8,172.9375 388.5188,173.2188 Q388.2375,173.5 387.8,173.5 Q387.4094,173.5 387.1594,173.3281 Q386.9094,173.1563 386.8,172.7031 Q386.7531,172.3906 386.5813,172.2188 Q386.2688,171.8906 385.7063,171.7031 Q385.1438,171.5 384.5813,171.5 Q383.8781,171.5 383.2844,171.7813 Q382.7063,172.0625 382.2531,172.6875 Q381.8,173.3125 381.8,174.1719 L381.8,175.0938 Q381.8,176.125 382.6438,176.8125 Q383.4875,177.5 384.9875,177.5 Q385.8781,177.5 386.5031,177.2969 Q386.8625,177.1875 387.2688,176.8281 Q387.5344,176.625 387.675,176.5625 Q387.8156,176.5 387.9875,176.5 Q388.3156,176.5 388.55,176.7656 Q388.8,177.0156 388.8,177.375 Q388.8,177.7188 388.4563,178.125 Q387.9563,178.7188 387.1594,179.0469 Q386.1125,179.5 384.8313,179.5 Q383.3313,179.5 382.1281,178.9063 Q381.1594,178.4375 380.4719,177.4219 Q379.8,176.4063 379.8,175.2031 L379.8,174.1094 Q379.8,172.8594 380.3938,171.7656 Q381.0031,170.6719 382.05,170.0938 Q383.1125,169.5 384.3,169.5 Q385.0188,169.5 385.6438,169.75 Q386.2688,170 386.8,170.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="403.2" y="178.9102">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="351" x2="478" y1="190" y2="190"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="117" x="356" y="205.4189">-cargoTruckTripStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="351" x2="478" y1="211.8359" y2="211.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="112" x="356" y="227.2549">-getTruckTripStoreDB()</text><!--MD5=[3c046e963c9e3f9a379d0eaaf7877986]
+link CheckIfContainerExceedsWarehouseCapacityController to Company--><path codeLine="26" d="M346.97,97.15 C359.3,115.01 373.46,135.54 385.62,153.16 " fill="none" id="CheckIfContainerExceedsWarehouseCapacityController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="388.67,157.57,386.8446,147.8918,385.8277,153.4565,380.263,152.4395,388.67,157.57" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[54f2aad5e48e8ceacdde5cfcec25bc6f]
+link CheckIfContainerExceedsWarehouseCapacityController to TruckTripStoreDB--><path codeLine="27" d="M317.77,97.11 C319.35,152.01 322.06,245.96 323.81,306.87 " fill="none" id="CheckIfContainerExceedsWarehouseCapacityController-to-TruckTripStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="323.96,311.93,327.7013,302.8194,323.8172,306.932,319.7046,303.0479,323.96,311.93" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c2502268fec329e9e53d043b4828bec8]
+link Company to TruckTripStoreDB--><path codeLine="28" d="M394.75,234.4 C382.71,257.18 367.14,286.67 353.81,311.91 " fill="none" id="Company-TruckTripStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="381.1648,277.597,387.9879,270.9716,382.7905,268.2264,381.1648,277.597" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="392.5" y="278.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="384.1898" y="255.0522">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="350.1438" y="301.0061">1</text><!--MD5=[4de3ddaacfde6c20a0354874a1254c56]
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CheckIfContainerExceedsWarehouseCapacityController{
+- company
+- tryToCreateTruckTrip(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+- deleteTruckTrip(truckTripID)
+}
+
+class TruckTripStoreDB{
+- triggerContainersWarehouse()
+- createTruckTripWithUnloading(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+- checkIfTruckTripExists(truckTripID)
+- deleteTruckTrip(truckTripID)
+- checkIfTruckExists(truckID)
+}
+
+class Company{
+- cargoTruckTripStoreDB
+- getTruckTripStoreDB()
+}
+
+CheckIfContainerExceedsWarehouseCapacityController ..> Company
+CheckIfContainerExceedsWarehouseCapacityController ..> TruckTripStoreDB
+Company "1" - - "1" TruckTripStoreDB : uses >
+
+@enduml
+
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class CheckIfContainerExceedsWarehouseCapacityController{
+- company
+- tryToCreateTruckTrip(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+- deleteTruckTrip(truckTripID)
+}
+
+class TruckTripStoreDB{
+- triggerContainersWarehouse()
+- createTruckTripWithUnloading(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+- checkIfTruckTripExists(truckTripID)
+- deleteTruckTrip(truckTripID)
+- checkIfTruckExists(truckID)
+}
+
+class Company{
+- cargoTruckTripStoreDB
+- getTruckTripStoreDB()
+}
+
+CheckIfContainerExceedsWarehouseCapacityController ..> Company
+CheckIfContainerExceedsWarehouseCapacityController ..> TruckTripStoreDB
+Company "1" - - "1" TruckTripStoreDB : uses >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

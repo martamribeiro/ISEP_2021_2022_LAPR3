@@ -1,0 +1,54 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+class TrafficManager{
+    -name
+}
+
+class Ship {
+    -mmsiCode
+    -shipName
+    -imoCode
+    -vesselTypeId
+    -callSignId
+    -cargo
+    -draft
+    -length
+    -width
+    -currentCapacity
+}
+
+class ShipTrip{
+    /'FK mmsi
+    FK start_location_id
+    FK destination_location_id
+    FK loading_cargo_id
+    FK unloading_cargo_id'/
+    est_departure_date
+    est_arrival_date
+    real_departure_date
+    real_arrival_date
+}
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+}
+
+TrafficManager "1" -- "1..*" Ship : analyses >
+Ship "1" -- "*" ShipTrip : does >
+Ship "1" -- "1..*" ShipPosition : has >
+
+
+
+
+@enduml

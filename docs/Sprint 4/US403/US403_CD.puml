@@ -1,0 +1,53 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class MostEfficientCircuitController {
+    +getMostEfficientCircuit()
+}
+
+class Company {
+    -designation
+    +getFreightNetwork()
+}
+
+class FreightNetwork {
+    +getTotalDistanceMinorCost()
+    +getAllCircuitsAndDistances()
+    +getCircuitAndDistance()
+    +checkCircuit()
+}
+
+abstract class Location{
+    -latitude
+    -longitude
+    -countryName
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -toPortsDistance
+}
+
+
+class MatrixGraph {}
+
+abstract class CommonGraph {}
+
+interface Graph <<interface>> {
+    +edge()
+    +adjVertices()
+    +vertices()
+}
+
+MostEfficientCircuitController ..> Company
+Company "1" -- "1" FreightNetwork : knows >
+Location <|-- Port
+FreightNetwork "*" -- "1..*" Location : of >
+FreightNetwork ..> MatrixGraph
+CommonGraph <|- MatrixGraph
+CommonGraph --> Graph
+
+@enduml

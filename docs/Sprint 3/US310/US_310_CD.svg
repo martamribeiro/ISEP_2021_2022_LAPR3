@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="490px" preserveAspectRatio="none" style="width:334px;height:490px;background:#FFFFFF;" version="1.1" viewBox="0 0 334 490" width="334px" zoomAndPan="magnify"><defs><filter height="300%" id="foytouldyc8sa" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[868a9eb534ead4906058579529220b06]
+class CreateMapContainersPortController--><rect codeLine="7" fill="#FEFECE" filter="url(#foytouldyc8sa)" height="172.5234" id="CreateMapContainersPortController" style="stroke:#A80036;stroke-width:1.5;" width="313" x="7" y="7"/><ellipse cx="60.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M62.75,19.5 Q62.9531,19 63.1875,18.75 Q63.4219,18.5 63.6875,18.5 Q64.1563,18.5 64.4531,18.7813 Q64.75,19.0625 64.75,19.7188 L64.75,21.2813 Q64.75,21.9375 64.4688,22.2188 Q64.1875,22.5 63.75,22.5 Q63.3594,22.5 63.1094,22.3281 Q62.8594,22.1563 62.75,21.7031 Q62.7031,21.3906 62.5313,21.2188 Q62.2188,20.8906 61.6563,20.7031 Q61.0938,20.5 60.5313,20.5 Q59.8281,20.5 59.2344,20.7813 Q58.6563,21.0625 58.2031,21.6875 Q57.75,22.3125 57.75,23.1719 L57.75,24.0938 Q57.75,25.125 58.5938,25.8125 Q59.4375,26.5 60.9375,26.5 Q61.8281,26.5 62.4531,26.2969 Q62.8125,26.1875 63.2188,25.8281 Q63.4844,25.625 63.625,25.5625 Q63.7656,25.5 63.9375,25.5 Q64.2656,25.5 64.5,25.7656 Q64.75,26.0156 64.75,26.375 Q64.75,26.7188 64.4063,27.125 Q63.9063,27.7188 63.1094,28.0469 Q62.0625,28.5 60.7813,28.5 Q59.2813,28.5 58.0781,27.9063 Q57.1094,27.4375 56.4219,26.4219 Q55.75,25.4063 55.75,24.2031 L55.75,23.1094 Q55.75,21.8594 56.3438,20.7656 Q56.9531,19.6719 58,19.0938 Q59.0625,18.5 60.25,18.5 Q60.9688,18.5 61.5938,18.75 Q62.2188,19 62.75,19.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="197" x="81.25" y="27.9102">CreateMapContainersPortController</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="319" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="48" x="13" y="54.4189">-company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="319" y1="60.8359" y2="60.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="278" x="13" y="76.2549">-calculateOccupancyRate(maxCapacity, currentCapacity)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="301" x="13" y="90.0908">-getOccupancyRateByPortIDandDate(portID, month, year, day)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="13" y="103.9268">-checkIfPortExists(portID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="194" x="13" y="117.7627">-getOccupancyMap(portID, month, year)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="13" y="131.5986">-getMap28dMonth(portID, month, year)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="13" y="145.4346">-getMap29dMonth(portID, month, year)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="13" y="159.2705">-getMap30dMonth(portID, month, year)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="185" x="13" y="173.1064">-getMap31dMonth(portID, month, year)</text><!--MD5=[be1d99dc5ab50e12f9e9def075fd951e]
+class PortStoreDB--><rect codeLine="19" fill="#FEFECE" filter="url(#foytouldyc8sa)" height="81.5078" id="PortStoreDB" style="stroke:#A80036;stroke-width:1.5;" width="196" x="59.5" y="395"/><ellipse cx="119.25" cy="411" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M121.25,407.5 Q121.4531,407 121.6875,406.75 Q121.9219,406.5 122.1875,406.5 Q122.6563,406.5 122.9531,406.7813 Q123.25,407.0625 123.25,407.7188 L123.25,409.2813 Q123.25,409.9375 122.9688,410.2188 Q122.6875,410.5 122.25,410.5 Q121.8594,410.5 121.6094,410.3281 Q121.3594,410.1563 121.25,409.7031 Q121.2031,409.3906 121.0313,409.2188 Q120.7188,408.8906 120.1563,408.7031 Q119.5938,408.5 119.0313,408.5 Q118.3281,408.5 117.7344,408.7813 Q117.1563,409.0625 116.7031,409.6875 Q116.25,410.3125 116.25,411.1719 L116.25,412.0938 Q116.25,413.125 117.0938,413.8125 Q117.9375,414.5 119.4375,414.5 Q120.3281,414.5 120.9531,414.2969 Q121.3125,414.1875 121.7188,413.8281 Q121.9844,413.625 122.125,413.5625 Q122.2656,413.5 122.4375,413.5 Q122.7656,413.5 123,413.7656 Q123.25,414.0156 123.25,414.375 Q123.25,414.7188 122.9063,415.125 Q122.4063,415.7188 121.6094,416.0469 Q120.5625,416.5 119.2813,416.5 Q117.7813,416.5 116.5781,415.9063 Q115.6094,415.4375 114.9219,414.4219 Q114.25,413.4063 114.25,412.2031 L114.25,411.1094 Q114.25,409.8594 114.8438,408.7656 Q115.4531,407.6719 116.5,407.0938 Q117.5625,406.5 118.75,406.5 Q119.4688,406.5 120.0938,406.75 Q120.7188,407 121.25,407.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="68" x="139.75" y="415.9102">PortStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="60.5" x2="254.5" y1="427" y2="427"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="136" x="65.5" y="442.4189">-getPortMaxCapacity(portID)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="184" x="65.5" y="456.2549">-getPortOccupancyInDay(portID, date)</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="123" x="65.5" y="470.0908">-checkIfPortExists(portID)</text><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="25" fill="#FEFECE" filter="url(#foytouldyc8sa)" height="75.6719" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="98" x="181.5" y="241"/><ellipse cx="202.35" cy="257" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M204.35,253.5 Q204.5531,253 204.7875,252.75 Q205.0219,252.5 205.2875,252.5 Q205.7563,252.5 206.0531,252.7813 Q206.35,253.0625 206.35,253.7188 L206.35,255.2813 Q206.35,255.9375 206.0688,256.2188 Q205.7875,256.5 205.35,256.5 Q204.9594,256.5 204.7094,256.3281 Q204.4594,256.1563 204.35,255.7031 Q204.3031,255.3906 204.1313,255.2188 Q203.8188,254.8906 203.2563,254.7031 Q202.6938,254.5 202.1313,254.5 Q201.4281,254.5 200.8344,254.7813 Q200.2563,255.0625 199.8031,255.6875 Q199.35,256.3125 199.35,257.1719 L199.35,258.0938 Q199.35,259.125 200.1938,259.8125 Q201.0375,260.5 202.5375,260.5 Q203.4281,260.5 204.0531,260.2969 Q204.4125,260.1875 204.8188,259.8281 Q205.0844,259.625 205.225,259.5625 Q205.3656,259.5 205.5375,259.5 Q205.8656,259.5 206.1,259.7656 Q206.35,260.0156 206.35,260.375 Q206.35,260.7188 206.0063,261.125 Q205.5063,261.7188 204.7094,262.0469 Q203.6625,262.5 202.3813,262.5 Q200.8813,262.5 199.6781,261.9063 Q198.7094,261.4375 198.0219,260.4219 Q197.35,259.4063 197.35,258.2031 L197.35,257.1094 Q197.35,255.8594 197.9438,254.7656 Q198.5531,253.6719 199.6,253.0938 Q200.6625,252.5 201.85,252.5 Q202.5688,252.5 203.1938,252.75 Q203.8188,253 204.35,253.5 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="53" x="217.65" y="261.9102">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="182.5" x2="278.5" y1="273" y2="273"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="63" x="187.5" y="288.4189">-PortStoreDB</text><line style="stroke:#A80036;stroke-width:1.5;" x1="182.5" x2="278.5" y1="294.8359" y2="294.8359"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="86" x="187.5" y="310.2549">-getPortStoreDB()</text><!--MD5=[1e7d76d01401a10348b1aa5147b849da]
+link CreateMapContainersPortController to Company--><path codeLine="30" d="M194.74,180.07 C201.79,199.38 208.98,219.05 215.04,235.65 " fill="none" id="CreateMapContainersPortController-to-Company" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="216.88,240.7,217.5539,230.8742,215.1667,236.0027,210.0382,233.6155,216.88,240.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[0312d39c0477d6d8c43d06aa9fb2ec88]
+link CreateMapContainersPortController to PortStoreDB--><path codeLine="31" d="M161.99,180.42 C160.81,247.03 159.23,336.68 158.29,389.89 " fill="none" id="CreateMapContainersPortController-to-PortStoreDB" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="158.21,394.93,162.3637,385.9999,158.2957,389.9307,154.3649,385.8628,158.21,394.93" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[1e69ac0c8f15c0d4ee701cbd54f4906d]
+link Company to PortStoreDB--><path codeLine="32" d="M213.01,317.13 C201.96,340.59 187.69,370.91 176.38,394.92 " fill="none" id="Company-PortStoreDB" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="200.3699,360.6994,206.8822,353.7682,201.5644,351.2641,200.3699,360.6994" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="28" x="211.5" y="361.4951">uses</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="202.6647" y="338.0312">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="172.0234" y="384.052">1</text><!--MD5=[50a53a4b2e6620a98aaa40a6d077f358]
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CreateMapContainersPortController{
+- company
+- calculateOccupancyRate(maxCapacity, currentCapacity)
+- getOccupancyRateByPortIDandDate(portID, month, year, day)
+- checkIfPortExists(portID)
+- getOccupancyMap(portID, month, year)
+- getMap28dMonth(portID, month, year)
+- getMap29dMonth(portID, month, year)
+- getMap30dMonth(portID, month, year)
+- getMap31dMonth(portID, month, year)
+}
+
+class PortStoreDB{
+- getPortMaxCapacity(portID)
+- getPortOccupancyInDay(portID, date)
+- checkIfPortExists(portID)
+}
+
+class Company{
+- PortStoreDB
+- getPortStoreDB()
+}
+
+CreateMapContainersPortController ..> Company
+CreateMapContainersPortController ..> PortStoreDB
+Company "1" - - "1" PortStoreDB : uses >
+
+@enduml
+
+@startuml
+
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class CreateMapContainersPortController{
+- company
+- calculateOccupancyRate(maxCapacity, currentCapacity)
+- getOccupancyRateByPortIDandDate(portID, month, year, day)
+- checkIfPortExists(portID)
+- getOccupancyMap(portID, month, year)
+- getMap28dMonth(portID, month, year)
+- getMap29dMonth(portID, month, year)
+- getMap30dMonth(portID, month, year)
+- getMap31dMonth(portID, month, year)
+}
+
+class PortStoreDB{
+- getPortMaxCapacity(portID)
+- getPortOccupancyInDay(portID, date)
+- checkIfPortExists(portID)
+}
+
+class Company{
+- PortStoreDB
+- getPortStoreDB()
+}
+
+CreateMapContainersPortController ..> Company
+CreateMapContainersPortController ..> PortStoreDB
+Company "1" - - "1" PortStoreDB : uses >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

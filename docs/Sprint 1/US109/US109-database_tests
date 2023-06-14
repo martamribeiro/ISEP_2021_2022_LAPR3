@@ -1,0 +1,251 @@
+
+--Country table:
+--Should pass
+INSERT INTO COUNTRY (country_name, continent) VALUES ('Brazil', 'South America');
+INSERT INTO COUNTRY (country_name, continent) VALUES ('Portugal', 'Europe');
+INSERT INTO COUNTRY (country_name, continent) VALUES ('Chile', 'South America');
+INSERT INTO COUNTRY (country_name, continent) VALUES ('United Kingdom', 'Europe');
+--should fail: repeating primary key
+INSERT INTO COUNTRY (country_name, continent) VALUES ('United Kingdom', 'Europe');
+INSERT INTO COUNTRY (country_name, continent) VALUES ('Portugal', 'Europe');
+--should  fail: null argument
+INSERT INTO COUNTRY (country_name, continent) VALUES (null, 'South America');
+INSERT INTO COUNTRY (country_name, continent) VALUES ('Bolivia', null);
+
+--Place Location table
+--should pass:
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.3344,55.2222,'Brazil');
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.4444,51.2222,'Portugal');
+-- should fail: not registered foreign key in table country
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.3344,55.1222,'South Africa');
+-- should fail: latitude and longitude toguether as key are already existent
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.3344,55.2222,'United Kingdom');
+-- should fail: null arguments:
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (null,55.2222,'United Kingdom');
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.3344,null,'United Kingdom');
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.3344,55.2222,null);
+--should fail: not respecting check constraints
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (92,55.2222,'United Kingdom');
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (72.3344,188,'United Kingdom');
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (-92.3344,55.2222,'Portugal');
+INSERT INTO PLACELOCATION (locationLatitude, locationLongitude, country) VALUES (33,-185.2222,'United Kingdom');
+
+--Port table
+--should pass:
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29021, 'Rio grande', 72.3344, 55.2222);
+-- should fail: repeated primary key
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29021, 'Lisboa', 72.4444, 55.2222);
+-- should fail: foreign key reference not existent
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29031, 'Lisboa', 72.8444, 55.2222);
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29041, 'Lisboa', 72.4444, 55.2022);
+--should fail: null arguments:
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29031, null, 72.8444, 55.2222);
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(null, 'Lisboa', 72.4444, 55.2022);
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29031, 'Lisboa', null, 55.2222);
+INSERT INTO PORT (port_id, name, locationLatitude, locationLongitude)
+VALUES(29041, 'Lisboa', 72.4444, null);
+
+--VesselType Table:
+--should pass:
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (70, 294, 55, 35)
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (30, 294, 55, 35)
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (20, 294.54, 55.78, 3552.23)
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (40, 294.54, 55.78, null)
+--Should fail: primary key cannot be repeated
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (70, 255, 25, 335)
+--should fail: null arguments
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (null, 255, 25, 335)
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (90, null, 25, 335)
+INSERT INTO VESSELTYPE (vesselTypeId, length, width, maxCapacity) VALUES (720, 255, null, 335)
+
+--Ship table:
+--should pass:
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123456789, 70, 'IMO9193305', 'DHBN', 'SEOUL EXPRESS',null, 13.6)
+--should fail: primary key cannot be repeated
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123456789, 40, 'IMO9192305', 'GGBN', 'SEOUL EXS',null, 12.6)
+-- should fail: foreign key reference not existent
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123456709, 12, 'IMO9192305', 'GGBN', 'SEOUL EXS',null, 12.6)
+-- should fail: not respecting check constraints
+--draft below 0
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416709, 40, 'IMO9192305', 'GGBN', 'SEOUL EXS',null, -12.6)
+--imo not starting with IMO
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416119, 40, 'IGO9192305', 'GGBN', 'SEOUL EXS',null, 12.6)
+--should fail: null values
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (NULL, 40, 'IMO9192305', 'GGBN', 'SEOUL EXS',null, 12.6)
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416119, NULL, 'IMO9192305', 'GGBN', 'SEOUL EXS',null, 12.6)
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416119, 40, NULL, 'GGBN', 'SEOUL EXS',null, 12.6)
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416119, 40, 'IMO9192305', NULL, 'SEOUL EXS',null, 12.6)
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416119, 40, 'IMO9192305', 'GGBN', NULL,null, 12.6)
+INSERT INTO SHIP (mmsi, vesselTypeId, imo, callSign, shipName, currentCapacity, draft)
+VALUES (123416119, 40, 'IMO9192305', 'GGBN', 'SEOUL EXS',null, NULL)
+
+--CargoManifest table:
+-- should pass
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(1, 29021, 123456789, 'ship', 'loading');
+--should fail: primary key repeated
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(1, 29021, 123456789, 'ship', 'loading');
+-- should fail: foreign key reference not existent
+--port id
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, 33021, 123456789, 'ship', 'loading');
+--MMSI
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, 29021, 0987654321, 'ship', 'loading');
+-- should fail: not respecting check constraints
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, 29021, 123456789, 'ship', 'charging');
+--should fail: null values
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(null, 29021, 123456789, 'ship', 'charging');
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, null, 123456789, 'ship', 'charging');
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, 29021, null, 'ship', 'charging');
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, 29021, 123456789, null, 'charging');
+INSERT INTO cargoManifest(cargoManifest_id, port_id, mmsi, typeOfTransport, status)
+VALUES(2, 29021, 123456789, 'ship', null);
+
+--ShipPosition table:
+--should pass:
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:25','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,123456789, 19.7, 145.5, 147, 'B')
+--should fail: primary key repeated
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:25','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,123456789, 12.7, 115.5, 137, 'A')
+--should fail: foreign key reference not existent
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:25','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,0987654321, 19.7, 145.5, 147, 'B');
+--should fail: check constraint not respected
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:15','DD/MM/YY hh24:mi:ss'), 96.0909, -122.66,123456789, 19.7, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:15','DD/MM/YY hh24:mi:ss'), 56.0909, -182.66,123456789, 19.7, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:15','DD/MM/YY hh24:mi:ss'), 46.0909, -122.66,123456789, 19.7, 465.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:15','DD/MM/YY hh24:mi:ss'), 86.0909, -122.66,123456789, 19.7, 145.5, 1427, 'B');
+-- should fail: null values:
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (null, 36.0909, -122.66,123456789, 19.7, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:15','DD/MM/YY hh24:mi:ss'), null, -122.66,123456789, 19.7, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:35','DD/MM/YY hh24:mi:ss'), 36.0909, null,123456789, 19.7, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 01:55','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,null, 19.7, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 02:15','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,123456789, null, 145.5, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 03:25','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,123456789,  19.7,null, 147, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 04:25','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,123456789,  19.7,145.5, null, 'B');
+INSERT INTO shipPosition (basedatetime, latitude, longitude, mmsi, sog, cog, heading, transceiver)
+VALUES (TO_DATE('22/4/2013 05:25','DD/MM/YY hh24:mi:ss'), 36.0909, -122.66,123456789,  19.7,145.5, 147, 'null');
+
+--energyPower table:
+--should pass:
+INSERT INTO energyPower (numEnergyGenerators, mmsi, generatorsPower) VALUES (3, 123456789, 15.23);
+--should fail: foreign key reference not existent
+INSERT INTO energyPower (numEnergyGenerators, mmsi, generatorsPower) VALUES (3, 000000000, 15.23);
+--should fail: primary key cannot be repeated
+INSERT INTO energyPower (numEnergyGenerators, mmsi, generatorsPower) VALUES (3, 123456789, 15.03);
+--should fail: null arguments
+INSERT INTO energyPower (numEnergyGenerators, mmsi, generatorsPower) VALUES (3, null, 15.03);
+
+--container table:
+--should pass:
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1234, 543.22, 321.22, 432.12, 'NH04');
+--should fail: primary key cannot be repeated
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1234, 513.22, 322.22, 132.12, 'NG04');
+--should fail: null arguments
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (null, 513.22, 322.22, 132.12, 'NG04');
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1234, null, 322.22, 132.12, 'NG04');
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1234, 513.22, null, 132.12, 'NG04');
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1234, 513.22, 322.22, null, 'NG04');
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1234, 513.22, 322.22, 132.12, null);
+-- should fail: check constraint not respected
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1334, -543.22, 321.22, 432.12, 'NH04');
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1334, 543.22, -321.22, 432.12, 'NH04');
+INSERT INTO container(container_id, payload, tare, gross, isoCode)
+ VALUES (1334, 543.22, 321.22, -432.12, 'NH04');
+
+--refrigeration table:
+--should pass:
+INSERT INTO refrigeration(container_id, temperatureKept) VALUES (1234, -10);
+--should fail: primary key cannot be repeated
+INSERT INTO refrigeration(container_id, temperatureKept) VALUES (1234, -10);
+--should fail: null arguments
+INSERT INTO refrigeration(container_id, temperatureKept) VALUES (null, -10);
+--should fail: foreign key reference not existent
+INSERT INTO refrigeration(container_id, temperatureKept) VALUES (1244, -10);
+
+--positionInVehicule table:
+--should pass:
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,1234, 1,0,1);
+--should fail: primary key cannot be repeated
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,1234, 2,1,2);
+--should fail: foreign key reference not existent
+--cargo manifest
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(6,1234, 2,1,2);
+--container id
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,1224, 2,1,2);
+--should fail: null arguments
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(null,1234, 1,0,1);
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,null, 1,0,1);
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,1234, null,0,1);
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,1234, 1,null,1);
+INSERT INTO positionInVehicule(cargoManifest_id, container_id, containerPositionX, containerPositionY, containerPositionZ)
+VALUES(1,1234, 1,1,null);
+
+--containerInCargoManifest table:
+--should pass:
+INSERT INTO containerInCargoManifest(container_id, cargoManifest_id) VALUES(1234, 1);
+--should fail: foreign key reference not existent
+--container id
+INSERT INTO containerInCargoManifest(container_id, cargoManifest_id) VALUES(1224, 1);
+--cargo manifest
+INSERT INTO containerInCargoManifest(container_id, cargoManifest_id) VALUES(1234, 2);
+--should fail: primary key repeated
+INSERT INTO containerInCargoManifest(container_id, cargoManifest_id) VALUES(1234, 1);
+--should fail: null values
+INSERT INTO containerInCargoManifest(container_id, cargoManifest_id) VALUES(null, 1);
+INSERT INTO containerInCargoManifest(container_id, cargoManifest_id) VALUES(1234, null);
+
+

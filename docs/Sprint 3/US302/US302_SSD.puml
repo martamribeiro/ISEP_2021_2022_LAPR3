@@ -1,0 +1,13 @@
+@startuml
+autonumber
+actor TrafficManager as C
+
+activate C
+C -> ":System" : asks to color the map using the minimum colors possible
+activate ":System"
+
+":System" --> C : displays the colored map
+deactivate ":System"
+
+deactivate C
+@enduml

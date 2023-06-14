@@ -1,0 +1,101 @@
+@startuml
+autonumber
+'hide footbox
+actor "Traffic Manager" as PM
+participant ":CreateFreightNetworkUI  " as UI
+participant ":CreateFreightNetworkController" as CTRL
+participant ":Company" as CMP
+participant ":CountryStoreDb" as CSTORE
+participant ":CountryStore" as LSTORE
+participant ":PortStoreDb" as STORE
+participant ":PortStore" as PSTORE
+participant ":Port" as PORT
+participant ":Capital" as CAP
+participant ":Country" as CTRY
+
+
+activate PM
+PM -> UI : asks to create a freight network importing ports, countries\n and seadists from database
+activate UI
+
+UI -> CTRL : CreateFreightNetworkFromDb()
+activate CTRL
+CTRL -> CSTORE** : create
+CTRL -> CSTORE : List<Country> existentCountries = getExistentCountries()
+activate CSTORE
+CSTORE -> CSTORE: resultSet = getCountriesInDatabase()
+CSTORE -> CTRL: existentCountries
+deactivate CSTORE
+CTRL -> CMP : countryStore = getCountryStore()
+activate CMP
+deactivate CMP
+alt for each country in existentCountries
+CTRL -> LSTORE : createCountry(countryDto)
+activate LSTORE
+LSTORE -> CTRL : country
+deactivate LSTORE
+CTRL -> LSTORE: saveCountry(country)
+activate LSTORE
+deactivate LSTORE
+end
+deactivate CSTORE
+CTRL -> STORE** : create
+CTRL -> STORE : List<Port> existentPorts = portStoreDb.getExistentPorts()
+activate STORE
+STORE -> STORE: resultSet = getPortsInDatabase()
+alt for each port in resultset
+STORE -> PORT** : create(continent, country, portCode, portName, latitude, longitude, Map<Integer, Integer> toPortsDistances)
+STORE -> STORE : existentPorts.add(port)
+end
+deactivate STORE
+
+CTRL -> CMP: portStore = getPortStore()
+activate CMP
+deactivate CMP
+
+CTRL -> PSTORE : importPortsList(existentPorts)
+activate PSTORE
+deactivate PSTORE
+deactivate STORE
+CTRL -> CMP : getFreigthNetwork()
+activate CMP
+deactivate CMP
+CTRL -> CSTORE : getCountries()
+activate CSTORE
+deactivate CSTORE
+CTRL -> PSTORE: getPorts()
+activate PSTORE
+deactivate PSTORE
+alt for each capital in countries list
+CTRL -> NET : add(capital)
+end
+alt for each port in portsList
+CTRL -> NET : add(port)
+end
+alt for each country in countries list
+CTRL -> LSTORE : <String, Integer>Map borders =  getBordersDistances()
+activate LSTORE
+deactivate LSTORE
+alt for each border in borders
+CTRL -> NET : addEdge(country.getCapital, border.key, border.value)
+end
+CTRL -> LSTORE: getClosestPortFromCapital(countryName, portStore.getCountryPorts(countryName))
+activate LSTORE
+deactivate LSTORE
+CTRL -> LSTORE: getLocationsDistance(capital.lat, capital.lon, port.lat, port.lon)
+activate LSTORE
+deactivate LSTORE
+CTRL -> NET : addEdge(country.Capital, closest.Port, dist)
+end
+alt for each port in ports
+alt for each toDistance in port
+CTRL -> NET : addEdge(port, portStore.getPortbyId(key), dist)
+end
+end
+CTRL --> UI : result
+deactivate CTRL
+UI --> PM : informs of operation success or fail
+deactivate UI
+deactivate PM
+
+@enduml

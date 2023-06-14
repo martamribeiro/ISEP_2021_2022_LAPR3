@@ -1,0 +1,37 @@
+@startuml
+autonumber
+'hide footbox
+actor "Traffic Manager" as SC
+participant ":OccupancyByCargoManifestUI  " as UI
+participant ":CheckIfContainerExceedsShipCapacityController" as CTRL
+participant ":Company" as CMP
+participant ":ShipTripStoreDB" as CMS
+
+activate SC
+SC -> UI : tries to create a ship trip
+activate UI
+UI --> SC : asks for data(i.e.,shipTripID, mmsi, depLocation, \narriLocation, loadCargID, estDepDate, estArriDate)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : tryToCreateShipTrip(shipTripID,mmsi,depLocation,arriLocation,loadCargID,estDepDate,estArriDate)
+activate CTRL
+CTRL -> CMP : getShipTripStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : resultCreate = createShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : result = checkIfShipTripExists(shipTripID)
+activate CMS
+|||
+deactivate CMS
+CTRL --> UI : result
+deactivate CTRL
+UI --> SC : informs of operation success or fail
+deactivate UI
+deactivate SC
+
+@enduml

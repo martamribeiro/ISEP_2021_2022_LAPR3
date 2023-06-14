@@ -1,0 +1,89 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Company{
+    +getShipBst()
+}
+class BST{}
+
+class Ship {
+    +getName()
+    +getMovements()
+}
+
+class ShipsBST{
+    +findShipByMmsi(MMSI)
+}
+
+class ShipsBSTImo{
+    +findShipByImo(imo)
+}
+class ShipsBSTCallSign{
+     +findShipByCallsign(callsign)
+ }
+
+class ShipStore{
+    getShipMmsiBst()
+}
+class ShipPosition{
+    +getLatitude()
+    +getLongitude()
+    +getBaseTime()
+    +getSog()
+    +getCog()
+}
+
+class PositionsBST {
+    +getStartDate()
+    +getEndDate()
+    +getMaxSog()
+    +getMeanSog()
+    +getMeanCog()
+    +getDepartLatitude()
+    +getDepartLongitude()
+    +getArrivalLatitude()
+    +getArrivalLongitude()
+    +getTravelDistance()
+    +getDeltaDistance()
+}
+
+
+class MovementSummaryController {
++getShipMovementSummary(MMSI)
+}
+
+class MovementSummaryDto{
+    name
+    startDate
+    endDate
+    maxSog
+    meanSog
+    meanCog
+    departLatitude
+    departLongitude
+    arrivalLatitude
+    arrivalLongitude
+    travelledDist
+    deltaDist
+}
+
+MovementSummaryController ..> Company
+MovementSummaryController ..> ShipStore
+MovementSummaryController -- MovementSummaryDto: creates >
+Company "1" --> "*" Ship : knows
+Company "1" -- "1" ShipStore : uses >
+ShipStore "1" -- "1" ShipsBSTCallSign : uses >
+ShipStore "1" -- "1" ShipsBST : uses >
+ShipStore "1" -- "1" ShipsBSTImo : uses >
+ShipsBST ..> Ship
+ShipsBSTImo ..> Ship
+ShipsBSTCallSign ..> Ship
+Ship "1" -- "*" ShipPosition : sends >
+Ship "1" -- "1" PositionsBST : uses >
+PositionsBST ..> ShipPosition
+ShipsBST -|> BST
+ShipsBSTImo -|> BST
+ShipsBSTCallSign -|> BST
+PositionsBST -|> BST
+
+@enduml

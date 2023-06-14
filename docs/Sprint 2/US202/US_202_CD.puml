@@ -1,0 +1,76 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class ClosestShipController {
+-company
+-getShipByCallSign(callSign)
+-getShipCoordinates(ship, dateTime)
+-findClosestPort(callSign, dateTime)
+}
+
+class Ship {
+-positionBST
+-getPositionBST()
+}
+
+class ShipStore {
+-getShipByAnyCode(callSign)
+}
+
+class PositionBST {
+-getPosInDateTime(dateTime)
+}
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+    -getBaseDateTime()
+    -getLat()
+    -getLon()
+}
+
+class Company {
+- designation
+- portStore
+- getPortStore()
+-getShipStore()
+}
+
+class PortStore {
+- findClosestPort(coordinates)
+}
+
+class PortTree {
+- findClosestPort(coordinates)
+}
+
+class 2DTree{
+-findNearestNeighbour(lat, lon)
+}
+
+Company "1" -- "1" PortStore : uses >
+Company "1" -- "1" ShipStore : uses >
+ShipStore "1" -- "1..*" Ship : owns >
+Ship "1" -- "1" PositionBST : uses >
+PortStore "1" -- "1" PortTree : uses >
+ClosestShipController ..> Company
+ClosestShipController ..> PortTree
+ClosestShipController ..> PortStore
+ClosestShipController ..> ShipStore
+PositionBST "1" -- "1..*" ShipPosition : has >
+
+PortTree -|> 2DTree
+
+
+
+@enduml

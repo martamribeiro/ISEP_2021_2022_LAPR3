@@ -1,0 +1,45 @@
+@startuml
+
+autonumber
+actor TrafficManager as C
+participant "MostEfficientCircuitUI" as UI
+participant "MostEfficientCircuitController" as CTRL
+participant "Company" as COMPANY
+participant "freightNetwork:\nFreightNetwork" as NET
+participant "Graph" as GRAPH
+
+activate C
+C -> UI : asks to get the most efficient circuit
+activate UI
+UI -> CTRL : getMostEfficientCircuit()
+activate CTRL
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : circuitMap = getTotalDistanceMinorCost()
+activate NET
+NET -> NET : getAllCircuitsAndDistances()
+NET -> GRAPH : vertices()
+activate GRAPH
+deactivate GRAPH
+NET -> NET : getCircuitsAndDistance()
+NET -> GRAPH : adjVertices()
+activate GRAPH
+NET -> GRAPH : edge()
+deactivate GRAPH
+NET -> NET : checkCircuit()
+NET -> GRAPH : edge()
+activate GRAPH
+deactivate GRAPH
+
+NET -> CTRL : circuitMap
+deactivate NET
+CTRL --> UI : centralPorts
+
+UI --> C : returns the most efficient circuit and total distance
+deactivate UI
+
+deactivate C
+
+
+@enduml

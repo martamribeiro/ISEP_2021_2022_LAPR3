@@ -1,0 +1,27 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class GetVesselSinkController{
+    +getUnLadenCenterOfMassOfShip(mmsi)
+}
+
+class Company {}
+
+
+class Ship {
+    +totalMassPlaced(numContainers)
+    +getPressure(numContainers)
+    +getDiffHeightAboveWaterLevel(numContainers)
+}
+
+class Mass {
+    +getX()
+    +getY()
+}
+
+GetVesselSinkController ..> Company
+GetVesselSinkController ..> Ship
+GetVesselSinkController ..> Mass
+Company "1" -- "1..*" Ship : owns >
+Ship "1" -- "1..*" Mass : has >
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+
+autonumber
+actor Client as C
+
+participant "GetContainerSituationUI" as UI
+participant "GetContainerSituationController" as CTRL
+participant "Company" as COMPANY
+participant "App" as APP
+participant "databaseConnection:\nDatabaseConnection" as CONNECTION
+
+participant "ShipTripStoreDB" as SHIP_TRIP_STORE_DB
+
+/'Temos de chamar a Company para as Stores ou não é
+necessário?'/
+
+
+activate C
+C -> "UI" : asks to obtain the situation of container to transport the goods
+activate "UI"
+"UI" --> C : requests the container id
+deactivate "UI"
+C -> "UI" : types the container id
+activate "UI"
+UI --> C : requests the shipment id
+deactivate UI
+C -> UI : types the shipment id
+activate UI
+UI -> CTRL : getLocation(containerID, shipmentID)
+activate CTRL
+CTRL -> COMPANY : shipTripStoreDB = getShipTripStoreDB()
+activate COMPANY
+deactivate COMPANY
+CTRL -> APP : databaseConnection = getInstance().getDatabaseConnection()
+activate APP
+deactivate APP
+CTRL -> SHIP_TRIP_STORE_DB : shipTripId = getShipTripId(connection, containerID, shipmentID)
+activate SHIP_TRIP_STORE_DB
+deactivate SHIP_TRIP_STORE_DB
+CTRL -> SHIP_TRIP_STORE_DB : containerLocation = getLocation(connection, shipTripID)
+activate SHIP_TRIP_STORE_DB
+deactivate SHIP_TRIP_STORE_DB
+CTRL --> UI : containerLocation
+deactivate CTRL
+UI --> C : displays the type and concrete instance of its current location
+deactivate UI
+deactivate C
+
+@enduml

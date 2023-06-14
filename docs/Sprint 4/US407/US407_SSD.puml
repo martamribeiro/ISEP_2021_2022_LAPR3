@@ -1,0 +1,12 @@
+@startuml
+autonumber
+actor "Port Manager" as PM
+
+activate PM
+PM -> ":System" : asks to get a week in advance, the loading and unloading map based on ships and trucks load manifests and corresponding travel plans
+
+activate ":System"
+":System" --> PM : operation success
+
+deactivate PM
+@enduml

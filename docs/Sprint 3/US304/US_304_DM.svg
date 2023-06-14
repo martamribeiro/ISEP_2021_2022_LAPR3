@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="487px" preserveAspectRatio="none" style="width:288px;height:487px;background:#FFFFFF;" version="1.1" viewBox="0 0 288 487" width="288px" zoomAndPan="magnify"><defs><filter height="300%" id="f14kph6f91qppr" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[e6b394b930674b2255938b8afe6bb7b4]
+class ShipCaptain--><rect codeLine="6" fill="#FEFECE" filter="url(#f14kph6f91qppr)" height="52.8047" id="ShipCaptain" style="stroke:#A80036;stroke-width:1.5;" width="105" x="7" y="239"/><ellipse cx="22" cy="255" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24.4688,260.875 Q23.8906,261.1875 23.25,261.3438 Q22.6094,261.5 21.9063,261.5 Q19.4063,261.5 18.0781,259.8281 Q16.7656,258.1563 16.7656,255 Q16.7656,251.8438 18.0781,250.1719 Q19.4063,248.5 21.9063,248.5 Q22.6094,248.5 23.25,248.6563 Q23.9063,248.8125 24.4688,249.125 L24.4688,251.9219 Q23.8438,251.3594 23.25,251.0938 Q22.6563,250.8125 22.0313,250.8125 Q20.6875,250.8125 20,251.875 Q19.3125,252.9375 19.3125,255 Q19.3125,257.0781 20,258.1406 Q20.6875,259.1875 22.0313,259.1875 Q22.6563,259.1875 23.25,258.9219 Q23.8438,258.6563 24.4688,258.0781 L24.4688,260.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="73" x="36" y="259.1543">ShipCaptain</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="111" y1="271" y2="271"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="13" y="285.2104">-name</text><!--MD5=[76562047389981627aea27c31a97aff5]
+class CargoManifest--><rect codeLine="11" fill="#FEFECE" filter="url(#f14kph6f91qppr)" height="52.8047" id="CargoManifest" style="stroke:#A80036;stroke-width:1.5;" width="117" x="147" y="239"/><ellipse cx="162" cy="255" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M164.4688,260.875 Q163.8906,261.1875 163.25,261.3438 Q162.6094,261.5 161.9063,261.5 Q159.4063,261.5 158.0781,259.8281 Q156.7656,258.1563 156.7656,255 Q156.7656,251.8438 158.0781,250.1719 Q159.4063,248.5 161.9063,248.5 Q162.6094,248.5 163.25,248.6563 Q163.9063,248.8125 164.4688,249.125 L164.4688,251.9219 Q163.8438,251.3594 163.25,251.0938 Q162.6563,250.8125 162.0313,250.8125 Q160.6875,250.8125 160,251.875 Q159.3125,252.9375 159.3125,255 Q159.3125,257.0781 160,258.1406 Q160.6875,259.1875 162.0313,259.1875 Q162.6563,259.1875 163.25,258.9219 Q163.8438,258.6563 164.4688,258.0781 L164.4688,260.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="85" x="176" y="259.1543">CargoManifest</text><line style="stroke:#A80036;stroke-width:1.5;" x1="148" x2="263" y1="271" y2="271"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="93" x="153" y="285.2104">-cargoManifestId</text><!--MD5=[cd383c058592010a1996452fddaad790]
+class ShipTrip--><rect codeLine="15" fill="#FEFECE" filter="url(#f14kph6f91qppr)" height="155.2422" id="ShipTrip" style="stroke:#A80036;stroke-width:1.5;" width="138" x="136.5" y="7"/><ellipse cx="176.7" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M179.1688,28.875 Q178.5906,29.1875 177.95,29.3438 Q177.3094,29.5 176.6063,29.5 Q174.1063,29.5 172.7781,27.8281 Q171.4656,26.1563 171.4656,23 Q171.4656,19.8438 172.7781,18.1719 Q174.1063,16.5 176.6063,16.5 Q177.3094,16.5 177.95,16.6563 Q178.6063,16.8125 179.1688,17.125 L179.1688,19.9219 Q178.5438,19.3594 177.95,19.0938 Q177.3563,18.8125 176.7313,18.8125 Q175.3875,18.8125 174.7,19.875 Q174.0125,20.9375 174.0125,23 Q174.0125,25.0781 174.7,26.1406 Q175.3875,27.1875 176.7313,27.1875 Q177.3563,27.1875 177.95,26.9219 Q178.5438,26.6563 179.1688,26.0781 L179.1688,28.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="50" x="196.3" y="27.1543">ShipTrip</text><line style="stroke:#A80036;stroke-width:1.5;" x1="137.5" x2="273.5" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="142.5" y="53.2104">-shipMmsi</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="126" x="142.5" y="66.0151">-departure_location_id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="107" x="142.5" y="78.8198">-arrival_location_id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="99" x="142.5" y="91.6245">-loading_cargo_id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="113" x="142.5" y="104.4292">-unloading_cargo_id</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="114" x="142.5" y="117.2339">-est_departure_date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="95" x="142.5" y="130.0386">-est_arrival_date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="119" x="142.5" y="142.8433">-real_departure_date</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="142.5" y="155.6479">-real_arrival_date</text><!--MD5=[e9a58730c562b34349daa605d1ed6662]
+class Container--><rect codeLine="27" fill="#FEFECE" filter="url(#f14kph6f91qppr)" height="104.0234" id="Container" style="stroke:#A80036;stroke-width:1.5;" width="90" x="74.5" y="369"/><ellipse cx="89.5" cy="385" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M91.9688,390.875 Q91.3906,391.1875 90.75,391.3438 Q90.1094,391.5 89.4063,391.5 Q86.9063,391.5 85.5781,389.8281 Q84.2656,388.1563 84.2656,385 Q84.2656,381.8438 85.5781,380.1719 Q86.9063,378.5 89.4063,378.5 Q90.1094,378.5 90.75,378.6563 Q91.4063,378.8125 91.9688,379.125 L91.9688,381.9219 Q91.3438,381.3594 90.75,381.0938 Q90.1563,380.8125 89.5313,380.8125 Q88.1875,380.8125 87.5,381.875 Q86.8125,382.9375 86.8125,385 Q86.8125,387.0781 87.5,388.1406 Q88.1875,389.1875 89.5313,389.1875 Q90.1563,389.1875 90.75,388.9219 Q91.3438,388.6563 91.9688,388.0781 L91.9688,390.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="58" x="103.5" y="389.1543">Container</text><line style="stroke:#A80036;stroke-width:1.5;" x1="75.5" x2="163.5" y1="401" y2="401"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="67" x="80.5" y="415.2104">-containerId</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="80.5" y="428.0151">-payload</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="27" x="80.5" y="440.8198">-tare</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="35" x="80.5" y="453.6245">-gross</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="49" x="80.5" y="466.4292">-isoCode</text><!--MD5=[d84d67203e7d83cdf89710d70aff3023]
+link ShipCaptain to Container--><path codeLine="35" d="M66.35,292.3 C70.31,306.29 75.65,323.77 81.5,339 C85.23,348.72 89.61,358.89 94.05,368.63 " fill="none" id="ShipCaptain-Container" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="88.2056,335.2665,87.8827,325.7614,82.3575,327.7665,88.2056,335.2665" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40" x="95.5" y="335.0669">audits</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="58.9734" y="311.9059">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="66.3158" y="358.0331">1..*</text><!--MD5=[a93f71c337684849482b0ec5675aa7db]
+link CargoManifest to Container--><path codeLine="36" d="M191.11,292.19 C179.44,313.02 162.63,343.02 148.23,368.72 " fill="none" id="CargoManifest-Container" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="175.056,334.9284,182.0412,328.4741,176.9134,325.6009,175.056,334.9284" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="186.5" y="335.0669">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="162.4466" y="311.7718">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="127.5453" y="357.7613">1..*</text><!--MD5=[fe56967d49e095412a54b704daffd5d9]
+link ShipTrip to CargoManifest--><path codeLine="37" d="M205.5,162.19 C205.5,189.71 205.5,218.88 205.5,239 " fill="none" id="ShipTrip-CargoManifest" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="210.5,205.5664,213.4389,196.5213,207.5611,196.5213,210.5,205.5664" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="219.5" y="205.0669">contains</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="197.1188" y="182.3714">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="178.575" y="227.8194">1..2</text><!--MD5=[fadf36fe6ab921ce6ca1324bbeed3c0a]
+@startuml
+'https://plantuml.com/class-diagram
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class ShipCaptain{
+    -name
+}
+
+
+class CargoManifest{
+    -cargoManifestId
+}
+
+class ShipTrip{
+    -shipMmsi
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+class Container{
+    -containerId
+    -payload
+    -tare
+    -gross
+    -isoCode
+}
+
+ShipCaptain "1" - - "1..*" Container : audits >
+CargoManifest "1..*" - - "1..*" Container : contains >
+ShipTrip "1" - - "1..2" CargoManifest : contains >
+
+@enduml
+
+@startuml
+hide empty methods
+hide empty attributes
+skinparam classAttributeIconSize 0
+
+class ShipCaptain{
+    -name
+}
+
+
+class CargoManifest{
+    -cargoManifestId
+}
+
+class ShipTrip{
+    -shipMmsi
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+class Container{
+    -containerId
+    -payload
+    -tare
+    -gross
+    -isoCode
+}
+
+ShipCaptain "1" - - "1..*" Container : audits >
+CargoManifest "1..*" - - "1..*" Container : contains >
+ShipTrip "1" - - "1..2" CargoManifest : contains >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

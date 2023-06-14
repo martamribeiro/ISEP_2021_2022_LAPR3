@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Traffic Manager" as TM
+
+activate TM
+TM-> ":System" : asks to import ships from a text file into a BST
+activate ":System"
+":System" --> TM : asks for data(i.e., file path)
+TM-> ":System" : inserts needed data
+":System" --> TM : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml

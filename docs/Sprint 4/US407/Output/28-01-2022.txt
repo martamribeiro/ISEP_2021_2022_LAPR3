@@ -1,0 +1,139 @@
+> Cargo Manifest ID: 34491
+Unload Date: 22.01.28
+Transport: Ship
+Number of Containers to Unload: 10
+Containers Info:
+>> Container ID: 4515914
+Position: (9, 1, 2)
+Payload: 125,89 | Tare: 36,05 | Gross: 89,84 | ISO Code: 4534
+
+>> Container ID: 4825735
+Position: (9, 8, 2)
+Payload: 177,05 | Tare: 89,12 | Gross: 87,93 | ISO Code: 3898
+
+>> Container ID: 7189955
+Position: (2, 7, 1)
+Payload: 109,17 | Tare: 14,66 | Gross: 94,51 | ISO Code: 4286
+
+
+
+> Cargo Manifest ID: 54091
+Unload Date: 22.01.28
+Transport: Ship
+Number of Containers to Unload: 6
+Containers Info:
+>> Container ID: 269705
+Position: (12, 6, 2)
+Payload: 115,46 | Tare: 30,03 | Gross: 85,43 | ISO Code: 3770
+
+>> Container ID: 1274563
+Position: (9, 2, 3)
+Payload: 84,49 | Tare: 1,03 | Gross: 83,46 | ISO Code: 2109
+
+>> Container ID: 1738638
+Position: (2, 7, 4)
+Payload: 45,59 | Tare: 4,43 | Gross: 41,16 | ISO Code: 3772
+
+>> Container ID: 3760110
+Position: (6, 1, 4)
+Payload: 56,92 | Tare: 18,95 | Gross: 37,97 | ISO Code: 1355
+
+>> Container ID: 4871217
+Position: (7, 8, 5)
+Payload: 115,87 | Tare: 34,52 | Gross: 81,35 | ISO Code: 3714
+
+>> Container ID: 5179239
+Position: (5, 7, 6)
+Payload: 51,81 | Tare: 32,8 | Gross: 19,01 | ISO Code: 2871
+
+>> Container ID: 6049696
+Position: (4, 8, 1)
+Payload: 69,85 | Tare: 65,94 | Gross: 3,91 | ISO Code: 4245
+
+>> Container ID: 6686080
+Position: (2, 3, 6)
+Payload: 96,94 | Tare: 74,5 | Gross: 22,44 | ISO Code: 2924
+
+>> Container ID: 9000932
+Position: (2, 1, 1)
+Payload: 34,08 | Tare: 13,28 | Gross: 20,8 | ISO Code: 4880
+
+
+
+
+
+> Cargo Manifest ID: 83244
+Load Date: 22.01.28
+Transport: Ship
+Number of Containers to Load: 6
+Containers Info:
+>> Container ID: 309787
+Position: (6, 9, 4)
+Payload: 42,98 | Tare: 6,25 | Gross: 36,73 | ISO Code: 3823
+
+>> Container ID: 1720027
+Position: (7, 2, 3)
+Payload: 63,45 | Tare: 24,62 | Gross: 38,83 | ISO Code: 4436
+
+>> Container ID: 3462818
+Position: (5, 7, 1)
+Payload: 69,35 | Tare: 27,43 | Gross: 41,92 | ISO Code: 4717
+
+>> Container ID: 3723819
+Position: (1, 4, 1)
+Payload: 151,73 | Tare: 86,9 | Gross: 64,83 | ISO Code: 3023
+
+>> Container ID: 5577067
+Position: (4, 9, 5)
+Payload: 118,94 | Tare: 51,9 | Gross: 67,04 | ISO Code: 1971
+
+>> Container ID: 7514776
+Position: (3, 10, 1)
+Payload: 66 | Tare: 52,99 | Gross: 13,01 | ISO Code: 1767
+
+
+
+> Cargo Manifest ID: 9004
+Load Date: 22.01.28
+Transport: Ship
+Number of Containers to Load: 10
+Containers Info:
+>> Container ID: 505155
+Position: (3, 5, 2)
+Payload: 144,99 | Tare: 69,89 | Gross: 75,1 | ISO Code: 4183
+
+>> Container ID: 961837
+Position: (12, 3, 6)
+Payload: 187,25 | Tare: 93,09 | Gross: 94,16 | ISO Code: 2303
+
+>> Container ID: 1736584
+Position: (7, 4, 6)
+Payload: 115,34 | Tare: 58,96 | Gross: 56,38 | ISO Code: 2524
+
+>> Container ID: 3753096
+Position: (1, 10, 3)
+Payload: 131,22 | Tare: 88 | Gross: 43,22 | ISO Code: 4696
+
+>> Container ID: 3908753
+Position: (12, 6, 6)
+Payload: 63,74 | Tare: 7,45 | Gross: 56,29 | ISO Code: 4286
+
+>> Container ID: 4166453
+Position: (8, 4, 6)
+Payload: 34,96 | Tare: 1,06 | Gross: 33,9 | ISO Code: 1729
+
+>> Container ID: 6215351
+Position: (8, 6, 5)
+Payload: 92,65 | Tare: 38,4 | Gross: 54,25 | ISO Code: 4323
+
+>> Container ID: 7065594
+Position: (12, 3, 3)
+Payload: 162,94 | Tare: 94,7 | Gross: 68,24 | ISO Code: 3129
+
+>> Container ID: 9554295
+Position: (10, 2, 2)
+Payload: 131,64 | Tare: 63,97 | Gross: 67,67 | ISO Code: 4705
+
+>> Container ID: 9803333
+Position: (7, 7, 6)
+Payload: 59,77 | Tare: 15,62 | Gross: 44,15 | ISO Code: 2733

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="490px" preserveAspectRatio="none" style="width:266px;height:490px;background:#FFFFFF;" version="1.1" viewBox="0 0 266 490" width="266px" zoomAndPan="magnify"><defs><filter height="300%" id="fa6lyv36axzch" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[02e4b9b7573f1156f41e60aa5b4e25a4]
+class Company--><rect codeLine="7" fill="#FEFECE" filter="url(#fa6lyv36axzch)" height="52.8047" id="Company" style="stroke:#A80036;stroke-width:1.5;" width="89" x="7" y="7"/><ellipse cx="22" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M24.4688,28.875 Q23.8906,29.1875 23.25,29.3438 Q22.6094,29.5 21.9063,29.5 Q19.4063,29.5 18.0781,27.8281 Q16.7656,26.1563 16.7656,23 Q16.7656,19.8438 18.0781,18.1719 Q19.4063,16.5 21.9063,16.5 Q22.6094,16.5 23.25,16.6563 Q23.9063,16.8125 24.4688,17.125 L24.4688,19.9219 Q23.8438,19.3594 23.25,19.0938 Q22.6563,18.8125 22.0313,18.8125 Q20.6875,18.8125 20,19.875 Q19.3125,20.9375 19.3125,23 Q19.3125,25.0781 20,26.1406 Q20.6875,27.1875 22.0313,27.1875 Q22.6563,27.1875 23.25,26.9219 Q23.8438,26.6563 24.4688,26.0781 L24.4688,28.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="36" y="27.1543">Company</text><line style="stroke:#A80036;stroke-width:1.5;" x1="8" x2="95" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="69" x="13" y="53.2104">-designation</text><!--MD5=[074ba6ad47b234bd73d65012320c1634]
+class FreightNetwork--><rect codeLine="11" fill="#FEFECE" filter="url(#fa6lyv36axzch)" height="32" id="FreightNetwork" style="stroke:#A80036;stroke-width:1.5;" width="125" x="59" y="137"/><ellipse cx="74" cy="153" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M76.4688,158.875 Q75.8906,159.1875 75.25,159.3438 Q74.6094,159.5 73.9063,159.5 Q71.4063,159.5 70.0781,157.8281 Q68.7656,156.1563 68.7656,153 Q68.7656,149.8438 70.0781,148.1719 Q71.4063,146.5 73.9063,146.5 Q74.6094,146.5 75.25,146.6563 Q75.9063,146.8125 76.4688,147.125 L76.4688,149.9219 Q75.8438,149.3594 75.25,149.0938 Q74.6563,148.8125 74.0313,148.8125 Q72.6875,148.8125 72,149.875 Q71.3125,150.9375 71.3125,153 Q71.3125,155.0781 72,156.1406 Q72.6875,157.1875 74.0313,157.1875 Q74.6563,157.1875 75.25,156.9219 Q75.8438,156.6563 76.4688,156.0781 L76.4688,158.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="93" x="88" y="157.1543">FreightNetwork</text><!--MD5=[4f1f3706c1a355a8488e154afcaed5df]
+class Location--><rect codeLine="13" fill="#FEFECE" filter="url(#fa6lyv36axzch)" height="78.4141" id="Location" style="stroke:#A80036;stroke-width:1.5;" width="92" x="75.5" y="246"/><ellipse cx="94.55" cy="262" fill="#A9DCDF" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M94.6594,257.2969 L93.5031,262.625 L95.8313,262.625 L94.6594,257.2969 Z M93.175,254.75 L96.1594,254.75 L99.5188,267.75 L97.0656,267.75 L96.3,264.75 L93.0188,264.75 L92.2688,267.75 L89.8313,267.75 L93.175,254.75 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="51" x="109.45" y="266.1543">Location</text><line style="stroke:#A80036;stroke-width:1.5;" x1="76.5" x2="166.5" y1="278" y2="278"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="46" x="81.5" y="292.2104">-latitude</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="81.5" y="305.0151">-longitude</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="80" x="81.5" y="317.8198">-countryName</text><!--MD5=[a0bfe97ac0a38e6e74cc1c7c7b744b71]
+class Port--><rect codeLine="19" fill="#FEFECE" filter="url(#fa6lyv36axzch)" height="91.2188" id="Port" style="stroke:#A80036;stroke-width:1.5;" width="104" x="69.5" y="385"/><ellipse cx="106.1" cy="401" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M108.5688,406.875 Q107.9906,407.1875 107.35,407.3438 Q106.7094,407.5 106.0063,407.5 Q103.5063,407.5 102.1781,405.8281 Q100.8656,404.1563 100.8656,401 Q100.8656,397.8438 102.1781,396.1719 Q103.5063,394.5 106.0063,394.5 Q106.7094,394.5 107.35,394.6563 Q108.0063,394.8125 108.5688,395.125 L108.5688,397.9219 Q107.9438,397.3594 107.35,397.0938 Q106.7563,396.8125 106.1313,396.8125 Q104.7875,396.8125 104.1,397.875 Q103.4125,398.9375 103.4125,401 Q103.4125,403.0781 104.1,404.1406 Q104.7875,405.1875 106.1313,405.1875 Q106.7563,405.1875 107.35,404.9219 Q107.9438,404.6563 108.5688,404.0781 L108.5688,406.875 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="24" x="124.9" y="405.1543">Port</text><line style="stroke:#A80036;stroke-width:1.5;" x1="70.5" x2="172.5" y1="417" y2="417"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="76" x="75.5" y="431.2104">-identification</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="36" x="75.5" y="444.0151">-name</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="56" x="75.5" y="456.8198">-continent</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="92" x="75.5" y="469.6245">-toPortsDistance</text><!--MD5=[ddaf6f62b0bc30921877ec9fb9463c9f]
+class TrafficManager--><rect codeLine="28" fill="#FEFECE" filter="url(#fa6lyv36axzch)" height="32" id="TrafficManager" style="stroke:#A80036;stroke-width:1.5;" width="121" x="131" y="17.5"/><ellipse cx="146" cy="33.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#A80036;stroke-width:1.0;"/><path d="M148.4688,39.375 Q147.8906,39.6875 147.25,39.8438 Q146.6094,40 145.9063,40 Q143.4063,40 142.0781,38.3281 Q140.7656,36.6563 140.7656,33.5 Q140.7656,30.3438 142.0781,28.6719 Q143.4063,27 145.9063,27 Q146.6094,27 147.25,27.1563 Q147.9063,27.3125 148.4688,27.625 L148.4688,30.4219 Q147.8438,29.8594 147.25,29.5938 Q146.6563,29.3125 146.0313,29.3125 Q144.6875,29.3125 144,30.375 Q143.3125,31.4375 143.3125,33.5 Q143.3125,35.5781 144,36.6406 Q144.6875,37.6875 146.0313,37.6875 Q146.6563,37.6875 147.25,37.4219 Q147.8438,37.1563 148.4688,36.5781 L148.4688,39.375 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="89" x="160" y="37.6543">TrafficManager</text><!--MD5=[e359b474b5bea3d5e0a05d5f38acf6c5]
+link Company to FreightNetwork--><path codeLine="33" d="M65.05,60.3 C72.57,74.28 82.24,91.77 91.5,107 C97.64,117.11 105.01,128.17 110.9,136.79 " fill="none" id="Company-FreightNetwork" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="99.0707,102.855,96.941,93.5859,91.8995,96.6079,99.0707,102.855" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="105.5" y="103.0669">knows</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="59.1391" y="79.9059">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="98.0638" y="126.025">1</text><!--MD5=[e37e8e3161027a4df85a8c5d819b551a]
+reverse link Location to Port--><path codeLine="34" d="M121.5,344.45 C121.5,357.94 121.5,372.08 121.5,384.87 " fill="none" id="Location-backto-Port" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="114.5,344.08,121.5,324.08,128.5,344.08,114.5,344.08" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[bd392566c8a46ea25d805713a18e8e2e]
+link FreightNetwork to Location--><path codeLine="35" d="M121.5,169.17 C121.5,187.85 121.5,220.27 121.5,245.91 " fill="none" id="FreightNetwork-Location" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="126.5,212.5664,129.4389,203.5213,123.5611,203.5213,126.5,212.5664" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="13" x="135.5" y="212.0669">of</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="7" x="113.3406" y="189.0996">*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="96.5234" y="234.9451">1..*</text><!--MD5=[92bb40e0190d7818911610b8d81cdb79]
+link TrafficManager to FreightNetwork--><path codeLine="37" d="M183.91,49.77 C176.37,64.63 164.27,87.73 152.5,107 C146.27,117.2 138.66,128.26 132.54,136.86 " fill="none" id="TrafficManager-FreightNetwork" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#000000" points="163.9597,102.873,171.0865,96.5754,166.0237,93.5891,163.9597,102.873" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="60" x="175.5" y="103.0669">manages</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="154.8251" y="69.4347">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="126.96" y="125.8235">1</text><!--MD5=[001ba1e5adfeafd8517e275c6b7f16b8]
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+class Company {
+    -designation
+}
+
+class FreightNetwork {}
+
+abstract class Location{
+    -latitude
+    -longitude
+    -countryName
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -toPortsDistance
+}
+
+
+
+class TrafficManager {}
+
+
+
+/'Multiplicidade'/
+Company "1" - - "1" FreightNetwork : knows >
+Location <|- - Port
+FreightNetwork "*" - - "1..*" Location : of >
+/'Dúvidas'/
+TrafficManager "1..*" - - "1" FreightNetwork : manages >
+
+@enduml
+
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+class Company {
+    -designation
+}
+
+class FreightNetwork {}
+
+abstract class Location{
+    -latitude
+    -longitude
+    -countryName
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -toPortsDistance
+}
+
+
+
+class TrafficManager {}
+
+
+
+Company "1" - - "1" FreightNetwork : knows >
+Location <|- - Port
+FreightNetwork "*" - - "1..*" Location : of >
+TrafficManager "1..*" - - "1" FreightNetwork : manages >
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,30 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class AverageOccupancyShipTimeController{
+- company
+- calculateOccupancyRate(maxCapacity, currentCapacity)
+- getAverageOccupancyRateByShipIDandDates(shipID, month1, year1, day1, month2, year2, day2)
+- checkIfShipTripExists(shipID)
+}
+
+class ShipStoreDB{
+- getShipMaxCapacity(mmsi)
+- getNumContainersShipDay(mmsi, someDate)
+- checkIfShipExists(mmsi)
+}
+
+class Company{
+- ShipStoreDB
+- getShipStoreDB()
+}
+
+AverageOccupancyShipTimeController ..> Company
+AverageOccupancyShipTimeController ..> ShipStoreDB
+Company "1" -- "1" ShipStoreDB : uses >
+
+@enduml

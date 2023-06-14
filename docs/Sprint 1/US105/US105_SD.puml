@@ -1,0 +1,67 @@
+@startuml
+autonumber
+'hide footbox
+actor "Unknown" as ADM
+
+participant "AllListUI" as UI
+participant "AllShipMMSIController" as CTRL
+participant "ShipBST" as STORE
+participant "Company" as COMP
+participant "ShipStore" as SHSTR
+participant "PositionBST" as BST
+participant "Position" as POS
+participant "Ship" as SHIP
+
+
+activate ADM
+ADM -> UI : asks to list for all ships the MMSI, the total number of movements, Travelled Distance and Delta Distance
+activate UI
+loop while traffic manager wants to check data
+
+UI -> CTRL : Map<mmsi, List<Double>> sortedByTravelledDistance(allShip)
+activate CTRL
+CTRL -> STORE : allMap = Map<mmsi, List<Double>> sortedByTravelledDistance(allShip)
+activate STORE
+STORE -> STORE : List<E> getAllShips()
+STORE -> COMP : shipBST = getShipStore()
+activate COMP
+COMP -> SHSTR : getShipsBstMmsi()
+activate SHSTR
+deactivate SHSTR
+deactivate COMP
+STORE -> SHIP : mmsi = getMMSI()
+activate SHIP
+deactivate SHIP
+STORE -> BST : travelledDistance = getTotalDistance()
+activate BST
+STORE -> BST : numOfMovements = size()
+STORE -> BST : deltaDistance = getDeltaDistance()
+deactivate BST
+STORE -> STORE : void sortByTravelledDistance(node, allMap, allShip)
+CTRL -> UI : allMap
+deactivate STORE
+UI -> ADM : show ships ordered by Travelled Distance
+deactivate CTRL
+
+UI -> CTRL : Map<mmsi, List<Double>> sortedByTotalMovements(allShip)
+activate CTRL
+CTRL -> STORE : Map<mmsi, List<Double>> sortedByTotalMovements(allShip)
+activate STORE
+STORE -> STORE : List<E> getAllShips()
+STORE -> BST : travelledDistance = getTotalDistance()
+activate BST
+STORE -> BST : numOfMovements = size()
+STORE -> BST : deltaDistance = getDeltaDistance()
+STORE -> STORE : void sortedByTotalMovements(node, allMap, allShip)
+deactivate BST
+CTRL -> UI : allMap
+
+deactivate STORE
+
+deactivate CTRL
+UI -> ADM : show ships ordered by Total Number of Movements
+deactivate UI
+end
+deactivate ADM
+
+@enduml

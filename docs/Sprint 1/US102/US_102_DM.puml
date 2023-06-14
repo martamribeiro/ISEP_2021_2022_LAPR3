@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam classAttributeIconSize 0
+
+class TrafficManager{
+    -name
+}
+
+class Company{}
+
+class Ship {
+    -mmmsiCode /'MMSI - 1'/
+    -imoCode /'IMO - 9'/
+    -vesselTypeId
+    -callSignId /'CallSign - 10'/
+    -shipName /'VesselName - 8'/
+    - Length /'Length - 12'/
+    -Width /'Width - 13'/
+    -maxCapacity /'Cargo - 15'/
+    -draft /'Draft - 14'/
+}
+
+Company "1" -- "1..*" Ship : owns >
+TrafficManager "1" -- "1..*" Ship : analyses >
+Ship "1" -- "1..*" ShipPosition: has >
+@enduml

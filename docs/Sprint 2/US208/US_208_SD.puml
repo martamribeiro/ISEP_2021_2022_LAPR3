@@ -1,0 +1,51 @@
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ":OccupancyByCargoManifestUI  " as UI
+participant ":ShipOccupancyRatesController" as CTRL
+participant ":Company" as CMP
+participant ":ShipStoreDB" as SS
+participant ":ShipTripStoreDB" as STS
+
+activate SC
+SC -> UI : asks to know the occupancy rate of a given ship for a given cargo manifest
+activate UI
+UI --> SC : asks for data(i.e., cargoManifestID)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getShipOccupancyRateByCargoManifestID(cargoManifestID)
+activate CTRL
+CTRL -> CMP : getShipStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> SS : maxCapacity = getShipCargo(cargoManifestID)
+activate SS
+|||
+deactivate SS
+CTRL -> CMP : getShipTripStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> STS : estDepDate = getEstDepartureDateFromShipTrip(cargoManifestID)
+activate STS
+|||
+deactivate STS
+CTRL -> STS : initialNumContainers = getInitialNumContainersPerShipTrip(cargoManifestID,estDepDate)
+activate STS
+|||
+deactivate STS
+CTRL -> STS : alreadyAddedRemovedContainersTripNum = getAddedRemovedContainersShipTripMoment(cargoManifestID)
+activate STS
+|||
+deactivate STS
+CTRL -> CTRL : result = calculateOccupancyRate(maxCapacity,initialNumContainers,alreadyAddedRemovedContainersTripNum)
+CTRL --> UI : result
+deactivate CTRL
+UI --> SC : informs of operation success or fail
+deactivate UI
+deactivate SC
+
+@enduml

@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor ShipCaptain as C
+
+activate C
+C -> ":System" : asks for the list of containers to be loaded in the next port
+activate ":System"
+":System" --> C : asks for mmsi
+deactivate ":System"
+
+C -> ":System" : types requested data
+activate ":System"
+
+
+":System" --> C : displays the list of containers to be loaded in the next port
+deactivate ":System"
+deactivate C
+@enduml

@@ -1,0 +1,244 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+left to right direction
+
+class Company {
+    -designation
+}
+
+class Container {
+   -containerId
+   -payload
+   -tare
+   -gross
+   -isoCode
+   /'-isRefrigerated'/
+   /'-temperatureKept' - ESTE TALVEZ ADEQUA-SE'/
+}
+
+/' Roles '/
+/'class Employee {}'/
+
+class Client {}
+
+/'class FleetManager {}'/
+
+class TrafficManager {}
+
+
+
+/'class WarehouseStaff {}'/
+
+class WarehouseManager {}
+
+/'class PortStaff {}'/
+
+class PortManager {}
+
+/'class ShipCaptain {}
+
+class ShipChiefElecEngineer {}
+
+class TruckDriver {}'/
+/' End Roles '/
+
+class CargoManifest {
+    -cargoManifestId
+    /'-typeOfTransport'/
+}
+
+class Ship {
+    -mmmsiCode
+    -shipName
+    -imoCode
+    -callSignId
+    -draft
+}
+
+
+class PositionInVehicle {
+    -containerPositionInVehiculeX
+    -containerPositionInVehiculeY
+    -containerPositionInVehiculeZ
+}
+
+class VesselType {
+    -vesselTypeId
+    -length
+    -width
+    -maxCapacity
+}
+
+class ShipPosition {
+    -baseDateTime
+    -latitude
+    -longitude
+    -sog
+    -cog
+    -heading
+    -position
+    -transceiver
+}
+
+/'CONFIRM'/
+class Port {
+    -identification
+    -name
+}
+
+class Warehouse {
+    -identification
+    -name
+}
+
+class Country {
+    -countryDesignation
+    -continent
+}
+
+class PlaceLocation {
+    -locationLatitude
+    -locationLongitude
+}
+
+class EnergyPower{
+    -numEnergyGenerators
+    -generatorsPower
+}
+
+class Truck {
+    -truckId
+    -name
+}
+
+class Route {
+    -route_id
+}
+
+class TruckTrip{
+    -route_id
+    -truck_Id
+    /'has attribute phase?'/
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+/'Classes not in the Data Model'/
+/'class Quote {}'/
+class System {}
+/'End of Classes not in the Data Model'/
+
+class ShipTrip{
+    -shipMmsi
+    /'has attribute phase?'/
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+
+Company "1" - "1..*" System : has >
+User "1..*" -- "1" System : uses >
+/'FleetManager "1" -- "1" Employee : is of >'/
+TrafficManager "1" -- "1" User : relates to >
+/'WarehouseStaff "1" -- "1" Employee : is of >'/
+WarehouseManager "1" -- "1" User : relates to >
+/'PortStaff "1" -- "1" Employee : is of >'/
+PortManager "1" -- "1" User : relates to >
+/'ShipCaptain "1" -- "1" Employee : is of >'/
+/'ShipChiefElecEngineer "1" -- "1" Employee : is of >'/
+/'TruckDriver "1" -- "1" Employee : is of >'/
+
+/'Relations that lack multiplicity'/
+CargoManifest "1" -- "1..*" Container /'as this relation exists, CargoManifest already has Container gross weight'/
+CargoManifest "1" -- "1..*" PositionInVehicle : contains >
+/'End of relations that lack multiplicity'/
+
+Container "1" -- "1" PositionInVehicle : has >
+Ship "*" -- "1" VesselType : is of >
+Ship "1" -- "1..*" ShipPosition : has >
+Warehouse "1" -- "1" PlaceLocation : is located at >
+Port "1" -- "1" PlaceLocation : is located at >
+PlaceLocation "*" -- "1" Country : in a >
+Ship "1" -- "*" Container : transports >
+Truck "*" -- "1" Container : transports >
+
+/'Relations that is in the Data Model but to be evaluated'/
+Ship "1" -- "*" CargoManifest
+Truck -- CargoManifest /' lacks multiplicity '/
+/'PortsAndWareHouse "1" -- "*" CargoManifest : delivered at <'/
+/'End of Relatiosn that is in the Data Model but to be evaluated'/
+
+/'Relations not in the Data Model'/
+/'Ship "1" -- "*" Message : sends >'/
+/'USCoastGuard "1" -- "*" Message : receives >'/
+/'Client "1" -- "1..*" Quote : wants >'/
+Company "1" -- "1..*" Ship : manages >
+Company "1" -- "1..*" VesselType : owns >
+Company "1" -- "1..*" Port : works with >
+Company "1" -- "1..*" Warehouse : has >
+Client "1" -- "1..*" Container : ships >
+TrafficManager "1" -- "*" ShipPosition : controls >
+TrafficManager "1" -- "1..*" Ship : imports >
+WarehouseManager "1" -- "1..*" Warehouse : manages >
+PortManager "1" -- "1..*" Port : manages >
+
+Ship "1" -- "1" EnergyPower : has >
+
+/'US204'/
+Container "1..*"-- "2..*" CargoManifest : associated with >
+/'CargoManifest -- Port : delivered at >'/
+/'Ship "1" -- "*" ShipTrip : does >'/
+/'ShipTrip "*" -- "1" Port : to >'/
+ShipTrip "1" -- "2" CargoManifest : relates to >
+
+/'US305'/
+CargoManifest "1..*" -- "0..1" Port : delivered at >
+CargoManifest "*" -- "0..1" Warehouse : delivered at >
+Ship "1" -- "*" Route : does >
+Route "1" -- "1..*" ShipTrip : contains >
+Truck "1" -- "*" Route : does >
+Route "1" -- "*" TruckTrip : contains >
+TruckTrip "1" -- "2" CargoManifest : relates to >
+
+
+
+
+
+
+/'RELAÇÕES EM FALTA - DÚVIDAS
+Company -- Quote?
+'/
+
+
+/' DÚVIDAS
+- Containers can be transported by land or sea - representar?
+- checkDigit - Container, para que serve?
+- isRefrigerated vai ser um método logo não se representa certo?
+- estado do Cargo Manifest
+
+- Ship sends Message - a Message contém info posicionamento, como representar?
+
+
+
+- NÃO ESQUECER DE VER SLIDES ESOFT , USER E ROLE!
+
+'/
+
+
+
+@enduml

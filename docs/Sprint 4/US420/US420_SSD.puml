@@ -1,0 +1,27 @@
+@startuml
+autonumber
+actor "Ship Captain" as PM
+
+activate PM
+PM -> ":System" : asks to get how much the vessel sink
+
+activate ":System"
+":System" --> PM : requests ship data
+
+
+PM -> ":System" : types ship data
+
+activate ":System"
+":System" --> PM : requests num of containers
+
+
+PM -> ":System" : types num of containers
+
+
+":System" --> PM : returns successfully info
+
+
+
+
+deactivate PM
+@enduml

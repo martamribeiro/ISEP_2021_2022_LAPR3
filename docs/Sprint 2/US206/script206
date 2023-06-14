@@ -1,0 +1,69 @@
+--get port id
+create or replace FUNCTION get_port(mmsi ship.mmsi%type) return integer
+AS
+    next_port Port.port_id%type;
+
+    unload_id ShipTrip.unloading_cargo_id%type;
+	location_id ShipTrip.arrival_location%type;
+	arrival_date ShipTrip.real_arrival_date%type;
+    departure_date ShipTrip.real_departure_date%type;
+
+CURSOR ship_trips(trip ShipTrip.MMSI%type) IS
+SELECT unloading_cargo_id, arrival_location, real_arrival_date, real_departure_date
+FROM ShipTrip
+WHERE mmsi=trip;
+
+BEGIN
+OPEN ship_trips(mmsi);
+LOOP
+FETCH ship_trips INTO unload_id, location_id, arrival_date, departure_date;
+		EXIT WHEN ship_trips%notfound;
+
+		IF arrival_date IS null AND departure_date IS NOT null THEN
+            next_port := location_id;
+END IF;
+END LOOP;
+CLOSE ship_trips;
+return next_port;
+exception
+    when no_data_found then
+        return null;
+
+END;
+/
+--get list of offloaded containers
+create or replace function load_containers_id(mmsi ship.mmsi%type) return SYS_REFCURSOR
+is
+    container_cursor SYS_REFCURSOR;
+
+
+    load_id ShipTrip.loading_cargo_id%type;
+	location_id ShipTrip.arrival_location%type;
+	arrival_date ShipTrip.real_arrival_date%type;
+    departure_date ShipTrip.real_departure_date%type;
+CURSOR ship_trips(trip ShipTrip.MMSI%type) IS
+SELECT loading_cargo_id, arrival_location, real_arrival_date, real_departure_date
+FROM ShipTrip
+WHERE mmsi=trip;
+
+
+begin
+OPEN ship_trips(mmsi);
+LOOP
+FETCH ship_trips INTO load_id, location_id, arrival_date, departure_date;
+		EXIT WHEN ship_trips%notfound;
+
+		IF arrival_date IS null AND departure_date IS NOT null THEN
+            open container_cursor for
+select container.container_id, container.isocode, container.payload, positioninvehicule.containerpositionx, positioninvehicule.containerpositiony, positioninvehicule.containerpositionz
+FROM container
+         left join positioninvehicule on container.container_id = positioninvehicule.container_id
+where container.container_id IN (SELECT containerincargomanifest.container_id from containerincargomanifest where containerincargomanifest.cargomanifest_id = load_id);
+END IF;
+END LOOP;
+CLOSE ship_trips;
+return (container_cursor);
+exception
+    when no_data_found then
+        return null;
+end;

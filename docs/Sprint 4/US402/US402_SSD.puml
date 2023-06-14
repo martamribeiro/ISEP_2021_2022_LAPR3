@@ -1,0 +1,14 @@
+@startuml
+autonumber
+actor TrafficManager as C
+
+activate C
+C -> ":System" : asks for the shortest path between two locals (city and/or port)
+activate ":System"
+":System" --> C : asks for data(i.e.,beg,end,path)
+C-> ":System" : inserts needed data
+":System" --> C : returns the shortest path
+deactivate ":System"
+
+deactivate C
+@enduml

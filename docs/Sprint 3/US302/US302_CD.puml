@@ -1,0 +1,65 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class ColorMapController {
+    +colorMap()
+}
+
+class Company {
+    -designation
+    +getFreightNetwork()
+}
+
+class FreightNetwork {
+    +getOrderedCapitalsList()
+    +fillCapitalsToColor(capitalsToColor)
+    +colorMap()
+}
+
+abstract class Location{
+    -latitude
+    -longitude
+    -countryName
+}
+
+class Port {
+    -identification
+    -name
+    -continent
+    -toPortsDistance
+}
+
+class Capital {
+    -name
+}
+
+class Country {
+    -continent
+    -name
+    -borders
+}
+
+class MatrixGraph {}
+
+abstract class CommonGraph {}
+
+interface Graph <<interface>> {}
+
+ColorMapController ..> Company
+Company "1" -- "1" FreightNetwork : knows >
+ColorMapController ..> FreightNetwork
+Location <|-- Port
+Location <|-- Capital
+FreightNetwork "*" -- "1..*" Location : of >
+Country "1" -- "1" Capital : has >
+FreightNetwork ..> MatrixGraph
+CommonGraph <|- MatrixGraph
+CommonGraph --> Graph
+ColorMapController ..> Location
+ColorMapController ..> Capital
+ColorMapController ..> Port
+ColorMapController ..> MatrixGraph
+
+
+@enduml

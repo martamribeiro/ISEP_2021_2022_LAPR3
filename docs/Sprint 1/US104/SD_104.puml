@@ -1,0 +1,89 @@
+@startuml
+autonumber
+'hide footbox
+actor "TrafficManager" as RC
+
+participant ":TrafficManagerUI" as UI
+participant ":MovementSummaryController" as CTRL
+participant ": Company" as CP
+participant ": ShipStore" as SP
+participant ": Ship" as CS
+participant ": PositionsBST" as PB
+participant ": MovementsSummaryDTO" as CL
+
+
+activate RC
+RC -> UI : asks to make a summary of a ship's movement
+activate UI
+UI --> RC : requests data (MMSI)
+deactivate UI
+
+RC -> UI : types requested data
+activate UI
+
+UI -> CTRL : getShipMovementSummary(MMSI)
+activate CTRL
+CTRL -> CP : store = getShipsBST()
+activate CP
+deactivate CP
+CTRL -> SP : ship = getShipByAnyCode()
+activate SP
+deactivate SP
+CTRL -> CS : cl = getShipMovementSummary(MMSI)
+activate CS
+CS --> CS : ship = findShipByMmsi(MMSI)
+activate CS
+deactivate CS
+CS --> CS : name = ship.getName()
+activate CS
+deactivate CS
+CS --> CS : movements = ship.getMovements()
+activate CS
+deactivate CS
+CS --> PB : startDate = movements.getStartDate()
+activate PB
+deactivate PB
+CS --> PB : endDate = movements.getEndDate()
+activate PB
+deactivate PB
+CS --> PB : maxSog = movements.getMaxSog()
+activate PB
+deactivate PB
+CS --> PB : meanSog = movements.getMeanSog()
+activate PB
+deactivate PB
+CS --> PB : meanCog = movements.getMeanCog()
+activate PB
+deactivate PB
+CS --> PB : departLatitute = movements.getDepartLatitude()
+activate PB
+deactivate PB
+CS --> PB : departLongitude = movements.getDepartLongitude()
+activate PB
+deactivate PB
+CS --> PB : arrivalLatitude = movements.getArrivalLatitude()
+activate PB
+deactivate PB
+CS --> PB : arrivalLongitude = movements.getArrivalLongitude()
+activate PB
+deactivate PB
+CS --> PB : travelledDistance = movements.getTravelledDistance()
+activate PB
+deactivate PB
+CS --> PB : deltaDistance = movements.getDeltaDistance()
+activate PB
+deactivate PB
+
+CS -->  CL** : summaryDto = create(MMSI, name, startDate, endDate, movement, maxSog, meanSog, meanCog, departLatitute\n, departLongitude, arrivalLatitude, arrivalLongitude, travelledDistance, deltaDistance)
+deactivate CL
+CS --> CTRL : summaryDto
+deactivate CS
+CTRL --> UI : summaryDto
+deactivate CTRL
+
+UI --> RC : returns the summary of the ships movements
+deactivate CS
+deactivate UI
+
+
+@enduml

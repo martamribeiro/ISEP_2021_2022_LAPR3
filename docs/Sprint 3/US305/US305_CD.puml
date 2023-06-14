@@ -1,0 +1,23 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+
+class GetContainerRouteController{
+    +getContainerPath(containerID, registrationCode)
+}
+
+class RouteStoreDB {
+    +getRouteId(databaseConnection, containerId, registrationCode)
+    +getContainerPath(databaseConnection, routeId)
+}
+
+class Company {
+    -designation
+    +getRouteStoreDB()
+}
+
+GetContainerRouteController ..> Company
+GetContainerRouteController ..> RouteStoreDB
+Company "1" -- "1" RouteStoreDB : uses >
+
+@enduml

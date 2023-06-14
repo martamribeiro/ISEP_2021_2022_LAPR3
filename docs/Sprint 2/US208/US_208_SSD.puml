@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Ship Captain" as SC
+
+activate SC
+SC-> ":System" : asks to know the occupancy rate of a given ship for a given cargo manifest
+activate ":System"
+":System" --> SC : asks for data(i.e., cargoManifestID)
+SC-> ":System" : inserts needed data
+":System" --> SC : informs of operation success or fail
+
+deactivate ":System"
+
+@enduml

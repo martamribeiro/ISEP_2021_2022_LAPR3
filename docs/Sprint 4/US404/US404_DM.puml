@@ -1,0 +1,48 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+hide empty methods
+hide empty attributes
+
+class FleetManager{}
+
+class Ship {
+    -mmsiCode
+    -shipName
+    -imoCode
+    -vesselTypeId
+    -callSignId
+    -cargo
+    -draft
+    -length
+    -width
+}
+
+class ShipTrip{
+    -route_id
+    -shipMmsi
+    /'has attribute phase?'/
+    -departure_location_id
+    -arrival_location_id
+    -loading_cargo_id
+    -unloading_cargo_id
+    -est_departure_date
+    -est_arrival_date
+    -real_departure_date
+    -real_arrival_date
+}
+
+class Route {
+    -route_id
+}
+
+class Company{
+    -designation
+}
+
+FleetManager "1" -- "1..*" Ship : controls >
+Ship "1" -- "*" Route : does >
+Route "1" -- "1..*" ShipTrip : contains >
+Company "1" -- "1..*" Ship : owns >
+
+@enduml

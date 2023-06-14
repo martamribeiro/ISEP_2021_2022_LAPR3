@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="535px" preserveAspectRatio="none" style="width:1539px;height:535px;background:#FFFFFF;" version="1.1" viewBox="0 0 1539 535" width="1539px" zoomAndPan="magnify"><defs><filter height="300%" id="fhml2iif4miyy" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="335.0625" style="stroke:#A80036;stroke-width:1.0;" width="10" x="48" y="98.2969"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="585" y="119.4297"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="255.6641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="585" y="177.6953"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="197.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="969" y="206.8281"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1157" y="235.9609"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1449" y="320.0938"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="53" x2="53" y1="88.2969" y2="451.3594"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="590" x2="590" y1="88.2969" y2="451.3594"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="973.5" x2="973.5" y1="88.2969" y2="451.3594"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1161.5" x2="1161.5" y1="88.2969" y2="451.3594"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1453.5" x2="1453.5" y1="88.2969" y2="451.3594"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="5" y="84.9951">Ship Captain</text><ellipse cx="53" cy="15" fill="#FEFECE" filter="url(#fhml2iif4miyy)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M53,23 L53,50 M40,31 L66,31 M53,50 L40,65 M53,50 L66,65 " fill="none" filter="url(#fhml2iif4miyy)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="5" y="463.3545">Ship Captain</text><ellipse cx="53" cy="476.6563" fill="#FEFECE" filter="url(#fhml2iif4miyy)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M53,484.6563 L53,511.6563 M40,492.6563 L66,492.6563 M53,511.6563 L40,526.6563 M53,511.6563 L66,526.6563 " fill="none" filter="url(#fhml2iif4miyy)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="106" x="535" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="542" y="72.9951">: AuditTrailUI</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="106" x="535" y="450.3594"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="542" y="470.3545">: AuditTrailUI</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="159" x="892.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="899.5" y="72.9951">:AuditTrailController</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="159" x="892.5" y="450.3594"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="899.5" y="470.3545">:AuditTrailController</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1116.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="1123.5" y="72.9951">:Company</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="87" x="1116.5" y="450.3594"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="1123.5" y="470.3545">:Company</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="147" x="1378.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="1385.5" y="72.9951">:ContainerStoreDb</text><rect fill="#FEFECE" filter="url(#fhml2iif4miyy)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="147" x="1378.5" y="450.3594"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="1385.5" y="470.3545">:ContainerStoreDb</text><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="335.0625" style="stroke:#A80036;stroke-width:1.0;" width="10" x="48" y="98.2969"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="585" y="119.4297"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="255.6641" style="stroke:#A80036;stroke-width:1.0;" width="10" x="585" y="177.6953"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="197.3984" style="stroke:#A80036;stroke-width:1.0;" width="10" x="969" y="206.8281"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1157" y="235.9609"/><rect fill="#FFFFFF" filter="url(#fhml2iif4miyy)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1449" y="320.0938"/><polygon fill="#A80036" points="573,115.4297,583,119.4297,573,123.4297,577,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="58" x2="579" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="65" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="495" x="78" y="114.3638">wants to check the audit trail of a given container of a given cargo manifest</text><polygon fill="#A80036" points="69,144.5625,59,148.5625,69,152.5625,65,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="63" x2="589" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="75" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="294" x="88" y="143.4966">asks for data(cargo manifest id, container id)</text><polygon fill="#A80036" points="573,173.6953,583,177.6953,573,181.6953,577,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="58" x2="579" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="65" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="78" y="172.6294">inserts needed data</text><polygon fill="#A80036" points="957,202.8281,967,206.8281,957,210.8281,961,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="595" x2="963" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="602" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="342" x="615" y="201.7622">getContainerAuditTrail(containerId, cargoManifestId)</text><polygon fill="#A80036" points="1145,231.9609,1155,235.9609,1145,239.9609,1149,235.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="979" x2="1151" y1="235.9609" y2="235.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="986" y="230.895">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="999" y="230.895">getContainerStoreDb()</text><polygon fill="#A80036" points="1437,316.0938,1447,320.0938,1437,324.0938,1441,320.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="979" x2="1443" y1="320.0938" y2="320.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="986" y="315.0278">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="438" x="999" y="315.0278">auditTrail = getAuditTrailOfContainer(containerId, cargoManifestId)</text><polygon fill="#A80036" points="606,400.2266,596,404.2266,606,408.2266,602,404.2266" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="600" x2="973" y1="404.2266" y2="404.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="612" y="399.1606">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="37" x="625" y="399.1606">result</text><polygon fill="#A80036" points="64,429.3594,54,433.3594,64,437.3594,60,433.3594" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="58" x2="589" y1="433.3594" y2="433.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="70" y="428.2935">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="230" x="83" y="428.2935">informs of operation success or fail</text><!--MD5=[19aa78c09febb15af2d90fdaaebd6885]
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ": AuditTrailUI" as UI
+participant ":AuditTrailController" as CTRL
+participant ":Company" as CMP
+participant ":ContainerStoreDb" as CMS
+
+activate SC
+SC -> UI : wants to check the audit trail of a given container of a given cargo manifest
+activate UI
+UI - -> SC : asks for data(cargo manifest id, container id)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getContainerAuditTrail(containerId, cargoManifestId)
+activate CTRL
+CTRL -> CMP : getContainerStoreDb()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : auditTrail = getAuditTrailOfContainer(containerId, cargoManifestId)
+activate CMS
+|||
+deactivate CMS
+CTRL - -> UI : result
+deactivate CTRL
+UI - -> SC : informs of operation success or fail
+deactivate UI
+deactivate SC
+
+@enduml
+
+@startuml
+autonumber
+actor "Ship Captain" as SC
+participant ": AuditTrailUI" as UI
+participant ":AuditTrailController" as CTRL
+participant ":Company" as CMP
+participant ":ContainerStoreDb" as CMS
+
+activate SC
+SC -> UI : wants to check the audit trail of a given container of a given cargo manifest
+activate UI
+UI - -> SC : asks for data(cargo manifest id, container id)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getContainerAuditTrail(containerId, cargoManifestId)
+activate CTRL
+CTRL -> CMP : getContainerStoreDb()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : auditTrail = getAuditTrailOfContainer(containerId, cargoManifestId)
+activate CMS
+|||
+deactivate CMS
+CTRL - -> UI : result
+deactivate CTRL
+UI - -> SC : informs of operation success or fail
+deactivate UI
+deactivate SC
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

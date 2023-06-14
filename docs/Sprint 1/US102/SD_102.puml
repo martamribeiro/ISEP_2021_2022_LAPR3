@@ -1,0 +1,53 @@
+@startuml
+autonumber
+'hide footbox
+actor "TrafficManager" as RC
+
+participant ":TrafficManagerUI" as UI
+participant ":ShipSearchController" as CTRL
+participant ": Company" as CP
+participant ": ShipStore" as CS
+
+
+activate RC
+RC -> UI : wishes to search the details of a ship using any of its codes.
+activate UI
+UI --> RC : asks for the code
+deactivate UI
+
+RC -> UI : types requested data
+activate UI
+
+
+UI -> CTRL : getShipDetailsByCode(code)
+activate CTRL
+CTRL -> CP : store = getShipsStore()
+activate CP
+deactivate CP
+CTRL -> CS : shipDetails = getShipByAnyCode(code)
+activate CS
+alt isImo(code)
+
+CS -> CS : shipDetails = imoShipBst.find(code);
+
+else isMmsi(code)
+
+CS -> CS :shipDetails = bstShip.find(code);
+
+else None of both
+
+CS -> CS:shipDetails = callSign.find(code);
+
+end
+deactivate CS
+
+CS -> CTRL : shipDetails
+CTRL -> UI: shipDetails
+deactivate CTRL
+
+UI --> RC : shows the details of the ship
+deactivate CS
+deactivate UI
+
+
+@enduml

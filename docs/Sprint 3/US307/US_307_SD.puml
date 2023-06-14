@@ -1,0 +1,37 @@
+@startuml
+autonumber
+'hide footbox
+actor "Port Manager" as SC
+participant ":ContainerExceedsWarehouseCapacityUI  " as UI
+participant ":CheckIfContainerExceedsWarehouseCapacityController" as CTRL
+participant ":Company" as CMP
+participant ":TruckTripStoreDB" as CMS
+
+activate SC
+SC -> UI : tries to create a truck trip
+activate UI
+UI --> SC : asks for data(i.e.,truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : tryToCreateTruckTrip(truckTripID,truckID,depLocation,arriLocation,loadCargID,unloadCargID,estDepDate,estArriDate)
+activate CTRL
+CTRL -> CMP : getTruckTripStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : resultCreate = createTruckTrip(truckTripID, truckID, depLocation, arriLocation, loadCargID, unloadCargID, estDepDate, estArriDate)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : result = checkIfTruckTripExists(shipTripID)
+activate CMS
+|||
+deactivate CMS
+CTRL --> UI : result
+deactivate CTRL
+UI --> SC : informs of operation success or fail
+deactivate UI
+deactivate SC
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+autonumber
+actor "Port Manager" as PM
+participant GetVesselSinkUI as UI
+participant GetVesselSinkController as CTRL
+participant "Company" as COMP
+participant "ShipStore" as STORE
+participant "Ship" as SHIP
+
+
+activate PM
+PM -> UI : asks to get how much the vessel sink
+
+activate UI
+UI --> PM : requests ship data
+
+
+PM -> UI : types ship data
+
+
+UI --> PM : requests num of containers
+
+
+PM -> UI : types num of containers
+
+/'aqui'/
+UI -> CTRL : getHowMuchSinkShip(ship, numContainers)
+activate CTRL
+
+
+
+CTRL -> SHIP : totalMassPlaced(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : getPressure(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL -> SHIP : getDiffHeightAboveWaterLevel(numContainers)
+activate SHIP
+deactivate SHIP
+
+CTRL --> UI : map
+
+UI --> PM : operation success
+
+deactivate PM
+@enduml

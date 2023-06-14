@@ -1,0 +1,60 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Company{
+    +getShipStore()
+}
+class BST{}
+
+class ShipsStore{
+    +Ship findShipByAnyCode(code)
+}
+class Ship {
+    +getters
+}
+
+class ShipsBST{
+    +findShipByMmsi(MMSI)
+}
+
+class ShipsBSTImo{
+    +findShipByImo(imo)
+}
+class ShipsBSTCallSign{
+     +findShipByCallsign(callsign)
+ }
+
+class ShipPosition{
+    +toString()
+}
+
+class PositionsBST {
+    +toString()
+}
+
+
+class searchShipController {
+    +String getShipInfoByAnyCode()
+    +String shipDetailsToString()
+}
+
+
+searchShipController ..> Company
+searchShipController ..> ShipsStore
+Company "1" --> "*" Ship : knows
+Company "1" -- "1" ShipsStore : uses >
+ShipsStore "1" -- "1" ShipsBSTCallSign : uses >
+ShipsStore "1" -- "1" ShipsBST : uses >
+ShipsStore "1" -- "1" ShipsBSTImo : uses >
+ShipsBST ..> Ship
+ShipsBSTImo ..> Ship
+ShipsBSTCallSign ..> Ship
+Ship "1" -- "*" ShipPosition : sends >
+Ship "1" -- "1" PositionsBST : uses >
+PositionsBST ..> ShipPosition
+ShipsBST -|> BST
+ShipsBSTImo -|> BST
+ShipsBSTCallSign -|> BST
+PositionsBST -|> BST
+
+@enduml

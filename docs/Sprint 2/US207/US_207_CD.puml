@@ -1,0 +1,26 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class NumCargoManifestsController{
+- getNumberOfCMAndAverageContForYear(year, mmsi)
+}
+
+class Company{
+- getShipStore()
+}
+
+class ShipsStoreDatabase{
+- getNumberOfCMAndAverageContForYear(year, mmsi)
+}
+
+
+
+NumCargoManifestsController ..> Company
+NumCargoManifestsController ..> ShipsStoreDatabase
+Company "1" -- "1" ShipsStoreDatabase : uses >
+
+@enduml

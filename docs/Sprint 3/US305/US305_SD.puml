@@ -1,0 +1,49 @@
+@startuml
+
+autonumber
+actor Client as C
+
+participant "GetContainerRouteUI" as UI
+participant "GetContainerRouteController" as CTRL
+participant "Company" as COMPANY
+participant "App" as APP
+participant "databaseConnection:\nDatabaseConnection" as CONNECTION
+
+participant "RouteStoreDB" as ROUTE_STORE_DB
+
+/'Temos de chamar a Company para as Stores ou não é
+necessário?'/
+
+
+activate C
+C -> "UI" : asks to obtain the situation of container to transport the goods
+activate "UI"
+"UI" --> C : requests the registration code
+deactivate "UI"
+C -> "UI" : types the registration code
+activate "UI"
+UI --> C : requests the container id
+deactivate UI
+C -> UI : types the container id
+activate UI
+UI -> CTRL : getContainerPath(containerID, registrationCode)
+activate CTRL
+CTRL -> COMPANY : routeStoreDB = getRouteStoreDB()
+activate COMPANY
+deactivate COMPANY
+CTRL -> APP : databaseConnection = getInstance().getDatabaseConnection()
+activate APP
+deactivate APP
+CTRL -> ROUTE_STORE_DB : routeId = getRouteId(connection, containerID, registrationCode)
+activate ROUTE_STORE_DB
+deactivate ROUTE_STORE_DB
+CTRL -> ROUTE_STORE_DB : route = getContainerPath(connection, routeID)
+activate ROUTE_STORE_DB
+deactivate ROUTE_STORE_DB
+CTRL --> UI : route
+deactivate CTRL
+UI --> C : displays the route until current location
+deactivate UI
+deactivate C
+
+@enduml

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="671px" preserveAspectRatio="none" style="width:1315px;height:671px;background:#FFFFFF;" version="1.1" viewBox="0 0 1315 671" width="1315px" zoomAndPan="magnify"><defs><filter height="300%" id="f1c42t2ogthmi8" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="480.3359" style="stroke:#A80036;stroke-width:1.0;" width="10" x="57.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="491.5" y="119.4297"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="391.9375" style="stroke:#A80036;stroke-width:1.0;" width="10" x="491.5" y="177.6953"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="333.6719" style="stroke:#A80036;stroke-width:1.0;" width="10" x="719.5" y="206.8281"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="913.5" y="235.9609"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="195.1406" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1019" y="295.0938"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="173.1406" style="stroke:#000000;stroke-width:2.0;" width="335" x="966" y="310.0938"/><rect fill="#FFFFFF" height="56.9375" style="stroke:none;stroke-width:1.0;" width="335" x="966" y="369.3594"/><rect fill="#FFFFFF" height="56.9375" style="stroke:none;stroke-width:1.0;" width="335" x="966" y="426.2969"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="62" x2="62" y1="88.2969" y2="587.6328"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="496.5" x2="496.5" y1="88.2969" y2="587.6328"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="724" x2="724" y1="88.2969" y2="587.6328"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="918" x2="918" y1="88.2969" y2="587.6328"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1024" x2="1024" y1="88.2969" y2="587.6328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="5" y="84.9951">TrafficManager</text><ellipse cx="62.5" cy="15" fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M62.5,23 L62.5,50 M49.5,31 L75.5,31 M62.5,50 L49.5,65 M62.5,50 L75.5,65 " fill="none" filter="url(#f1c42t2ogthmi8)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="5" y="599.6279">TrafficManager</text><ellipse cx="62.5" cy="612.9297" fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M62.5,620.9297 L62.5,647.9297 M49.5,628.9297 L75.5,628.9297 M62.5,647.9297 L49.5,662.9297 M62.5,647.9297 L75.5,662.9297 " fill="none" filter="url(#f1c42t2ogthmi8)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="142" x="423.5" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="430.5" y="72.9951">:TrafficManagerUI</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="142" x="423.5" y="586.6328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="430.5" y="606.6279">:TrafficManagerUI</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="171" x="637" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="644" y="72.9951">:ShipSearchController</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="171" x="637" y="586.6328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="644" y="606.6279">:ShipSearchController</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="91" x="871" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="878" y="72.9951">: Company</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="91" x="871" y="586.6328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="77" x="878" y="606.6279">: Company</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="92" x="976" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="983" y="72.9951">: ShipStore</text><rect fill="#FEFECE" filter="url(#f1c42t2ogthmi8)" height="30.2969" style="stroke:#A80036;stroke-width:1.5;" width="92" x="976" y="586.6328"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="983" y="606.6279">: ShipStore</text><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="480.3359" style="stroke:#A80036;stroke-width:1.0;" width="10" x="57.5" y="98.2969"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="29.1328" style="stroke:#A80036;stroke-width:1.0;" width="10" x="491.5" y="119.4297"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="391.9375" style="stroke:#A80036;stroke-width:1.0;" width="10" x="491.5" y="177.6953"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="333.6719" style="stroke:#A80036;stroke-width:1.0;" width="10" x="719.5" y="206.8281"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="913.5" y="235.9609"/><rect fill="#FFFFFF" filter="url(#f1c42t2ogthmi8)" height="195.1406" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1019" y="295.0938"/><polygon fill="#A80036" points="479.5,115.4297,489.5,119.4297,479.5,123.4297,483.5,119.4297" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="67.5" x2="485.5" y1="119.4297" y2="119.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="74.5" y="114.3638">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="392" x="87.5" y="114.3638">wishes to search the details of a ship using any of its codes.</text><polygon fill="#A80036" points="78.5,144.5625,68.5,148.5625,78.5,152.5625,74.5,148.5625" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="72.5" x2="495.5" y1="148.5625" y2="148.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="84.5" y="143.4966">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="97.5" y="143.4966">asks for the code</text><polygon fill="#A80036" points="479.5,173.6953,489.5,177.6953,479.5,181.6953,483.5,177.6953" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="67.5" x2="485.5" y1="177.6953" y2="177.6953"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="74.5" y="172.6294">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="138" x="87.5" y="172.6294">types requested data</text><polygon fill="#A80036" points="707.5,202.8281,717.5,206.8281,707.5,210.8281,711.5,206.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="501.5" x2="713.5" y1="206.8281" y2="206.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="508.5" y="201.7622">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="186" x="521.5" y="201.7622">getShipDetailsByCode(code)</text><polygon fill="#A80036" points="901.5,231.9609,911.5,235.9609,901.5,239.9609,905.5,235.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="729.5" x2="907.5" y1="235.9609" y2="235.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="736.5" y="230.895">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="152" x="749.5" y="230.895">store = getShipsStore()</text><polygon fill="#A80036" points="1007,291.0938,1017,295.0938,1007,299.0938,1011,295.0938" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="729.5" x2="1013" y1="295.0938" y2="295.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="736.5" y="290.0278">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="257" x="749.5" y="290.0278">shipDetails = getShipByAnyCode(code)</text><path d="M966,310.0938 L1030,310.0938 L1030,317.0938 L1020,327.0938 L966,327.0938 L966,310.0938 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.0;"/><rect fill="none" height="173.1406" style="stroke:#000000;stroke-width:2.0;" width="335" x="966" y="310.0938"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="19" x="981" y="323.1606">alt</text><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="84" x="1045" y="322.3042">[isImo(code)]</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1029" x2="1071" y1="348.3594" y2="348.3594"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1071" x2="1071" y1="348.3594" y2="361.3594"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1030" x2="1071" y1="361.3594" y2="361.3594"/><polygon fill="#A80036" points="1040,357.3594,1030,361.3594,1040,365.3594,1036,361.3594" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1036" y="343.2935">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="240" x="1049" y="343.2935">shipDetails = imoShipBst.find(code);</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="966" x2="1301" y1="370.3594" y2="370.3594"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="94" x="971" y="380.5698">[isMmsi(code)]</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1029" x2="1071" y1="405.2969" y2="405.2969"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1071" x2="1071" y1="405.2969" y2="418.2969"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1030" x2="1071" y1="418.2969" y2="418.2969"/><polygon fill="#A80036" points="1040,414.2969,1030,418.2969,1040,422.2969,1036,418.2969" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1036" y="400.231">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="214" x="1049" y="400.231">shipDetails = bstShip.find(code);</text><line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="966" x2="1301" y1="427.2969" y2="427.2969"/><text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="92" x="971" y="437.5073">[None of both]</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1029" x2="1071" y1="462.2344" y2="462.2344"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1071" x2="1071" y1="462.2344" y2="475.2344"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1030" x2="1071" y1="475.2344" y2="475.2344"/><polygon fill="#A80036" points="1040,471.2344,1030,475.2344,1040,479.2344,1036,475.2344" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="9" x="1036" y="457.1685">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="217" x="1049" y="457.1685">shipDetails = callSign.find(code);</text><polygon fill="#A80036" points="740.5,507.3672,730.5,511.3672,740.5,515.3672,736.5,511.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="734.5" x2="1023" y1="511.3672" y2="511.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="746.5" y="506.3013">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="768.5" y="506.3013">shipDetails</text><polygon fill="#A80036" points="512.5,536.5,502.5,540.5,512.5,544.5,508.5,540.5" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="506.5" x2="723.5" y1="540.5" y2="540.5"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="518.5" y="535.4341">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73" x="540.5" y="535.4341">shipDetails</text><polygon fill="#A80036" points="78.5,565.6328,68.5,569.6328,78.5,573.6328,74.5,569.6328" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="72.5" x2="495.5" y1="569.6328" y2="569.6328"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="18" x="84.5" y="564.5669">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="187" x="106.5" y="564.5669">shows the details of the ship</text><!--MD5=[a140fd7989b04bf65b15381a0361dc66]
+@startuml
+autonumber
+'hide footbox
+actor "TrafficManager" as RC
+
+participant ":TrafficManagerUI" as UI
+participant ":ShipSearchController" as CTRL
+participant ": Company" as CP
+participant ": ShipStore" as CS
+
+
+activate RC
+RC -> UI : wishes to search the details of a ship using any of its codes.
+activate UI
+UI - -> RC : asks for the code
+deactivate UI
+
+RC -> UI : types requested data
+activate UI
+
+
+UI -> CTRL : getShipDetailsByCode(code)
+activate CTRL
+CTRL -> CP : store = getShipsStore()
+activate CP
+deactivate CP
+CTRL -> CS : shipDetails = getShipByAnyCode(code)
+activate CS
+alt isImo(code)
+
+CS -> CS : shipDetails = imoShipBst.find(code);
+
+else isMmsi(code)
+
+CS -> CS :shipDetails = bstShip.find(code);
+
+else None of both
+
+CS -> CS:shipDetails = callSign.find(code);
+
+end
+deactivate CS
+
+CS -> CTRL : shipDetails
+CTRL -> UI: shipDetails
+deactivate CTRL
+
+UI - -> RC : shows the details of the ship
+deactivate CS
+deactivate UI
+
+
+@enduml
+
+@startuml
+autonumber
+actor "TrafficManager" as RC
+
+participant ":TrafficManagerUI" as UI
+participant ":ShipSearchController" as CTRL
+participant ": Company" as CP
+participant ": ShipStore" as CS
+
+
+activate RC
+RC -> UI : wishes to search the details of a ship using any of its codes.
+activate UI
+UI - -> RC : asks for the code
+deactivate UI
+
+RC -> UI : types requested data
+activate UI
+
+
+UI -> CTRL : getShipDetailsByCode(code)
+activate CTRL
+CTRL -> CP : store = getShipsStore()
+activate CP
+deactivate CP
+CTRL -> CS : shipDetails = getShipByAnyCode(code)
+activate CS
+alt isImo(code)
+
+CS -> CS : shipDetails = imoShipBst.find(code);
+
+else isMmsi(code)
+
+CS -> CS :shipDetails = bstShip.find(code);
+
+else None of both
+
+CS -> CS:shipDetails = callSign.find(code);
+
+end
+deactivate CS
+
+CS -> CTRL : shipDetails
+CTRL -> UI: shipDetails
+deactivate CTRL
+
+UI - -> RC : shows the details of the ship
+deactivate CS
+deactivate UI
+
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 WEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

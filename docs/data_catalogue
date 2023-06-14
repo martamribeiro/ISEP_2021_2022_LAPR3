@@ -1,0 +1,35 @@
+Tables:
+    Country:
+        fields:
+            country_name:
+                cannot be null, is a primary key, has to be a string with maximun of 70 chars.
+            continent:
+                cannot be null and it's a string with 30 chars at maximum.
+
+    placeLocation:
+        fields:
+            locationLatitude:
+                Is a numeric field with 4 decimal places in the range of [-90,91] or 91 (unavailable),
+                cannot be null.
+            locationLongitude:
+                Is a numeric field with 4 decimal places in the range of [-180,180] or 181 (unavailable),
+                cannot be null.
+            country:
+                not nullable and it references to the country_name field in the country table.
+
+    vesselType:
+        fields:
+            vesselTypeId:
+                integer field, cannot be null, is the primary key of the table
+            length:
+                numeric field with 2 decimal places and at max 5 digits(counting decimals), not nullable
+            width:
+                numeric field with 2 decimal places and at max 5 digits(counting decimals), not nullable
+            maxCapacity:
+                numeric field with 2 decimal places and at max 6 digits(counting decimals)
+
+    Ship:
+        fields:
+            mmsi:
+                integer field as primary key of the table and it's not nullable
+            vesselType

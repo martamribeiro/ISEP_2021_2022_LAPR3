@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="877px" preserveAspectRatio="none" style="width:1791px;height:877px;background:#FFFFFF;" version="1.1" viewBox="0 0 1791 877" width="1791px" zoomAndPan="magnify"><defs><filter height="300%" id="f17aut7jrchpki" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="674.5703" style="stroke:#A80036;stroke-width:1.0;" width="10" x="46" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="847" y="121.9609"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="591.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="847" y="182.6641"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="384.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1218" y="213.0156"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="28" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1223" y="507.4219"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="115.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1218" y="628.125"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="243.3672"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1702" y="328.7188"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1702" y="414.0703"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1702" y="658.4766"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="51" x2="51" y1="89.6094" y2="792.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="852" x2="852" y1="89.6094" y2="792.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1223" x2="1223" y1="89.6094" y2="792.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1582" x2="1582" y1="89.6094" y2="792.1797"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:5.0,5.0;" x1="1707" x2="1707" y1="89.6094" y2="792.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="5" y="86.5332">Port Manager</text><ellipse cx="51" cy="15" fill="#FEFECE" filter="url(#f17aut7jrchpki)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M51,23 L51,50 M38,31 L64,31 M51,50 L38,65 M51,50 L64,65 " fill="none" filter="url(#f17aut7jrchpki)" style="stroke:#A80036;stroke-width:2.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="5" y="805.7129">Port Manager</text><ellipse cx="51" cy="818.7891" fill="#FEFECE" filter="url(#f17aut7jrchpki)" rx="8" ry="8" style="stroke:#A80036;stroke-width:2.0;"/><path d="M51,826.7891 L51,853.7891 M38,834.7891 L64,834.7891 M51,853.7891 L38,868.7891 M51,853.7891 L64,868.7891 " fill="none" filter="url(#f17aut7jrchpki)" style="stroke:#A80036;stroke-width:2.0;"/><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="316" x="692" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="294" x="699" y="74.5332">:OccupancyRatesAndEstimationsWarehouseUI</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="316" x="692" y="791.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="294" x="699" y="812.7129">:OccupancyRatesAndEstimationsWarehouseUI</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="398" x="1022" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="384" x="1029" y="74.5332">:CheckOccupancyRatesAndEstimationsWarehouseController</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="398" x="1022" y="791.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="384" x="1029" y="812.7129">:CheckOccupancyRatesAndEstimationsWarehouseController</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1541" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1548" y="74.5332">:Company</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="78" x="1541" y="791.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="1548" y="812.7129">:Company</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="144" x="1633" y="53"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="1640" y="74.5332">:WarehouseStoreDB</text><rect fill="#FEFECE" filter="url(#f17aut7jrchpki)" height="31.6094" style="stroke:#A80036;stroke-width:1.5;" width="144" x="1633" y="791.1797"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="1640" y="812.7129">:WarehouseStoreDB</text><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="674.5703" style="stroke:#A80036;stroke-width:1.0;" width="10" x="46" y="99.6094"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30.3516" style="stroke:#A80036;stroke-width:1.0;" width="10" x="847" y="121.9609"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="591.5156" style="stroke:#A80036;stroke-width:1.0;" width="10" x="847" y="182.6641"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="384.7578" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1218" y="213.0156"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="28" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1223" y="507.4219"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="115.7031" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1218" y="628.125"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1577" y="243.3672"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1702" y="328.7188"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1702" y="414.0703"/><rect fill="#FFFFFF" filter="url(#f17aut7jrchpki)" height="30" style="stroke:#A80036;stroke-width:1.0;" width="10" x="1702" y="658.4766"/><polygon fill="#A80036" points="835,117.9609,845,121.9609,835,125.9609,839,121.9609" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="56" x2="841" y1="121.9609" y2="121.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="63" y="117.1045">1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="761" x="74" y="117.1045">wants to know the occupancy rate for a warehouse and an estimate of the containers leaving the warehouse during the next 30 days</text><polygon fill="#A80036" points="67,148.3125,57,152.3125,67,156.3125,63,152.3125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="61" x2="851" y1="152.3125" y2="152.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="73" y="147.4561">2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="179" x="84" y="147.4561">asks for data(i.e.,warehouseID)</text><polygon fill="#A80036" points="835,178.6641,845,182.6641,835,186.6641,839,182.6641" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="56" x2="841" y1="182.6641" y2="182.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="63" y="177.8076">3</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="74" y="177.8076">inserts needed data</text><polygon fill="#A80036" points="1206,209.0156,1216,213.0156,1206,217.0156,1210,213.0156" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="857" x2="1212" y1="213.0156" y2="213.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="864" y="208.1592">4</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="287" x="875" y="208.1592">getOccupancyRateByWarehouseID(warehouseID)</text><polygon fill="#A80036" points="1565,239.3672,1575,243.3672,1565,247.3672,1569,243.3672" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1228" x2="1571" y1="243.3672" y2="243.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1235" y="238.5107">5</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="1246" y="238.5107">getWarehouseStoreDB()</text><polygon fill="#A80036" points="1690,324.7188,1700,328.7188,1690,332.7188,1694,328.7188" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1228" x2="1696" y1="328.7188" y2="328.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1235" y="323.8623">6</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="334" x="1246" y="323.8623">maxCapacity = getWarehouseMaxCapacity(warehouseID)</text><polygon fill="#A80036" points="1690,410.0703,1700,414.0703,1690,418.0703,1694,414.0703" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1228" x2="1696" y1="414.0703" y2="414.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1235" y="409.2139">7</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="377" x="1246" y="409.2139">currentCapacity = getCurrentContainersWarehouse(warehouseID)</text><line style="stroke:#A80036;stroke-width:1.0;" x1="1233" x2="1275" y1="499.4219" y2="499.4219"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1275" x2="1275" y1="499.4219" y2="512.4219"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1234" x2="1275" y1="512.4219" y2="512.4219"/><polygon fill="#A80036" points="1244,508.4219,1234,512.4219,1244,516.4219,1240,512.4219" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="1240" y="494.5654">8</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="324" x="1251" y="494.5654">calculateOccupancyRate(maxCapacity,currentCapacity)</text><polygon fill="#A80036" points="868,593.7734,858,597.7734,868,601.7734,864,597.7734" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="862" x2="1222" y1="597.7734" y2="597.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="7" x="874" y="592.917">9</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="885" y="592.917">occupancyRate</text><polygon fill="#A80036" points="1206,624.125,1216,628.125,1206,632.125,1210,628.125" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="857" x2="1212" y1="628.125" y2="628.125"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="864" y="623.2686">10</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="227" x="882" y="623.2686">getContainersOut30Days(warehouseID)</text><polygon fill="#A80036" points="1690,654.4766,1700,658.4766,1690,662.4766,1694,658.4766" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;" x1="1228" x2="1696" y1="658.4766" y2="658.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="1235" y="653.6201">11</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="276" x="1253" y="653.6201">getNumContainersOutWarehouse(warehouseID)</text><polygon fill="#A80036" points="868,739.8281,858,743.8281,868,747.8281,864,743.8281" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="862" x2="1222" y1="743.8281" y2="743.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="874" y="738.9717">12</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="152" x="892" y="738.9717">numContainersOut30Days</text><polygon fill="#A80036" points="62,770.1797,52,774.1797,62,778.1797,58,774.1797" style="stroke:#A80036;stroke-width:1.0;"/><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="56" x2="851" y1="774.1797" y2="774.1797"/><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="14" x="68" y="769.3232">13</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="625" x="86" y="769.3232">informs the warehouse occupancy rate and the estimated number of containers leaving it in the next 30 days</text><!--MD5=[4e0a60ccb23d8a3580dc7e37a313b0d7]
+@startuml
+autonumber
+'hide footbox
+actor "Port Manager" as SC
+participant ":OccupancyRatesAndEstimationsWarehouseUI  " as UI
+participant ":CheckOccupancyRatesAndEstimationsWarehouseController" as CTRL
+participant ":Company" as CMP
+participant ":WarehouseStoreDB" as CMS
+
+activate SC
+SC -> UI : wants to know the occupancy rate for a warehouse and an estimate of the containers leaving the warehouse during the next 30 days
+activate UI
+UI - -> SC : asks for data(i.e.,warehouseID)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getOccupancyRateByWarehouseID(warehouseID)
+activate CTRL
+CTRL -> CMP : getWarehouseStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getWarehouseMaxCapacity(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getCurrentContainersWarehouse(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : calculateOccupancyRate(maxCapacity,currentCapacity)
+activate CTRL
+|||
+deactivate CTRL
+CTRL - -> UI : occupancyRate
+deactivate CTRL
+UI -> CTRL : getContainersOut30Days(warehouseID)
+activate CTRL
+CTRL -> CMS : getNumContainersOutWarehouse(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL - -> UI : numContainersOut30Days
+deactivate CTRL
+UI - -> SC : informs the warehouse occupancy rate and the estimated number of containers leaving it in the next 30 days
+deactivate UI
+deactivate SC
+
+@enduml
+
+@startuml
+autonumber
+actor "Port Manager" as SC
+participant ":OccupancyRatesAndEstimationsWarehouseUI  " as UI
+participant ":CheckOccupancyRatesAndEstimationsWarehouseController" as CTRL
+participant ":Company" as CMP
+participant ":WarehouseStoreDB" as CMS
+
+activate SC
+SC -> UI : wants to know the occupancy rate for a warehouse and an estimate of the containers leaving the warehouse during the next 30 days
+activate UI
+UI - -> SC : asks for data(i.e.,warehouseID)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getOccupancyRateByWarehouseID(warehouseID)
+activate CTRL
+CTRL -> CMP : getWarehouseStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getWarehouseMaxCapacity(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getCurrentContainersWarehouse(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : calculateOccupancyRate(maxCapacity,currentCapacity)
+activate CTRL
+|||
+deactivate CTRL
+CTRL - -> UI : occupancyRate
+deactivate CTRL
+UI -> CTRL : getContainersOut30Days(warehouseID)
+activate CTRL
+CTRL -> CMS : getNumContainersOutWarehouse(warehouseID)
+activate CMS
+|||
+deactivate CMS
+CTRL - -> UI : numContainersOut30Days
+deactivate CTRL
+UI - -> SC : informs the warehouse occupancy rate and the estimated number of containers leaving it in the next 30 days
+deactivate UI
+deactivate SC
+
+@enduml
+
+PlantUML version 1.2021.11(Sat Oct 02 14:26:11 BST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: Cp1252
+Language: pt
+Country: PT
+--></g></svg>

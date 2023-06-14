@@ -1,0 +1,38 @@
+@startuml
+
+autonumber
+actor TrafficManager as C
+participant "ClosenessPlacesUi" as UI
+participant "ClosenessPlacesController" as CTRL
+participant "Company" as COMPANY
+participant "freightNetwork:\nFreightNetwork" as NET
+participant "closenessPlacesByContinent:\nMap<String, Map<String, Double>" as MAP
+
+activate C
+C -> UI : asks to list the n closeness locals by continent
+activate UI
+UI -> CTRL : getClosenessPlacesByContinent()
+activate CTRL
+CTRL -> COMPANY : freightNetwork = getFreightNetwork()
+activate COMPANY
+deactivate COMPANY
+CTRL -> NET : closenessPlaces = getClosenessPlacesByContinent()
+activate NET
+NET -> NET : continents = getLocationsContinents()
+NET -> MAP : Map<String, Map<String, Double>> closenessPlacesByContinent : create
+alt for every continent
+NET -> NET : continentSubGraph = getContinentSubGraph()
+NET -> NET : Map<String, Double> closeness = getClosenessPlaces()
+NET -> MAP : put(continent, getClosenessPlaces)
+end
+NET -> CTRL : closenessPlacesByContinent
+deactivate NET
+CTRL --> UI : closenessPlacesByContinent
+
+UI --> C : displays the closeness places by continent
+deactivate UI
+
+deactivate C
+
+
+@enduml

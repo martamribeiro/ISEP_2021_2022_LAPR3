@@ -1,0 +1,30 @@
+@startuml
+
+hide empty methods
+hide empty attributes
+'left to right direction
+skinparam classAttributeIconSize 0
+
+class CheckIfContainerExceedsShipCapacityController{
+- company
+- tryToCeateShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+- deleteShipTrip(shipTripID)
+}
+
+class ShipTripStoreDB{
+- triggerShipAvailability()
+- checkIfShipTripExists(shipTripID)
+- deleteShipTrip(shipTripID)
+- createShipTrip(shipTripID, mmsi, depLocation, arriLocation, loadCargID, estDepDate, estArriDate)
+}
+
+class Company{
+- cargoShipTripStoreDB
+- getShipTripStoreDB()
+}
+
+CheckIfContainerExceedsShipCapacityController ..> Company
+CheckIfContainerExceedsShipCapacityController ..> ShipTripStoreDB
+Company "1" -- "1" ShipTripStoreDB : uses >
+
+@enduml

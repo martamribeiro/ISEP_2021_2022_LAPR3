@@ -1,0 +1,20 @@
+@startuml
+autonumber
+actor Client as C
+
+activate C
+C -> ":System" : asks to obtain the situation of container to transport the goods
+activate ":System"
+":System" --> C : requests the container id
+deactivate ":System"
+C -> ":System" : types the container id
+activate ":System"
+":System" --> C : requests the shipment id
+deactivate ":System"
+C -> ":System" : types the shipment id
+activate ":System"
+":System" --> C : displays the type and concrete instance of its current location
+deactivate ":System"
+
+deactivate C
+@enduml

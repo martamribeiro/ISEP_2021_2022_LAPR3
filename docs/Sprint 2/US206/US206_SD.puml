@@ -1,0 +1,30 @@
+@startuml
+autonumber
+'hide footbox
+actor "Ship Captain" as SC
+participant ":ContainersLoadedUI" as UI
+participant ":ContainersLoadedController" as CTRL
+participant ":ShipTripStore" as SBST
+
+activate SC
+SC -> UI :asks for the list of containers to be loaded in the next port
+activate UI
+UI --> SC : asks for mmsi
+deactivate UI
+SC -> UI : types requested data
+activate UI
+
+UI -> CTRL : getListloadedContainers(mmsi)
+activate CTRL
+CTRL -> SBST : List<>loadedList = getListLoadedContainers(databaseConection, mmsi)
+
+activate SBST
+SBST -> SBST : nextPortID = getNextPortID(databaseConection, mmsi)
+CTRL -> UI : loadedList
+deactivate SBST
+deactivate CTRL
+UI --> SC : displays the list of containers to be loaded in the next port
+deactivate UI
+deactivate SC
+
+@enduml

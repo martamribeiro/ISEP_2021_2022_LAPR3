@@ -1,0 +1,12 @@
+@startuml
+autonumber
+actor "Fleet Manager" as FM
+
+activate FM
+FM -> ":System" : asks to know the number of days each ship has been idle since the beginning of the current year.
+
+activate ":System"
+":System" --> FM : shows successfully ships and its idle times
+
+deactivate FM
+@enduml

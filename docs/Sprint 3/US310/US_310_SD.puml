@@ -1,0 +1,133 @@
+-@startuml
+autonumber
+'hide footbox
+actor "Port Manager" as SC
+participant ":CreateMapContainersPortUI  " as UI
+participant ":CreateMapContainersPortController" as CTRL
+participant ":Company" as CMP
+participant ":PortStoreDB" as CMS
+
+activate SC
+SC -> UI : wants a map of the occupation of the existing resources in the port during a given month
+activate UI
+UI --> SC : asks for data(i.e.,portID, month, year)
+deactivate UI
+SC -> UI : inserts needed data
+activate UI
+UI -> CTRL : getOccupancyMap(portID, month, year)
+activate CTRL
+alt if the inserted values are valid
+alt if the month has 31 days
+CTRL -> CTRL : getMap31Month(portID, month, year)
+activate CTRL
+alt for every day of the month
+CTRL -> CTRL : getOccupancyRateByPortIDandDate(portID, month, year, day)
+activate CTRL
+CTRL -> CMP : getPortStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getPortMaxCapacity(portID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getPortOccupancyInDay(portID,date)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : result = calculateOccupancyRate(maxCapacity,currentCapacity);
+activate CTRL
+|||
+deactivate CTRL
+deactivate CTRL
+end
+deactivate CTRL
+else if the month has 30 days
+CTRL -> CTRL : getMap30Month(portID, month, year)
+activate CTRL
+alt for every day of the month
+CTRL -> CTRL : getOccupancyRateByPortIDandDate(portID, month, year, day)
+activate CTRL
+CTRL -> CMP : getPortStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getPortMaxCapacity(portID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getPortOccupancyInDay(portID,date)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : result = calculateOccupancyRate(maxCapacity,currentCapacity);
+activate CTRL
+|||
+deactivate CTRL
+deactivate CTRL
+end
+deactivate CTRL
+else if the month has 29 days
+CTRL -> CTRL : getMap29Month(portID, month, year)
+activate CTRL
+alt for every day of the month
+CTRL -> CTRL : getOccupancyRateByPortIDandDate(portID, month, year, day)
+activate CTRL
+CTRL -> CMP : getPortStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getPortMaxCapacity(portID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getPortOccupancyInDay(portID,date)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : result = calculateOccupancyRate(maxCapacity,currentCapacity);
+activate CTRL
+|||
+deactivate CTRL
+deactivate CTRL
+end
+deactivate CTRL
+else if the month has 28 days
+CTRL -> CTRL : getMap28Month(portID, month, year)
+activate CTRL
+alt for every day of the month
+CTRL -> CTRL : getOccupancyRateByPortIDandDate(portID, month, year, day)
+activate CTRL
+CTRL -> CMP : getPortStoreDB()
+activate CMP
+|||
+deactivate CMP
+CTRL -> CMS : maxCapacity = getPortMaxCapacity(portID)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CMS : currentCapacity = getPortOccupancyInDay(portID,date)
+activate CMS
+|||
+deactivate CMS
+CTRL -> CTRL : result = calculateOccupancyRate(maxCapacity,currentCapacity);
+activate CTRL
+|||
+deactivate CTRL
+deactivate CTRL
+end
+deactivate CTRL
+end
+else if the inserted values are invalid
+CTRL -> CTRL : result = null
+activate CTRL
+|||
+deactivate CTRL
+end
+CTRL --> UI : result
+deactivate CTRL
+UI --> SC : shows desired map
+deactivate UI
+deactivate SC
+
+@enduml

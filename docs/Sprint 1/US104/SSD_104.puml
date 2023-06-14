@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+actor "Traffic manager" as TM
+
+activate TM
+TM-> ":System" : wishes to make a Summary of a ship's movements.
+activate ":System"
+":System" --> TM : asks what ship's code to search for
+TM-> ":System" : inserts needed data
+":System" --> TM : returns a summary of the searched ship's movements.
+
+deactivate ":System"
+
+@enduml
