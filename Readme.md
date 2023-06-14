@@ -42,9 +42,6 @@ The following folder is solely used by Intellij Idea IDE :
   - NetBeans
   - Intellij
 
-# Who do I talk to?
-In case you have any problem, please email Nuno Bettencourt (nmb@isep.ipp.pt).
-
 # How do I use Maven?
 
 ## How to run unit tests?
